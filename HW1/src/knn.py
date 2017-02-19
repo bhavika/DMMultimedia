@@ -5,7 +5,6 @@ from scipy.spatial.distance import euclidean
 from sklearn.metrics import accuracy_score
 
 
-
 train1 = np.genfromtxt(fname='../data/dataset1/train.txt')
 train2 = np.genfromtxt(fname= '../data/dataset2/train.txt')
 train3 = np.genfromtxt(fname='../data/dataset3/train.txt')
@@ -45,8 +44,8 @@ test5_df = test5_df.rename(columns={0: 'Label'})
 # print train1_df['Label'].unique() #1, 2, 3
 # print train2_df['Label'].unique() # 1 to 7
 # print train3_df['Label'].unique() # 1 to 6
-# print train4_df['Label'].unique() #1 to 15
-# print train5_df['Label'].unique() # 1 and -1
+#print train4_df['Label'].unique() #1 to 15
+print train5_df['Label'].unique() # 1 and -1
 
 
 # Works directly with DataFrames
@@ -117,23 +116,21 @@ def nearest_neighbours(train_df, similarity_matrix, k, datasetno):
     test_scores_ref = [nbr_scores[i:i + k] for i in range(0, len(nbr_scores), k)]
     test_scores_series = pd.DataFrame(test_scores_ref)
 
+    test_scores_series['Pos'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[1]
+    test_scores_series['Neg'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[-1]
 
-    test_scores_series['Label1'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[1]
-    test_scores_series['Label2'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[2]
-    test_scores_series['Label3'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[3]
 
-    test_scores_series['Label1'].fillna(0, inplace=True)
-    test_scores_series['Label2'].fillna(0, inplace=True)
-    test_scores_series['Label3'].fillna(0, inplace=True)
+    test_scores_series['Pos'].fillna(0, inplace=True)
+    test_scores_series['Neg'].fillna(0, inplace=True)
 
     # determining conditions for majority vote of nearest neighbours
-    test_scores_series['MajVote'] = test_scores_series[['Label1', 'Label2', 'Label3']].idxmax(axis=1)
+    test_scores_series['MajVote'] = test_scores_series[['Pos', 'Neg']].idxmax(axis=1)
 
     # choices to be printed are 1, 2 and 3
-    choices = ["1", "2", "3"]
-    conditions = [test_scores_series['MajVote'] == 'Label1',
-                  test_scores_series['MajVote'] == 'Label2',
-                  test_scores_series['MajVote'] == 'Label3']
+    choices = ["1", "-1", ]
+    conditions = [test_scores_series['MajVote'] == 'Pos',
+                  test_scores_series['MajVote'] == 'Neg',
+                 ]
     test_scores_series['Answer'] = np.select(conditions, choices)
     write_submission_file(test_scores_series, k, datasetno)
 
@@ -152,8 +149,8 @@ def get_accuracy(dataset_no, k):
 
 
 def run_knn():
-    for k in range(1, 29 ,2):
-        nearest_neighbours(train1_df, sim1, k, 1)
-        get_accuracy(1, k)
+    for k in range(1, 77, 2):
+        nearest_neighbours(train5_df, sim5, k, 5)
+        get_accuracy(5, k)
 
 run_knn()
