@@ -1,0 +1,29 @@
+DataSet1
+k,accuracy
+1 , 0.852222222222
+k,accuracy
+3 , 0.837777777778
+k,accuracy
+5 , 0.773333333333
+k,accuracy
+7 , 0.72
+k,accuracy
+9 , 0.738888888889
+k,accuracy
+11 , 0.673333333333
+k,accuracy
+13 , 0.651111111111
+k,accuracy
+15 , 0.642222222222
+k,accuracy
+17 , 0.642222222222
+k,accuracy
+19 , 0.623333333333
+k,accuracy
+21 , 0.504444444444
+k,accuracy
+23 , 0.503333333333
+k,accuracy
+25 , 0.512222222222
+k,accuracy
+27 , 0.478888888889
