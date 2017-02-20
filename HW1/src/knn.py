@@ -41,6 +41,8 @@ test3_df = test3_df.rename(columns={0: 'Label'})
 test4_df = test4_df.rename(columns={0: 'Label'})
 test5_df = test5_df.rename(columns={0: 'Label'})
 
+
+
 # print train1_df['Label'].unique() #1, 2, 3
 # print train2_df['Label'].unique() # 1 to 7
 # print train3_df['Label'].unique() # 1 to 6
@@ -49,7 +51,6 @@ test5_df = test5_df.rename(columns={0: 'Label'})
 
 
 # Works directly with DataFrames
-
 def similarity_matrix_euclidean(train_df, test_df):
     train = train_df.ix[:, 1:]
     test = test_df.ix[:, 1:]
@@ -90,6 +91,15 @@ sim3 = joblib.load('../pickles/sim3.pkl')
 sim4 = joblib.load('../pickles/sim4.pkl')
 sim5 = joblib.load('../pickles/sim5.pkl')
 
+sim_dtw_1 = joblib.load('../pickles/dtw_1.pkl')
+
+train = [train1_df, train2_df, train3_df, train4_df, train5_df]
+test = [test1_df, test2_df, test3_df, test4_df, test5_df]
+#similarity_matrices = [sim1, sim2, sim3, sim4, sim5]
+similarity_matrices = [sim_dtw_1]
+k_range = [27, 35, 35, 35, 77]
+no_of_datasets = 5
+
 
 def get_review(train_df, train_case):
     return train_df.iloc[train_case].Label
@@ -126,23 +136,21 @@ def nearest_neighbours(train_df, similarity_matrix, k, datasetno):
         test_scores_series['Label_{}'.format(choices[i])] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[choices[i]]
         test_scores_series['Label_{}'.format(choices[i])].fillna(0, inplace=True)
 
-
     label_columns = [col for col in list(test_scores_series.columns.values) if col.startswith('Label_')]
 
     # find the column which has the largest label vote
     test_scores_series['MajVote'] = test_scores_series[label_columns].idxmax(axis=1)
 
-    conditions = []
-
     # Generate conditions based on the columns we have
-
+    conditions = []
     for i in range(len(label_columns)):
         conditions.append(("test_scores_series['MajVote']=="+"'"+label_columns[i]+"'"))
 
+    # dynamically genereated conditions for selection were stored as strings, to use them, we convert to bool
     conditions = map(bool, conditions)
 
+    # extract the label from the MajVote column
     test_scores_series['Answer'] = test_scores_series['MajVote'].apply(lambda y: y.split("Label_")[1])
-
     write_submission_file(test_scores_series, k, datasetno)
 
 
@@ -159,12 +167,6 @@ def get_accuracy(dataset_no, k):
     print "k,accuracy"
     print k,",", accuracy_score(y_true, y_pred)
 
-
-train = [train1_df, train2_df, train3_df, train4_df, train5_df]
-test = [test1_df, test2_df, test3_df, test4_df, test5_df]
-similarity_matrices = [sim1, sim2, sim3, sim4, sim5]
-k_range = [27, 35, 35, 35, 77]
-no_of_datasets = 5
 
 def run_knn():
     for n in range(no_of_datasets):

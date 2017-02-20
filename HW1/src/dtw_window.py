@@ -88,7 +88,10 @@ for i in range(len(test5)):
 
 print "Elapsed time: ", time() - start
 
-joblib.dump(distance_matrix, 'dtw5_window.pkl')
+
+distance_matrix_df = pd.DataFrame(distance_matrix)
+
+joblib.dump(distance_matrix_df, 'dtw5_window.pkl')
 
 p = joblib.load('dtw5_window.pkl')
 print p
