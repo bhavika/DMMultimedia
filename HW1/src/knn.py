@@ -45,7 +45,7 @@ test5_df = test5_df.rename(columns={0: 'Label'})
 # print train2_df['Label'].unique() # 1 to 7
 # print train3_df['Label'].unique() # 1 to 6
 #print train4_df['Label'].unique() #1 to 15
-print train5_df['Label'].unique() # 1 and -1
+#print train5_df['Label'].unique() # 1 and -1
 
 
 # Works directly with DataFrames
@@ -116,22 +116,33 @@ def nearest_neighbours(train_df, similarity_matrix, k, datasetno):
     test_scores_ref = [nbr_scores[i:i + k] for i in range(0, len(nbr_scores), k)]
     test_scores_series = pd.DataFrame(test_scores_ref)
 
-    test_scores_series['Pos'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[1]
-    test_scores_series['Neg'] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[-1]
+    test_scores_series.columns = [str(col) + '_x' for col in test_scores_series.columns]
+
+    choices = list(train_df['Label'].unique())
+
+    choices.sort()
+
+    for i in range(len(choices)):
+        test_scores_series['Label_{}'.format(choices[i])] = test_scores_series.apply(lambda y: y.value_counts(), axis=1)[choices[i]]
+        test_scores_series['Label_{}'.format(choices[i])].fillna(0, inplace=True)
 
 
-    test_scores_series['Pos'].fillna(0, inplace=True)
-    test_scores_series['Neg'].fillna(0, inplace=True)
+    label_columns = [col for col in list(test_scores_series.columns.values) if col.startswith('Label_')]
 
-    # determining conditions for majority vote of nearest neighbours
-    test_scores_series['MajVote'] = test_scores_series[['Pos', 'Neg']].idxmax(axis=1)
+    # find the column which has the largest label vote
+    test_scores_series['MajVote'] = test_scores_series[label_columns].idxmax(axis=1)
 
-    # choices to be printed are 1, 2 and 3
-    choices = ["1", "-1", ]
-    conditions = [test_scores_series['MajVote'] == 'Pos',
-                  test_scores_series['MajVote'] == 'Neg',
-                 ]
-    test_scores_series['Answer'] = np.select(conditions, choices)
+    conditions = []
+
+    # Generate conditions based on the columns we have
+
+    for i in range(len(label_columns)):
+        conditions.append(("test_scores_series['MajVote']=="+"'"+label_columns[i]+"'"))
+
+    conditions = map(bool, conditions)
+
+    test_scores_series['Answer'] = test_scores_series['MajVote'].apply(lambda y: y.split("Label_")[1])
+
     write_submission_file(test_scores_series, k, datasetno)
 
 
@@ -144,13 +155,21 @@ def get_accuracy(dataset_no, k):
     datasets = [test1_df, test2_df, test3_df, test4_df, test5_df]
     y_true = datasets[dataset_no-1]['Label']
     y_pred = pd.read_csv(str.format('submission_{}_{}.txt', dataset_no, k), header=None)
+    print "Dataset no", dataset_no
     print "k,accuracy"
     print k,",", accuracy_score(y_true, y_pred)
 
 
+train = [train1_df, train2_df, train3_df, train4_df, train5_df]
+test = [test1_df, test2_df, test3_df, test4_df, test5_df]
+similarity_matrices = [sim1, sim2, sim3, sim4, sim5]
+k_range = [27, 35, 35, 35, 77]
+no_of_datasets = 5
+
 def run_knn():
-    for k in range(1, 77, 2):
-        nearest_neighbours(train5_df, sim5, k, 5)
-        get_accuracy(5, k)
+    for n in range(no_of_datasets):
+        for k in range(1, k_range[n], 2):
+            nearest_neighbours(train[n], similarity_matrices[n], k, n+1)
+            get_accuracy(n+1, k)
 
 run_knn()
