@@ -113,12 +113,15 @@ def knn_df(train_df, test_df, w, truth_labels):
                     best_so_far = D
                     nearest_neighbour.append(i)
                     lbl = truth_labels.iloc[i]
-                    print "idx", idx, "label", lbl
+                    print lbl, idx
         y_pred.append(lbl)
 
     y = pd.DataFrame(y_pred)
-    joblib.dump(y, 'keogh_predictions.pkl')
+    joblib.dump(y, 'keogh_predictions_2.pkl')
 
 
-print knn_df(train1_df.ix[:, train1_df.columns != 'Label'], test1_df.ix[:, test1_df.columns != 'Label'], 4 , train1_df['Label'])
+print knn_df(train4_df.ix[:, train4_df.columns != 'Label'], test4_df.ix[:, test4_df.columns != 'Label'], 4 , train4_df['Label'])
 
+y = joblib.load('../pickles/keogh_predictions.pkl')
+
+print accuracy_score(test1_df['Label'], y)
