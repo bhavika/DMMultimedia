@@ -1,219 +1,113 @@
 DataSet1
-k,accuracy
 1 , 0.852222222222
-k,accuracy
 3 , 0.837777777778
-k,accuracy
 5 , 0.773333333333
-k,accuracy
 7 , 0.72
-k,accuracy
 9 , 0.738888888889
-k,accuracy
 11 , 0.673333333333
-k,accuracy
 13 , 0.651111111111
-k,accuracy
 15 , 0.642222222222
-k,accuracy
 17 , 0.642222222222
-k,accuracy
 19 , 0.623333333333
-k,accuracy
 21 , 0.504444444444
-k,accuracy
 23 , 0.503333333333
-k,accuracy
 25 , 0.512222222222
-k,accuracy
 27 , 0.478888888889
 
 Dataset2
-
-k,accuracy
 1 , 0.782857142857
-k,accuracy
 3 , 0.754285714286
-k,accuracy
 5 , 0.72
-k,accuracy
 7 , 0.68
-k,accuracy
 9 , 0.702857142857
-k,accuracy
 11 , 0.691428571429
-k,accuracy
 13 , 0.674285714286
-k,accuracy
 15 , 0.662857142857
-k,accuracy
 17 , 0.68
-k,accuracy
 19 , 0.668571428571
-k,accuracy
 21 , 0.628571428571
-k,accuracy
 23 , 0.634285714286
-k,accuracy
 25 , 0.588571428571
-k,accuracy
 27 , 0.594285714286
-k,accuracy
 29 , 0.56
-k,accuracy
 31 , 0.542857142857
-k,accuracy
 33 , 0.548571428571
 
 DataSet 3
-
-k,accuracy
 1 , 0.51652892562
-k,accuracy
 3 , 0.504132231405
-k,accuracy
 5 , 0.46694214876
-k,accuracy
 7 , 0.46694214876
-k,accuracy
 9 , 0.429752066116
-k,accuracy
 11 , 0.45041322314
-k,accuracy
 13 , 0.429752066116
-k,accuracy
 15 , 0.417355371901
-k,accuracy
 17 , 0.396694214876
-k,accuracy
 19 , 0.392561983471
-k,accuracy
 21 , 0.413223140496
-k,accuracy
 23 , 0.392561983471
-k,accuracy
 25 , 0.384297520661
-k,accuracy
 27 , 0.396694214876
-k,accuracy
 29 , 0.380165289256
-k,accuracy
 31 , 0.384297520661
-k,accuracy
 33 , 0.367768595041
 
 
 DataSet 4
-
-k,accuracy
 1 , 0.7888
-k,accuracy
 3 , 0.7184
-k,accuracy
 5 , 0.7184
-k,accuracy
 7 , 0.7008
-k,accuracy
 9 , 0.6864
-k,accuracy
 11 , 0.6688
-k,accuracy
 13 , 0.6544
-k,accuracy
 15 , 0.6448
-k,accuracy
 17 , 0.6288
-k,accuracy
 19 , 0.6016
-k,accuracy
 21 , 0.5968
-k,accuracy
 23 , 0.5808
-k,accuracy
 25 , 0.5648
-k,accuracy
 27 , 0.56
-k,accuracy
 29 , 0.544
-k,accuracy
 31 , 0.5376
-k,accuracy
 33 , 0.5296
 
 DataSet 5
-k,accuracy
 1 , 0.995457495133
-k,accuracy
 3 , 0.993835171966
-k,accuracy
 5 , 0.991726151849
-k,accuracy
 7 , 0.988968202466
-k,accuracy
 9 , 0.987345879299
-k,accuracy
 11 , 0.985885788449
-k,accuracy
 13 , 0.983939000649
-k,accuracy
 15 , 0.983290071382
-k,accuracy
 17 , 0.982803374432
-k,accuracy
 19 , 0.982154445165
-k,accuracy
 21 , 0.982154445165
-k,accuracy
 23 , 0.981343283582
-k,accuracy
 25 , 0.982316677482
-k,accuracy
 27 , 0.982316677482
-k,accuracy
 29 , 0.982965606749
-k,accuracy
 31 , 0.981667748215
-k,accuracy
 33 , 0.981829980532
-k,accuracy
 35 , 0.980856586632
-k,accuracy
 37 , 0.978747566515
-k,accuracy
 39 , 0.968202465931
-k,accuracy
 41 , 0.957819597664
-k,accuracy
 43 , 0.951979234263
-k,accuracy
 45 , 0.95165476963
-k,accuracy
 47 , 0.950843608047
-k,accuracy
 49 , 0.950843608047
-k,accuracy
 51 , 0.951492537313
-k,accuracy
 53 , 0.951330304997
-k,accuracy
 55 , 0.950843608047
-k,accuracy
 57 , 0.950843608047
-k,accuracy
 59 , 0.95068137573
-k,accuracy
 61 , 0.95019467878
-k,accuracy
 63 , 0.949545749513
-k,accuracy
 65 , 0.94873458793
-k,accuracy
 67 , 0.948572355613
-k,accuracy
 69 , 0.948410123297
-k,accuracy
 71 , 0.94873458793
-k,accuracy
 73 , 0.948896820247
-k,accuracy
 75 , 0.94873458793

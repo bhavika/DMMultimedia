@@ -93,8 +93,8 @@ def similarity_matrix_euclidean(train_df, test_df):
 
 sim_dtw_1 = joblib.load('../pickles/dtw4.pkl')
 
+sim_dtw_df = pd.DataFrame(sim_dtw_1)
 
-print sim_dtw_1
 
 def get_review(train_df, train_case):
     return train_df.iloc[train_case].Label
@@ -142,7 +142,7 @@ def get_accuracy(dataset_no, k):
     print k,",", accuracy_score(y_true, y_pred)
 
 
-# for k in range(1, 35, 2):
-#     nearest_neighbours(train4_df, sim_dtw_1, k, 4)
-#     get_accuracy(4, k)
-#
+for k in range(1, 35, 2):
+    nearest_neighbours(train4_df, sim_dtw_df, k, 4)
+    get_accuracy(4, k)
+
