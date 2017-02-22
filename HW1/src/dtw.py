@@ -3,7 +3,10 @@ import pandas as pd
 import numpy as np
 import math
 from time import time
+from scipy.spatial.distance import euclidean
+from multiprocessing import Process
 
+print "Loading the data"
 
 #load into numpy arrays
 train1 = np.genfromtxt(fname='../data/dataset1/train.txt')
@@ -43,6 +46,20 @@ test4_df = test4_df.rename(columns={0: 'Label'})
 test5_df = test5_df.rename(columns={0: 'Label'})
 
 
+def LB_Keogh(P, Q, r=0):
+    lbsum = 0
+
+    for index, i in enumerate(P):
+        lower_bound = min(Q[(index - r if index-r >= 0 else 0): (index + r)])
+        upper_bound = max(Q[(index - r if index-r >= 0 else 0) : (index +r)])
+
+        if i > upper_bound:
+            lbsum += (i - upper_bound)**2
+        elif i < lower_bound:
+            lbsum += (i - lower_bound)**2
+    return math.sqrt(lbsum)
+
+
 # Let P and Q be the two time series
 
 def print_distance_matrix(d):
@@ -50,10 +67,6 @@ def print_distance_matrix(d):
         for j in range(len(d[i])):
             print d[i][j],
         print
-
-
-def local_distance(p_i, q_j):
-    return math.sqrt(pow(p_i - q_j, 2))
 
 
 def dtw(P, Q):
@@ -71,15 +84,15 @@ def dtw(P, Q):
 
             # boundary case: the starting position at (0,0)
             if (i == 0) and (j == 0):
-                dist_np[i,j] = local_distance(P[i], Q[j])
+                dist_np[i,j] = euclidean(P[i], Q[j])
 
             elif i == 0:
                 assert dist_np[i, j - 1] >= 0
-                dist_np[i, j] = dist_np[i, j - 1] + local_distance(P[i], Q[j])
+                dist_np[i, j] = dist_np[i, j - 1] + euclidean(P[i], Q[j])
 
             elif j == 0:
                 assert dist_np[i - 1, j] >= 0
-                dist_np[i, j] = dist_np[i - 1, j] + local_distance(P[i], Q[j])
+                dist_np[i, j] = dist_np[i - 1, j] + euclidean(P[i], Q[j])
             else:
                 # general case - paths can start from any of the 3 neighbouring points on the matrix
                 # Check that the neighbouring 3 positions have been visited
@@ -89,28 +102,40 @@ def dtw(P, Q):
 
                 # Compare all the distances of the 3 neighbouring points
                 lowest_D = min(dist_np[i, j - 1], dist_np[i - 1, j], dist_np[i - 1, j - 1])
-                dist_np[i, j] = lowest_D + local_distance(P[i], Q[j])
+                dist_np[i, j] = lowest_D + euclidean(P[i], Q[j])
 
     # the last corner of the matrix is the final distance
     D = dist_np[len(P) - 1, len(Q) - 1]
     return D
 
 
-distance_matrix = np.zeros((6164, 1000))
+def run_dtw(test, train):
+    train_r, train_c = train.shape
+    test_r, test_c = test.shape
 
-start = time()
+    print "Creating a matrix of size", str(test_r) + "*" + str(train_r)
+    distance_matrix = np.zeros((test_r, train_r))
 
-for i in range(len(test5)):
-    for j in range(len(train5)):
-        distance_matrix[i, j] = dtw(test5[i], train5[j])
+    start = time()
 
-print "Elapsed time: ", time() - start
+    print "Starting DTW calculations"
 
-distance_matrix_df = pd.DataFrame(distance_matrix)
+    for i in range(len(test)):
+        for j in range(len(train)):
+            distance_matrix[i, j] = dtw(test[i], train[j])
 
-joblib.dump(distance_matrix_df, 'dtw5.pkl')
+    print "Elapsed time: ", time() - start
 
-p = joblib.load('dtw5.pkl')
-print p
-print type(p)
+    distance_matrix_df = pd.DataFrame(distance_matrix)
 
+    print distance_matrix_df
+    joblib.dump(distance_matrix_df, 'dtw4.pkl')
+
+    p = joblib.load('dtw4.pkl')
+    print p
+
+
+if __name__ == '__main__':
+    p = Process(target = run_dtw, args=(test4, train4))
+    p.start()
+    p.join()

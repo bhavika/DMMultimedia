@@ -3,9 +3,12 @@ import pandas as pd
 import numpy as np
 import math
 from time import time
+import datetime
 import subprocess
 
 subprocess.call(['speech-dispatcher'])
+
+print "Loading data"
 
 
 #load into numpy arrays
@@ -46,7 +49,7 @@ test4_df = test4_df.rename(columns={0: 'Label'})
 test5_df = test5_df.rename(columns={0: 'Label'})
 
 
-def local_distance(p_i, q_j):
+def dist(p_i, q_j):
     return math.sqrt(pow(p_i - q_j, 2))
 
 
@@ -62,12 +65,10 @@ def dtw(P, Q, w):
     dist_np = np.full((len(P), len(Q)), -1)
 
     # Start visiting every position in the distance matrix
-
     for i in range(len(P)):
         for j in range(max(1, i-w), min(len(Q), i+w)):
-
             # boundary case: the starting position at (0,0)
-            lowest_D = local_distance(P[i-1], Q[j-1])
+            lowest_D = dist(P[i-1], Q[j-1])
             dist_np[i, j] = lowest_D + min(dist_np[i-1, j], dist_np[i, j-1], dist_np[i-1, j-1])
 
     # the last corner of the matrix is the final distance
@@ -75,25 +76,26 @@ def dtw(P, Q, w):
     return D
 
 
-distance_matrix = np.zeros((6164, 1000))
-m, n = test5.shape
-
+distance_matrix = np.zeros((625,500))
+m, n = test4.shape
 w = math.ceil(0.2 * n)
-
 start = time()
 
-for i in range(len(test5)):
-    for j in range(len(train5)):
-        distance_matrix[i, j] = dtw(test5[i], train5[j], int(w))
+
+print "Starting DTW calculations", datetime.datetime.now()
+
+for i in range(len(test4)):
+    for j in range(len(train4)):
+        distance_matrix[i, j] = dtw(test4[i], train4[j], int(w))
 
 print "Elapsed time: ", time() - start
 
 
 distance_matrix_df = pd.DataFrame(distance_matrix)
 
-joblib.dump(distance_matrix_df, 'dtw5_window.pkl')
+joblib.dump(distance_matrix_df, 'dtw4_window.pkl')
 
-p = joblib.load('dtw5_window.pkl')
+p = joblib.load('dtw4_window.pkl')
 print p
 
 subprocess.call(['spd-say', '"Process finished."'])
@@ -108,5 +110,6 @@ for i in range(len(training)):
     w = math.ceil(0.2 * n)
     warp_window.append(w)
 
-
 print warp_window
+
+
