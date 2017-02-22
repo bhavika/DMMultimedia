@@ -4,12 +4,11 @@ import numpy as np
 import math
 from time import time
 import datetime
-import subprocess
+#import subprocess
 
-subprocess.call(['speech-dispatcher'])
+#subprocess.call(['speech-dispatcher'])
 
 print "Loading data"
-
 
 #load into numpy arrays
 train1 = np.genfromtxt(fname='../data/dataset1/train.txt')
@@ -97,8 +96,6 @@ joblib.dump(distance_matrix_df, 'dtw4_window.pkl')
 
 p = joblib.load('dtw4_window.pkl')
 print p
-
-subprocess.call(['spd-say', '"Process finished."'])
 
 
 training = [train1, train2, train3, train4, train5]

@@ -1,13 +1,10 @@
-import joblib
 import pandas as pd
 import numpy as np
 import math
-from time import time
+from sklearn.metrics import accuracy_score
 from scipy.spatial.distance import euclidean
-from multiprocessing import Process
+import joblib
 
-
-print "Loading the data"
 
 #load into numpy arrays
 train1 = np.genfromtxt(fname='../data/dataset1/train.txt')
@@ -47,18 +44,26 @@ test4_df = test4_df.rename(columns={0: 'Label'})
 test5_df = test5_df.rename(columns={0: 'Label'})
 
 
-def print_distance_matrix(d):
-    for i in range(len(d)):
-        for j in range(len(d[i])):
-            print d[i][j],
-        print
+def LB_Keogh(P, Q, r=0):
+    lbsum = 0
 
-# Let P and Q be the two time series
+    for index, i in enumerate(P):
+        lower_bound = min(Q[(index - r if index-r >= 0 else 0): (index + r)])
+        upper_bound = max(Q[(index - r if index-r >= 0 else 0) : (index + r)])
+
+        if i > upper_bound:
+            lbsum += (i - upper_bound)**2
+        elif i < lower_bound:
+            lbsum += (i - lower_bound)**2
+    return math.sqrt(lbsum)
+
+
+# P and Q are individual time series - not numpy arrays or dataframes
 def dtw(P, Q):
 
     D = 0;
 
-    # Store all the computations in a list of lists
+    # Store all the computations in a numpy array
 
     dist_np = np.full((len(P), len(Q)), -1)
 
@@ -69,15 +74,15 @@ def dtw(P, Q):
 
             # boundary case: the starting position at (0,0)
             if (i == 0) and (j == 0):
-                dist_np[i,j] = euclidean(P[i], Q[j])
+                dist_np[i,j] = euclidean(P, Q)
 
             elif i == 0:
                 assert dist_np[i, j - 1] >= 0
-                dist_np[i, j] = dist_np[i, j - 1] + euclidean(P[i], Q[j])
+                dist_np[i, j] = dist_np[i, j - 1] + euclidean(P, Q)
 
             elif j == 0:
                 assert dist_np[i - 1, j] >= 0
-                dist_np[i, j] = dist_np[i - 1, j] + euclidean(P[i], Q[j])
+                dist_np[i, j] = dist_np[i - 1, j] + euclidean(P, Q)
             else:
                 # general case - paths can start from any of the 3 neighbouring points on the matrix
                 # Check that the neighbouring 3 positions have been visited
@@ -87,40 +92,33 @@ def dtw(P, Q):
 
                 # Compare all the distances of the 3 neighbouring points
                 lowest_D = min(dist_np[i, j - 1], dist_np[i - 1, j], dist_np[i - 1, j - 1])
-                dist_np[i, j] = lowest_D + euclidean(P[i], Q[j])
+                dist_np[i, j] = lowest_D + euclidean(P, Q)
 
     # the last corner of the matrix is the final distance
     D = dist_np[len(P) - 1, len(Q) - 1]
     return D
 
 
-def run_dtw(test, train):
-    train_r, train_c = train.shape
-    test_r, test_c = test.shape
+def knn_df(train_df, test_df, w, truth_labels):
 
-    print "Creating a matrix of size", str(test_r) + "*" + str(train_r)
-    distance_matrix = np.zeros((test_r, train_r))
+    y_pred = []
+    for idx, k in test_df.iterrows():
+        best_so_far = np.inf
+        nearest_neighbour = []
 
-    start = time()
+        for i, j in train_df.iterrows():
+            if LB_Keogh(k, j, w) < best_so_far:
+                D = dtw(k, j)
+                if D < best_so_far:
+                    best_so_far = D
+                    nearest_neighbour.append(i)
+                    lbl = truth_labels.iloc[i]
+                    print "idx", idx, "label", lbl
+        y_pred.append(lbl)
 
-    print "Starting DTW calculations"
-
-    for i in range(len(test)):
-        for j in range(len(train)):
-            distance_matrix[i, j] = dtw(test[i], train[j])
-
-    print "Elapsed time: ", time() - start
-
-    distance_matrix_df = pd.DataFrame(distance_matrix)
-
-    print distance_matrix_df
-    joblib.dump(distance_matrix_df, 'dtw4.pkl')
-
-    p = joblib.load('dtw4.pkl')
-    print p
+    y = pd.DataFrame(y_pred)
+    joblib.dump(y, 'keogh_predictions.pkl')
 
 
-if __name__ == '__main__':
-    p = Process(target = run_dtw, args=(test4, train4))
-    p.start()
-    p.join()
+print knn_df(train1_df.ix[:, train1_df.columns != 'Label'], test1_df.ix[:, test1_df.columns != 'Label'], 4 , train1_df['Label'])
+

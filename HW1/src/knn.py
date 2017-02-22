@@ -3,54 +3,13 @@ import numpy as np
 import joblib
 from scipy.spatial.distance import euclidean
 from sklearn.metrics import accuracy_score
+from main import train1, train2, train3, train4, train5
+from main import test1, test2, test3, test4, test5
+from main import train1_df, train4_df, train2_df, train5_df, train3_df
+from main import test1_df, test2_df, test3_df, test4_df, test5_df
 
 
-train1 = np.genfromtxt(fname='../data/dataset1/train.txt')
-train2 = np.genfromtxt(fname= '../data/dataset2/train.txt')
-train3 = np.genfromtxt(fname='../data/dataset3/train.txt')
-train4 = np.genfromtxt(fname='../data/dataset4/train.txt')
-train5 = np.genfromtxt(fname='../data/dataset5/train.txt')
-
-test1 = np.genfromtxt(fname='../data/dataset1/test.txt')
-test2 = np.genfromtxt(fname='../data/dataset2/test.txt')
-test3 = np.genfromtxt(fname='../data/dataset3/test.txt')
-test4 = np.genfromtxt(fname='../data/dataset4/test.txt')
-test5 = np.genfromtxt(fname='../data/dataset5/test.txt')
-
-train1_df = pd.DataFrame(train1)
-train2_df = pd.DataFrame(train2)
-train3_df = pd.DataFrame(train3)
-train4_df = pd.DataFrame(train4)
-train5_df = pd.DataFrame(train5)
-
-train1_df = train1_df.rename(columns={0: 'Label'})
-train2_df = train2_df.rename(columns={0: 'Label'})
-train3_df = train3_df.rename(columns={0: 'Label'})
-train4_df = train4_df.rename(columns={0: 'Label'})
-train5_df = train5_df.rename(columns={0: 'Label'})
-
-test1_df = pd.DataFrame(test1)
-test2_df = pd.DataFrame(test2)
-test3_df = pd.DataFrame(test3)
-test4_df = pd.DataFrame(test4)
-test5_df = pd.DataFrame(test5)
-
-test1_df = test1_df.rename(columns={0: 'Label'})
-test2_df = test2_df.rename(columns={0: 'Label'})
-test3_df = test3_df.rename(columns={0: 'Label'})
-test4_df = test4_df.rename(columns={0: 'Label'})
-test5_df = test5_df.rename(columns={0: 'Label'})
-
-
-
-# print train1_df['Label'].unique() #1, 2, 3
-# print train2_df['Label'].unique() # 1 to 7
-# print train3_df['Label'].unique() # 1 to 6
-#print train4_df['Label'].unique() #1 to 15
-#print train5_df['Label'].unique() # 1 and -1
-
-
-# Works directly with DataFrames
+# Works with DataFrames
 def similarity_matrix_euclidean(train_df, test_df):
     train = train_df.ix[:, 1:]
     test = test_df.ix[:, 1:]
@@ -84,17 +43,21 @@ def similarity_matrix_euclidean(train_df, test_df):
 # joblib.dump(sim4_df, '../pickles/sim4.pkl')
 # joblib.dump(sim5_df, '../pickles/sim5.pkl')
 
-#
-# sim1 = joblib.load('../pickles/sim1.pkl')
-# sim2 = joblib.load('../pickles/sim2.pkl')
-# sim3 = joblib.load('../pickles/sim3.pkl')
-# sim4 = joblib.load('../pickles/sim4.pkl')
-# sim5 = joblib.load('../pickles/sim5.pkl')
+# Uncomment this to load similarity matrices for euclidean distance - KNN
+sim1 = joblib.load('../pickles/sim1.pkl')
+sim2 = joblib.load('../pickles/sim2.pkl')
+sim3 = joblib.load('../pickles/sim3.pkl')
+sim4 = joblib.load('../pickles/sim4.pkl')
+sim5 = joblib.load('../pickles/sim5.pkl')
 
-sim_dtw_1 = joblib.load('../pickles/dtw4.pkl')
 
-sim_dtw_df = pd.DataFrame(sim_dtw_1)
+dtw_1 = joblib.load('../pickles/dtw1.pkl')
+dtw_4 = joblib.load('..pickles/dtw4.pkl')
+dtw_win_1 = joblib.load('../pickles/dtw1_window.pkl')
+dtw_win_4 = joblib.load('../pickles/dtw4_window.pkl')
 
+
+# Fetch labels for neighbouring train cases
 def get_review(train_df, train_case):
     return train_df.iloc[train_case].Label
 
@@ -119,9 +82,7 @@ def nearest_neighbours(train_df, similarity_matrix, k, datasetno):
 
     test_scores_ref = [nbr_scores[i:i + k] for i in range(0, len(nbr_scores), k)]
     test_scores_series = pd.DataFrame(test_scores_ref)
-
     test_scores_series.columns = [str(col) + '_x' for col in test_scores_series.columns]
-
     choices = list(train_df['Label'].unique())
     choices.sort()
     test_scores_series['Answer'] = test_scores_series.apply(lambda y: y.value_counts().idxmax(), axis=1)
@@ -142,6 +103,8 @@ def get_accuracy(dataset_no, k):
 
 
 for k in range(1, 35, 2):
-    nearest_neighbours(train4_df, sim_dtw_df, k, 4)
-    get_accuracy(4, k)
+    # last parameter is no of dataset - 1, 2 , 3 , 4 or 5
+    nearest_neighbours(train_df=train1_df, similarity_matrix=dtw_1, k=k, datasetno=1)
+    # (datasetno, k)
+    get_accuracy(dataset_no=1, k=k)
 
