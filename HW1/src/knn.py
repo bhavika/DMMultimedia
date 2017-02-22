@@ -95,7 +95,6 @@ sim_dtw_1 = joblib.load('../pickles/dtw4.pkl')
 
 sim_dtw_df = pd.DataFrame(sim_dtw_1)
 
-
 def get_review(train_df, train_case):
     return train_df.iloc[train_case].Label
 
