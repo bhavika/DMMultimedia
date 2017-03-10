@@ -1,0 +1,6 @@
+1) Z-normalization
+2) Motifs - how many should you find?
+3) How to use motifs as features?
+4) What are point and range motifs?
+5) Refer slides - clustering time series
+6) How does SAX help with classification?
