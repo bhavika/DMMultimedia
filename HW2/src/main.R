@@ -40,5 +40,11 @@ discover_motifs <- function(x){
 }
 
 as.matrix(sapply(train, as.numeric))
-train$motifs = with(train, discover_motifs(x))
 
+# train$motifs = apply(train, 1 , function(x) {discover_motifs(x)})
+
+s = sapply(train[5,], as.numeric)
+
+w1 <- discover_motifs(s)
+
+print(w1)
