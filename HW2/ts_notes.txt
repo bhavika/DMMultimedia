@@ -4,3 +4,5 @@
 4) What are point and range motifs?
 5) Refer slides - clustering time series
 6) How does SAX help with classification?
+7) bag of time series?
+8) top k motifs?
