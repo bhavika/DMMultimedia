@@ -16,7 +16,7 @@ read_dataset <- function(i){
   return(dataset)
 }
 
-dataset  <- read_dataset(5)
+dataset  <- read_dataset(2)
 
 train = dataset[[1]]
 test = dataset[[2]]
@@ -39,5 +39,11 @@ discover_motifs <- function(x){
 
 as.matrix(sapply(train, as.numeric))
 
+start <- proc.time()
+
+print (timestamp())
+
 train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
 
+print ("Elapsed time: ", proc.time() - start)
+saveRDS(train, "DS2motifs.rds")
