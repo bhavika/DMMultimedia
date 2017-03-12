@@ -10,15 +10,13 @@ read_dataset <- function(i){
   test_path = str_c(base_path, '/test.txt')
   train = read.table(train_path, sep="", header=FALSE)
   test = read.table(test_path, sep="", header=FALSE)
-  
-  print ("While reading, types are")
 
   dataset <- list(train, test)
   
   return(dataset)
 }
 
-dataset  <- read_dataset(1)
+dataset  <- read_dataset(5)
 
 train = dataset[[1]]
 test = dataset[[2]]
@@ -41,10 +39,5 @@ discover_motifs <- function(x){
 
 as.matrix(sapply(train, as.numeric))
 
-# train$motifs = apply(train, 1 , function(x) {discover_motifs(x)})
+train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
 
-s = sapply(train[5,], as.numeric)
-
-w1 <- discover_motifs(s)
-
-print(w1)
