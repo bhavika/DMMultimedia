@@ -41,6 +41,4 @@ print (timestamp())
 
 train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
 
-print (proc.time() - start)
-
 saveRDS(train, "DS1motifs_train.rds")
