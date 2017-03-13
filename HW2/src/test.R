@@ -10,17 +10,18 @@ read_dataset <- function(i){
   test_path = str_c(base_path, '/test.txt')
   train = read.table(train_path, sep="", header=FALSE)
   test = read.table(test_path, sep="", header=FALSE)
-
+  
   dataset <- list(train, test)
   
   return(dataset)
 }
 
-dataset  <- read_dataset(1)
+
+discover_motifs <- function(dataset, n){
 
 train = dataset[[1]]
 test = dataset[[2]]
-
+  
 train[,] <- lapply(train, function(x) {x[is.nan(x)] <- 0; return (x)})
 test[,] <- lapply(test, function(x) {x[is.nan(x)] <- 0; return (x)})
 
@@ -31,16 +32,24 @@ train_labels <- train["V1"]
 test["V1"] <- NULL
 train["V1"] <- NULL
 
-as.matrix(sapply(train, as.numeric))
-
-as.matrix(sapply(train, as.numeric))
-
+as.matrix(sapply(test, as.numeric))
 start <- proc.time()
 
 print (timestamp())
 
-train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
+test$motifs = apply(test, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
+proc.time() - start
 
-print (proc.time() - start)
+filename = str_c("DS_",n, "_motifs_test.rds")
+print(filename)
+saveRDS(test, filename)
+}
 
-saveRDS(train, "DS1motifs_train.rds")
+
+dataset2 <- read_dataset(2)
+dataset3 <- read_dataset(3)
+dataset4 <- read_dataset(4)
+
+discover_motifs(dataset2, 2)
+discover_motifs(dataset3, 3)
+discover_motifs(dataset4, 4)
