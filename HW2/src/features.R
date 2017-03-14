@@ -1,7 +1,38 @@
 library(jmotif)
 library(stringr)
 
-# train1_motifs <- readRDS('DS3motifs_train.rds')
+### In this script we collect all the unique patterns that exist in each dataset
+
+# train1_motifs <- readRDS('DS4motifs_train.rds')
+
+read_motifs <- function(filename){
+   motif_df <- readRDS(filename)
+   motifs <- motif_df$motifs
+   
+   motif_list = c()
+   
+   # for (i in 1:length(motifs)){
+   #   motifs[[i]] = c(length(motifs[[i]]$Indices), motifs[[i]]$Motif.SAX)
+   # }
+   # 
+   unique_words = c()
+   
+   for(i in 1: length(motifs)){
+     for(j in 1: length(motifs[[i]]$Indices)){
+       unique_words[[i]] <- toString(motifs[[i]]$Motif.SAX[[j]][2,][2:6])
+     }
+   }
+   
+   unq <- unique(unique_words)
+   
+   return (unq)
+}
+
+
+unique_words_4 <- read_motifs('DS4motifs_train.rds')
+
+print (unique_words_4)
+
 # 
 # motifs = train1_motifs$motifs
 # #
@@ -9,51 +40,9 @@ library(stringr)
 # 
 # train1_motifs = c()
 # 
-# for (i in 1:length(motifs)){
-#   train1_motifs[[i]] = c(length(motifs[[i]]$Indices), motifs[[i]]$Motif.SAX)
-# }
+# # print (motifs[[35]]$Motif.SAX[[2]])
+# # print (toString(motifs[[35]]$Motif.SAX[[2]][2, ][2:6]))
 # 
-# print (train1_motifs)
-
-read_dataset <- function(i){
-  base_path = str_c('../data/dataset', i)
-  train_path = str_c(base_path, '/train.txt')
-  test_path = str_c(base_path, '/test.txt')
-  train = read.table(train_path, sep="", header=FALSE)
-  test = read.table(test_path, sep="", header=FALSE)
-  dataset <- list(train, test)
-  return(dataset)
-}
-
-dataset <- read_dataset(1)
-train <- dataset[[1]]
-test <- dataset[[2]]
-
-train = dataset[[1]]
-test = dataset[[2]]
-
-train[,] <- lapply(train, function(x) {x[is.nan(x)] <- 0; return (x)})
-test[,] <- lapply(test, function(x) {x[is.nan(x)] <- 0; return (x)})
-
-test_labels <- test["V1"]
-train_labels <- train["V1"]
-
-# remove the labels from test set
-test["V1"] <- NULL
-train["V1"] <- NULL
-
-as.matrix(sapply(train, as.numeric))
-as.matrix(sapply(test, as.numeric))
-
-train = unlist(train[,])
-
-train <- data.matrix(train)
-
-print (class(train))
-
-wb <- manyseries_to_wordbag(train, w_size = 5, paa_size = 5, a_size = 5, nr_strategy = "mindist", n_threshold = 0.01)
-
-
-filename = str_c("wb_", 1 , "_train.rds")
-print(filename)
-saveRDS(wb, filename)
+# unique_motifs_4 = unique(unique_words_4)
+# 
+# print (unique_motifs_4[[2]])
