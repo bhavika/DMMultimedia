@@ -36,12 +36,12 @@ start <- proc.time()
 
 print (timestamp())
 
-test$motifs = apply(test, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
+train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=5, overlap=0, w = 5, a = 5, eps=0.01))
 proc.time() - start
 
 filename = str_c("DS_", n, "_motifs_train.rds")
 print(filename)
-saveRDS(test, filename)
+saveRDS(train, filename)
 }
 
 
