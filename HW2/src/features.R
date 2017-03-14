@@ -12,37 +12,34 @@ read_motifs <- function(filename){
    motif_list = c()
    
    # for (i in 1:length(motifs)){
-   #   motifs[[i]] = c(length(motifs[[i]]$Indices), motifs[[i]]$Motif.SAX)
+   #   motif_list[[i]] = c(length(motifs[[i]]$Indices), motifs[[i]]$Motif.SAX)
    # }
-   # 
-   unique_words = c()
+  
    
+   unique_words = c()
+
    for(i in 1: length(motifs)){
      for(j in 1: length(motifs[[i]]$Indices)){
        unique_words[[i]] <- toString(motifs[[i]]$Motif.SAX[[j]][2,][2:6])
      }
    }
-   
+
    unq <- unique(unique_words)
-   
+   #return (motif_list)
    return (unq)
 }
 
 
-unique_words_4 <- read_motifs('DS4motifs_train.rds')
 
-print (unique_words_4)
+unq_words_train_2 <- read_motifs('DS2motifs_train.rds')
+unq_words_test_2 <- read_motifs('DS_2_motifs_test.rds')
+unq_words_train_4 <- read_motifs('DS4motifs_train.rds')
+unq_words_test_4 <- read_motifs('DS_4_motifs_test.rds')
+unq_words_train_3 <- read_motifs('DS3motifs_train.rds')
+unq_words_test_3 <- read_motifs('DS_3_motifs_test.rds')
 
-# 
-# motifs = train1_motifs$motifs
-# #
-# # print(motifs[[1]]$Indices[1])
-# 
-# train1_motifs = c()
-# 
-# # print (motifs[[35]]$Motif.SAX[[2]])
-# # print (toString(motifs[[35]]$Motif.SAX[[2]][2, ][2:6]))
-# 
-# unique_motifs_4 = unique(unique_words_4)
-# 
-# print (unique_motifs_4[[2]])
+
+print (unq_words_train_3)
+print (unq_words_test_3)
+
+
