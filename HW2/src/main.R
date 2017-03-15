@@ -10,35 +10,42 @@ read_dataset <- function(i){
   test_path = str_c(base_path, '/test.txt')
   train = read.table(train_path, sep="", header=FALSE)
   test = read.table(test_path, sep="", header=FALSE)
-
   dataset <- list(train, test)
-  
   return(dataset)
 }
 
-dataset  <- read_dataset(4)
 
-train = dataset[[1]]
-test = dataset[[2]]
+discover_motifs <- function(dataset, n){
+  
+  train = dataset[[1]]
+  test = dataset[[2]]
+  
+  
+  train[,] <- lapply(train, function(x) {x[is.nan(x)] <- 0; return (x)})
+  test[,] <- lapply(test, function(x) {x[is.nan(x)] <- 0; return (x)})
+  
+  print ("Removing labels")
+  test_labels <- test["V1"]
+  train_labels <- train["V1"]
+  
+  # set label column to empty
+  test["V1"] <- NULL
+  train["V1"] <- NULL
+  
+  as.matrix(sapply(train, as.numeric))
+  as.matrix(sapply(test, as.numeric))
+  start <- proc.time()
+  
+  timestamp()
+  
+  # for dataset 1, we set window.size = 6 but for others, it is 5
+  test$motifs = apply(test, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=3, overlap=0, w = 5, a = 5, eps=0.01))
+  
+  filename = str_c("DS_", n, "_motifs_test.rds")
+  print(filename)
+  saveRDS(test, filename)
+}
 
-train[,] <- lapply(train, function(x) {x[is.nan(x)] <- 0; return (x)})
-test[,] <- lapply(test, function(x) {x[is.nan(x)] <- 0; return (x)})
 
-test_labels <- test["V1"]
-train_labels <- train["V1"]
-
-# remove the labels from test set
-test["V1"] <- NULL
-train["V1"] <- NULL
-
-as.matrix(sapply(train, as.numeric))
-
-as.matrix(sapply(train, as.numeric))
-
-start <- proc.time()
-
-print (timestamp())
-
-train$motifs = apply(train, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=10, overlap=0, w = 5, a = 5, eps=0.01))
-
-saveRDS(train, "./rds/DS4motifs_train_2.rds")
+dataset <- read_dataset(1)
+discover_motifs(dataset, 1)

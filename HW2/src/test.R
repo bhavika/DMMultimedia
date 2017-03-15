@@ -43,7 +43,7 @@ filename = str_c("DS_", n, "_motifs_test.rds")
 print(filename)
 saveRDS(test, filename)
 }
-
+  
 
 dataset1 <- read_dataset(5)
 discover_motifs(dataset1, 5)
