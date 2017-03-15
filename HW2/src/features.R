@@ -57,14 +57,10 @@ get_length_dataset <- function(datasetno, tr_te)
 read_motifs <- function(filename, datasetno, tr_te){
    motif_df <- readRDS(filename)
    motifs <- motif_df$motifs
-   # 
-   # print (length(motifs))
-   # 
+   
    # we want to link the labels to the motifs - for using jmotif's bagwise tfidf
    labels = get_labels(datasetno, tr_te)
    
-   # print (class(train_labels))
-   # 
    motif_list = c()
    max_motifs = 0
    words = c()
@@ -79,19 +75,11 @@ read_motifs <- function(filename, datasetno, tr_te){
        }
      }
    }
-  
-   # print ("How many motifs are there?")
-   # print (length((unique_words)))
    
    # A dataset containing the label and motifs, we later convert this to a table
    # containing the frequency of each motif for a specific label 
    featureset = data.frame(words, labels, max_motifs)
    
-   # print ("Featureset has type")
-   # print (class(featureset))
-   # 
-   # print(featureset)
-   # 
    print ("Length of featureset")
    print (dim(featureset))
    
@@ -125,11 +113,6 @@ read_motifs <- function(filename, datasetno, tr_te){
 }
 
 
-
-#unq_words_train_1 <- read_motifs('DS_1_motifs_train.rds', 1)
-train_2_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
-test_2_bags <- read_motifs('DS_2_motifs_test.rds', 2, "test")
-
 tf_idf <- function(bags){
   Label1 <- bags[[1]]
   Label2 <- bags[[2]]
@@ -137,25 +120,33 @@ tf_idf <- function(bags){
   return (tfidf)
 }
 
-
-tfidf = tf_idf(train_2_bags)
-
-# [[1]] is length of test set
-# [[2]] is test labels
-testlength <- get_length_dataset(2, "test")
-labels_test <- get_labels(2, "test")
-predictions = rep(-1, testlength)
-dt = get_train_test(2)
-test = dt[[2]]
-
-for (i in 1: testlength){
-  series = test[i, ]
-  series = as.numeric(series)
-  bag = series_to_wordbag(series, w = 5, p = 5 , a = 5, "exact", 0.01)
-  cosines = cosine_sim(list("bag"=bag, "tfidf"= tfidf))
-  predictions[i] = which(cosines$cosines == max(cosines$cosines))
+classify <- function(datasetno, tfidf)
+{
+  testlength <- get_length_dataset(datasetno, "test")
+  labels_test <- get_labels(datasetno, "test")
+  predictions <- rep (-1, testlength)
+  dt = get_train_test(datasetno)
+  test = dt[[2]]
+  
+  for (i in 1: testlength){
+    series = test[i, ]
+    series = as.numeric(series)
+    bag = series_to_wordbag(series, w = 5, p = 5 , a = 5, "exact", 0.01)
+    cosines = cosine_sim(list("bag"=bag, "tfidf"= tfidf))
+    predictions[i] = which(cosines$cosines == max(cosines$cosines))
+  }
+  
+  # classification error
+  error = length(which((labels_test != predictions))) / testlength
+  return (error)
 }
 
-# classification error
-error = length(which((labels_test != predictions))) / testlength
-error
+
+
+# train_2_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
+# tfidf = tf_idf(train_2_bags)
+
+q <- get_labels(4, "train")
+q <- list(q)
+lbls = unique(q)
+lbls
