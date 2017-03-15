@@ -71,3 +71,8 @@ error
 # findout which time series were misclassified
 #
 # which((labels_test != labels_predicted))
+
+l = list(c(1, 2, NaN), c(3, 4, NaN))
+x = data.frame(l, header=FALSE)
+
+max(NaN, NaN)
