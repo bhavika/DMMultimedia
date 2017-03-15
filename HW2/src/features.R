@@ -61,6 +61,9 @@ read_motifs <- function(filename, datasetno, tr_te){
    # we want to link the labels to the motifs - for using jmotif's bagwise tfidf
    labels = get_labels(datasetno, tr_te)
    
+   unique_labels = unique(labels)
+   print(unique_labels)
+   
    motif_list = c()
    max_motifs = 0
    words = c()
@@ -142,11 +145,6 @@ classify <- function(datasetno, tfidf)
 }
 
 
+train_2_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
+tfidf = tf_idf(train_2_bags)
 
-# train_2_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
-# tfidf = tf_idf(train_2_bags)
-
-q <- get_labels(4, "train")
-q <- list(q)
-lbls = unique(q)
-lbls
