@@ -170,6 +170,9 @@ classify <- function(datasetno, tfidf)
   dt = get_train_test(datasetno)
   test = dt[[2]]
   
+  # This code has been adapted from [2]  Pavel Senin, jMotif-R, https://github.com/jMotif/jmotif-R 
+  # The example given is from the SAX VSM classifier. It has been modified for our implementation.
+  
   for (i in 1: testlength){
     series = test[i, ]
     series = as.numeric(series)
