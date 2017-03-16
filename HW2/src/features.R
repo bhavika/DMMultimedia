@@ -83,9 +83,9 @@ read_motifs <- function(filename, datasetno, tr_te){
    # containing the frequency of each motif for a specific label 
    featureset = data.frame(words, labels, max_motifs)
    
-   print ("Length of featureset")
-   print (dim(featureset))
-   
+   # print ("Length of featureset")
+   # print (dim(featureset))
+   # 
    # print ("trying to convert to count table")
    # print (str_c("Dataset no: ", datasetno))
    featureset <- as.data.frame(table(featureset))
@@ -93,25 +93,104 @@ read_motifs <- function(filename, datasetno, tr_te){
    # This is a dataframe filtered by label
    Label1 <- subset(featureset, V1==1)
    Label2 <- subset(featureset, V1==2)
-    
+   Label3 <-  subset(featureset, V1==3)
+   Label4 <-  subset(featureset, V1==4)
+   Label5 <-  subset(featureset, V1==5)
+   Label6 <-  subset(featureset, V1==6)
+   Label7 <-  subset(featureset, V1==7)
+   Label8 <-  subset(featureset, V1==8)
+   Label9 <-  subset(featureset, V1==9)
+   Label10 <-  subset(featureset, V1==10)
+   Label11 <-  subset(featureset, V1==11)
+   Label12 <-  subset(featureset, V1==12)
+   Label13 <-  subset(featureset, V1==13)
+   Label14 <-  subset(featureset, V1==14)
+   Label15 <-  subset(featureset, V1==15)
+
    Label1 <- Label1[, c("words", "Freq")]
    Label2 <- Label2[, c("words", "Freq")]
-   
+   Label3 <- Label3[, c("words", "Freq")]
+   Label4 <- Label4[, c("words", "Freq")]
+   Label5 <- Label5[, c("words", "Freq")]
+   Label6 <- Label6[, c("words", "Freq")]
+   Label7 <- Label7[, c("words", "Freq")]
+   Label8 <- Label8[, c("words", "Freq")]
+   Label9 <- Label9[, c("words", "Freq")]
+   Label10 <- Label10[, c("words", "Freq")]
+   Label11 <- Label11[, c("words", "Freq")]
+   Label12 <- Label12[, c("words", "Freq")]
+   Label13 <- Label13[, c("words", "Freq")]
+   Label14 <- Label14[, c("words", "Freq")]
+   Label15 <- Label15[, c("words", "Freq")]
    
    # rename columns for the TF-IDF SAX implementation in jmotif - words & counts
    colnames(Label1)[2] <- "counts"
    colnames(Label2)[2] <- "counts"
+   colnames(Label3)[2] <- "counts"
+   colnames(Label4)[2] <- "counts"
+   colnames(Label5)[2] <- "counts"
+   colnames(Label6)[2] <- "counts"
+   colnames(Label7)[2] <- "counts"
+   colnames(Label8)[2] <- "counts"
+   colnames(Label9)[2] <- "counts"
+   colnames(Label10)[2] <- "counts"
+   colnames(Label11)[2] <- "counts"
+   colnames(Label12)[2] <- "counts"
+   colnames(Label13)[2] <- "counts"
+   colnames(Label14)[2] <- "counts"
+   colnames(Label15)[2] <- "counts"
    
    # convert factors type to characters
-   Label1$words <- as.character(Label1$words)
    #replace commas and spaces - convert to a word instead of spaced characters
+   Label1$words <- as.character(Label1$words)
    Label1$words <- as.character(gsub(", ", "", Label1$words))
    
    Label2$words <- as.character(Label2$words)
    Label2$words <- as.character(gsub(", ", "", Label2$words))
+   
+   Label3$words <- as.character(Label3$words)
+   Label3$words <- as.character(gsub(", ", "", Label3$words))
 
-   # print (str_c(filename, " has ", max_motifs))
-   bags = list(Label1, Label2)
+   Label4$words <- as.character(Label4$words)
+   Label4$words <- as.character(gsub(", ", "", Label4$words))
+
+   Label5$words <- as.character(Label5$words)
+   Label5$words <- as.character(gsub(", ", "", Label5$words))
+
+   Label6$words <- as.character(Label6$words)
+   Label6$words <- as.character(gsub(", ", "", Label6$words))
+
+   Label7$words <- as.character(Label7$words)
+   Label7$words <- as.character(gsub(", ", "", Label7$words))
+
+   Label8$words <- as.character(Label8$words)
+   Label8$words <- as.character(gsub(", ", "", Label8$words))
+
+   Label9$words <- as.character(Label9$words)
+   Label9$words <- as.character(gsub(", ", "", Label9$words))
+
+   Label10$words <- as.character(Label10$words)
+   Label10$words <- as.character(gsub(", ", "", Label10$words))
+
+   Label11$words <- as.character(Label11$words)
+   Label11$words <- as.character(gsub(", ", "", Label11$words))
+
+   Label12$words <- as.character(Label12$words)
+   Label12$words <- as.character(gsub(", ", "", Label12$words))
+
+   Label13$words <- as.character(Label13$words)
+   Label13$words <- as.character(gsub(", ", "", Label13$words))
+
+   Label14$words <- as.character(Label14$words)
+   Label14$words <- as.character(gsub(", ", "", Label14$words))
+
+   Label15$words <- as.character(Label15$words)
+   Label15$words <- as.character(gsub(", ", "", Label15$words))
+  
+   bags = list(Label1, Label2 ,
+              Label3, Label4, Label5, Label6, Label7,
+              Label8, Label9, Label10, Label11, Label12, Label13, Label14, Label15)
+  
    return (bags)
 }
 
@@ -119,7 +198,26 @@ read_motifs <- function(filename, datasetno, tr_te){
 tf_idf <- function(bags){
   Label1 <- bags[[1]]
   Label2 <- bags[[2]]
-  tfidf = bags_to_tfidf(list("Label1"=Label1, "Label2"=Label2))
+  Label3 <- bags[[3]]
+  Label4 <- bags[[4]]
+  Label5 <- bags[[5]]
+  Label6 <- bags[[6]]
+  Label7 <- bags[[7]]
+  Label8 <- bags[[8]]
+  Label9 <- bags[[9]]
+  Label10 <- bags[[10]]
+  Label11 <- bags[[11]]
+  Label12 <- bags[[12]]
+  Label13 <- bags[[13]]
+  Label14 <- bags[[14]]
+  Label15 <- bags[[15]]
+  tfidf = bags_to_tfidf(list("Label1"=Label1, "Label2"=Label2,
+                             "Label3"=Label3, "Label4"=Label4,
+                             "Label5"=Label5, "Label6"=Label6,
+                             "Label7"=Label7, "Label8"=Label8, "Label9"=Label9,
+                              "Label10"=Label10, "Label11"=Label11,
+                             "Label12"=Label12, "Label13"=Label13,
+                             "Label14"=Label14, "Label15"=Label15))
   return (tfidf)
 }
 
@@ -130,21 +228,46 @@ classify <- function(datasetno, tfidf)
   predictions <- rep (-1, testlength)
   dt = get_train_test(datasetno)
   test = dt[[2]]
+  test["V1"] <- NULL
   
-  for (i in 1: testlength){
+  #  Source: jMotif- R classification example for SAX-VSM, Pavel Senin
+  
+  for (i in c(1: testlength)){
     series = test[i, ]
     series = as.numeric(series)
     bag = series_to_wordbag(series, w = 5, p = 5 , a = 5, "exact", 0.01)
     cosines = cosine_sim(list("bag"=bag, "tfidf"= tfidf))
     predictions[i] = which(cosines$cosines == max(cosines$cosines))
-  }
+    
+ }
+ 
   
-  # classification error
+  # classification error and accuracy
   error = length(which((labels_test != predictions))) / testlength
-  return (error)
+  accuracy = length(which((labels_test == predictions))) / testlength
+  
+  print (accuracy)
+  return (accuracy)
 }
 
 
-train_2_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
-tfidf = tf_idf(train_2_bags)
+train_bags <- read_motifs('DS_1_motifs_train.rds', 1, "train")
+tfidf = tf_idf(train_bags)
+classify(1, tfidf)
 
+
+train_bags <- read_motifs('DS2motifs_train.rds', 2, "train")
+tfidf = tf_idf(train_bags)
+classify(2, tfidf)
+
+train_bags <- read_motifs('DS3motifs_train.rds', 3, "train")
+tfidf = tf_idf(train_bags)
+classify(3, tfidf)
+
+train_bags <- read_motifs('DS4motifs_train.rds', 4, "train")
+tfidf = tf_idf(train_bags)
+classify(4, tfidf)
+
+train_bags <- read_motifs('DS5motifs_train.rds', 5, "train")
+tfidf = tf_idf(train_bags)
+classify(5, tfidf)
