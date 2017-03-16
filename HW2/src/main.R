@@ -61,11 +61,11 @@ discover_motifs_test <- function(dataset, n){
   # for dataset 1, we set window.size = 6 but for others, it is 5
   test$motifs = apply(test, 1, function(x) Func.motif(ts = x, global.norm=TRUE, local.norm=TRUE, window.size=3, overlap=0, w = 5, a = 5, eps=0.01))
   
-  filename = str_c("DS_", n, "_motifs_test.rds")
+  filename = str_c("DS", n, "_motifs_test.rds")
   print(filename)
   saveRDS(test, filename)
 }
 
 dataset <- read_dataset(1)
 discover_motifs_train(dataset, 1)
-discover_motifs_test(dataset, 1)
+# discover_motifs_test(dataset, 1)
