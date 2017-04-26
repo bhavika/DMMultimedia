@@ -1,38 +1,66 @@
 from scipy.io import loadmat, mmwrite
 import numpy as np
-from scipy.sparse import csr_matrix, csc_matrix
 import logging
-from gensim.corpora import BleiCorpus, LowCorpus, MalletCorpus
-from gensim.corpora import MmCorpus
-from gensim.models import ldamodel
-from gensim.matutils import Dense2Corpus
-import gensim
-
+from sklearn.decomposition import LatentDirichletAllocation as lda
+import pickle
+import matplotlib.pyplot as plt
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-mnist_all = loadmat('../data/mnist_all.mat')
+mnist = loadmat('../data/mnist_all.mat')
 
 mnist_list = []
-# for i in range(10):
-#     mnist_list.append(mnist_all['test'+str(i)])
 
 for i in range(10):
-    mnist_list.append(mnist_all['test'+str(i)])
+    mnist_list.append(mnist['test'+str(i)])
+    #mnist_list.append(mnist_all['train'+str(i)])
 
-corpus = Dense2Corpus(mnist_list[1])
+mnist_list = np.vstack(mnist_list)
 
-LowCorpus.serialize('/tmp/corpus.low', corpus)
+lda_10 = lda(n_topics=10, learning_method='batch', max_iter=10, n_jobs=3)
+lda_20 = lda(n_topics=20, learning_method='batch', max_iter=50, n_jobs=3)
+lda_50 = lda(n_topics=50, learning_method='batch', max_iter=50, n_jobs=3)
 
-lda_50 = ldamodel.LdaModel(corpus=corpus, num_topics=50, update_every=1, chunksize=10000, passes=50)
-lda_50.save('../models/mnist_lda_50.lda')
-lda_50_topics = lda_50.show_topics(num_topics=50, num_words=20, log=True)
+models = {'lda_10': lda_10, 'lda_20':lda_20, 'lda_50':lda_50}
 
-lda_100 = ldamodel.LdaModel(corpus=corpus, num_topics=100, update_every=1, chunksize=10000, passes=50)
-lda_100.save('../models/mnist_lda_100.lda')
-lda_100_topics = lda_50.show_topics(num_topics=100, num_words=50, log=True)
+# Store the model's output in a dictionary
+models_out = {}
 
-lda_20 = ldamodel.LdaModel(corpus=corpus, num_topics=20, update_every=1, chunksize=10000, passes=50)
-lda_20.save('../models/mnist_lda_20.lda')
-lda_20_topics = lda_20.show_topics(num_topics=20, num_words=10, log=True)
 
+def topic_models(models):
+    for k, v in models.iteritems():
+        print models[k]
+        models_out[k] = models[k].fit(mnist_list)
+
+
+def save_topickle(path, model_results):
+    with open(path, 'wb') as out:
+        pickle.dump(model_results, out, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def create_plots(model, words, n_iter):
+    for topic_idx, topic in enumerate(model.components_):
+
+        # Initialize a list with the original number of pixels
+        pix = [0] * 784
+        pixel_id = []
+        for i in topic.argsort()[:-words-1:-1]:
+            pixel_id.append(i)
+
+        # paint it black
+        for p in pixel_id:
+            pix[p] = 255
+
+        pix = np.array(pix).reshape(28, 28)
+        plt.title('Topic %d, Iteration %d' % (topic_idx, n_iter))
+        plt.imshow(pix, cmap='gray')
+        plt.savefig('../models/Top%d-Iter%d' % (topic_idx, n_iter))
+
+
+topic_models(models)
+save_topickle('../models/mnist_lda.pickle', models_out)
+
+with open('../models/mnist_lda.pickle', 'rb') as f:
+    r = pickle.load(f)
+    for k, v in r.iteritems():
+        create_plots(v, 50, v.max_iter)
