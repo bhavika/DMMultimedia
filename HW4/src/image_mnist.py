@@ -8,12 +8,11 @@ import matplotlib.pyplot as plt
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 mnist = loadmat('../data/mnist_all.mat')
-
 mnist_list = []
 
 for i in range(10):
     mnist_list.append(mnist['test'+str(i)])
-    #mnist_list.append(mnist_all['train'+str(i)])
+    mnist_list.append(mnist['train'+str(i)])
 
 mnist_list = np.vstack(mnist_list)
 
@@ -26,8 +25,7 @@ models = {'lda_10': lda_10, 'lda_20':lda_20, 'lda_50':lda_50}
 # Store the model's output in a dictionary
 models_out = {}
 
-
-def topic_models(models):
+def topic_modeling(models):
     for k, v in models.iteritems():
         print models[k]
         models_out[k] = models[k].fit(mnist_list)
@@ -57,7 +55,7 @@ def create_plots(model, words, n_iter):
         plt.savefig('../models/Top%d-Iter%d' % (topic_idx, n_iter))
 
 
-topic_models(models)
+topic_modeling(models)
 save_topickle('../models/mnist_lda.pickle', models_out)
 
 with open('../models/mnist_lda.pickle', 'rb') as f:
