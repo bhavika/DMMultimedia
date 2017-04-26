@@ -1,0 +1,646 @@
+/home/bhavika/anaconda2/bin/python /home/bhavika/PycharmProjects/miner/HW4/src/timeseries.py
+0
+2017-04-26 04:12:08,552 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2017-04-26 04:12:08,560 : INFO : built Dictionary(980 unique tokens: [u'ffede', u'eefef', u'eefed', u'eefee', u'aaacb']...) from 174 documents (total 6090 corpus positions)
+2017-04-26 04:12:08,560 : INFO : saving Dictionary object under ../models/ts_dict.dict, separately None
+2017-04-26 04:12:08,561 : INFO : saved ../models/ts_dict.dict
+2017-04-26 04:12:08,568 : INFO : storing corpus in Matrix Market format to ../models/ts%d_corpus.mm
+2017-04-26 04:12:08,568 : INFO : saving sparse matrix to ../models/ts%d_corpus.mm
+2017-04-26 04:12:08,568 : INFO : PROGRESS: saving document #0
+2017-04-26 04:12:08,583 : INFO : saved 174x980 matrix, density=2.191% (3736/170520)
+2017-04-26 04:12:08,583 : INFO : saving MmCorpus index to ../models/ts%d_corpus.mm.index
+2017-04-26 04:12:08,583 : INFO : using symmetric alpha at 0.05
+2017-04-26 04:12:08,583 : INFO : using symmetric eta at 0.00102040816327
+2017-04-26 04:12:08,583 : INFO : using serial LDA version on this node
+2017-04-26 04:12:08,830 : INFO : running online LDA training, 20 topics, 20 passes over the supplied corpus of 174 documents, updating model once every 174 documents, evaluating perplexity every 174 documents, iterating 50x with a convergence threshold of 0.001000
+2017-04-26 04:12:09,795 : INFO : -12.895 per-word bound, 7616.1 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:09,795 : INFO : PROGRESS: pass 0, at document #174/174
+2017-04-26 04:12:10,372 : INFO : topic #7 (0.050): 0.056*"fffff" + 0.042*"ffffg" + 0.025*"fffgf" + 0.024*"fggff" + 0.021*"gffff" + 0.021*"ggggg" + 0.020*"gggfg" + 0.019*"ffgff" + 0.017*"fgggg" + 0.016*"fffef"
+2017-04-26 04:12:10,372 : INFO : topic #3 (0.050): 0.171*"fffff" + 0.053*"fffgf" + 0.036*"ffffg" + 0.033*"fffef" + 0.028*"ffffe" + 0.019*"fefff" + 0.018*"fgfff" + 0.018*"ffgff" + 0.017*"edeee" + 0.016*"ffeff"
+2017-04-26 04:12:10,372 : INFO : topic #10 (0.050): 0.022*"ccdcc" + 0.017*"ccccc" + 0.017*"cccdc" + 0.016*"ddded" + 0.015*"cddde" + 0.015*"ddedd" + 0.014*"ddddd" + 0.014*"dddcc" + 0.013*"ddcdc" + 0.013*"cccbc"
+2017-04-26 04:12:10,372 : INFO : topic #1 (0.050): 0.022*"ffgfe" + 0.020*"effgf" + 0.018*"ffeff" + 0.018*"fgggf" + 0.017*"gffgf" + 0.017*"fefff" + 0.016*"fdefg" + 0.016*"fffge" + 0.016*"ggfgg" + 0.016*"gfeeg"
+2017-04-26 04:12:10,373 : INFO : topic #2 (0.050): 0.016*"fffgg" + 0.014*"dddfd" + 0.011*"ddcdd" + 0.011*"eeeee" + 0.011*"ggfgf" + 0.011*"gfggg" + 0.010*"gfgff" + 0.010*"fgggf" + 0.009*"ddedd" + 0.007*"cbbbb"
+2017-04-26 04:12:10,373 : INFO : topic diff=15.076922, rho=1.000000
+2017-04-26 04:12:10,670 : INFO : -5.714 per-word bound, 52.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:10,670 : INFO : PROGRESS: pass 1, at document #174/174
+2017-04-26 04:12:10,863 : INFO : topic #12 (0.050): 0.596*"ggggg" + 0.061*"bbbbb" + 0.026*"gggfg" + 0.020*"fgggg" + 0.019*"bcbbb" + 0.017*"gfggg" + 0.015*"ggggf" + 0.013*"ggfgg" + 0.010*"bbbbc" + 0.008*"bbbab"
+2017-04-26 04:12:10,864 : INFO : topic #5 (0.050): 0.413*"aaaaa" + 0.078*"aabaa" + 0.061*"aaaba" + 0.052*"abaaa" + 0.051*"aaaab" + 0.031*"baaaa" + 0.018*"eeeee" + 0.015*"ababa" + 0.014*"bbaaa" + 0.011*"babaa"
+2017-04-26 04:12:10,864 : INFO : topic #19 (0.050): 0.113*"bbbbb" + 0.048*"bbabb" + 0.038*"bbbab" + 0.036*"babbb" + 0.025*"bbbba" + 0.018*"aabbb" + 0.018*"baabb" + 0.017*"baaab" + 0.016*"abbbb" + 0.014*"baaba"
+2017-04-26 04:12:10,864 : INFO : topic #6 (0.050): 0.066*"ggggf" + 0.066*"gfggg" + 0.062*"ggfgg" + 0.044*"ggggg" + 0.042*"fgggg" + 0.040*"gggfg" + 0.028*"ggfgf" + 0.021*"fgfgg" + 0.018*"fggfg" + 0.015*"bbbbc"
+2017-04-26 04:12:10,864 : INFO : topic #4 (0.050): 0.028*"ccccc" + 0.023*"cbccc" + 0.019*"cccdc" + 0.015*"ccdbc" + 0.012*"ccbcc" + 0.012*"ccdcc" + 0.010*"ccdce" + 0.009*"ggfgg" + 0.009*"cbcbd" + 0.009*"bbbcb"
+2017-04-26 04:12:10,864 : INFO : topic diff=0.432638, rho=0.577350
+2017-04-26 04:12:11,153 : INFO : -5.461 per-word bound, 44.1 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:11,153 : INFO : PROGRESS: pass 2, at document #174/174
+2017-04-26 04:12:11,345 : INFO : topic #7 (0.050): 0.029*"ffffg" + 0.026*"fggff" + 0.022*"fffff" + 0.020*"gffff" + 0.015*"ffgff" + 0.015*"fffgf" + 0.015*"gggfg" + 0.012*"gffef" + 0.011*"gfffg" + 0.011*"ffece"
+2017-04-26 04:12:11,345 : INFO : topic #14 (0.050): 0.034*"dddee" + 0.031*"edddd" + 0.031*"ddddd" + 0.026*"ddecd" + 0.019*"eeddd" + 0.018*"gffff" + 0.018*"dddde" + 0.016*"fgfff" + 0.015*"fffff" + 0.014*"ddede"
+2017-04-26 04:12:11,345 : INFO : topic #2 (0.050): 0.019*"dddfd" + 0.017*"fffgg" + 0.015*"eeeee" + 0.015*"ddedd" + 0.014*"deede" + 0.014*"eddce" + 0.013*"ddcdd" + 0.013*"deeee" + 0.013*"eedee" + 0.012*"ededd"
+2017-04-26 04:12:11,345 : INFO : topic #19 (0.050): 0.136*"bbbbb" + 0.048*"bbabb" + 0.042*"bbbab" + 0.038*"babbb" + 0.028*"bbbba" + 0.019*"aabbb" + 0.019*"baabb" + 0.017*"abbbb" + 0.017*"baaab" + 0.015*"bbbcb"
+2017-04-26 04:12:11,345 : INFO : topic #15 (0.050): 0.031*"bbbbb" + 0.025*"cddcc" + 0.014*"bbcbc" + 0.014*"ggfgg" + 0.012*"cdccd" + 0.011*"ggggg" + 0.011*"cdcde" + 0.011*"bbbbc" + 0.011*"fgfgf" + 0.010*"fgffg"
+2017-04-26 04:12:11,345 : INFO : topic diff=0.366498, rho=0.500000
+2017-04-26 04:12:11,642 : INFO : -5.313 per-word bound, 39.8 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:11,642 : INFO : PROGRESS: pass 3, at document #174/174
+2017-04-26 04:12:11,833 : INFO : topic #10 (0.050): 0.023*"ddcdc" + 0.022*"ccdcc" + 0.021*"ddded" + 0.021*"dddcc" + 0.020*"cccdc" + 0.018*"cddcd" + 0.017*"ddddd" + 0.017*"cddde" + 0.017*"ddddc" + 0.017*"cdddd"
+2017-04-26 04:12:11,833 : INFO : topic #14 (0.050): 0.038*"dddee" + 0.037*"edddd" + 0.033*"ddddd" + 0.026*"ddecd" + 0.020*"eeddd" + 0.019*"dddde" + 0.017*"edded" + 0.016*"ddede" + 0.013*"dddce" + 0.013*"edede"
+2017-04-26 04:12:11,833 : INFO : topic #3 (0.050): 0.190*"fffff" + 0.055*"fffgf" + 0.047*"fffef" + 0.045*"ffffg" + 0.032*"ffffe" + 0.031*"ffeff" + 0.029*"effff" + 0.029*"eeeee" + 0.021*"ffgff" + 0.020*"fgfff"
+2017-04-26 04:12:11,833 : INFO : topic #15 (0.050): 0.030*"bbbbb" + 0.027*"cddcc" + 0.016*"bbcbc" + 0.013*"cdccd" + 0.013*"cdcdc" + 0.013*"cdcde" + 0.012*"bccbb" + 0.012*"dcdcc" + 0.011*"bbbbc" + 0.011*"bcbcc"
+2017-04-26 04:12:11,833 : INFO : topic #7 (0.050): 0.023*"fggff" + 0.023*"ffffg" + 0.014*"fffff" + 0.014*"gggfg" + 0.013*"ffece" + 0.013*"gffff" + 0.012*"gffef" + 0.012*"ffgff" + 0.012*"fffgf" + 0.010*"ffefg"
+2017-04-26 04:12:11,833 : INFO : topic diff=0.309238, rho=0.447214
+2017-04-26 04:12:12,141 : INFO : -5.215 per-word bound, 37.1 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:12,141 : INFO : PROGRESS: pass 4, at document #174/174
+2017-04-26 04:12:12,318 : INFO : topic #10 (0.050): 0.023*"ddcdc" + 0.023*"ddded" + 0.022*"ccdcc" + 0.022*"dddcc" + 0.020*"cccdc" + 0.019*"ddddc" + 0.019*"cdddd" + 0.019*"ddddd" + 0.019*"cddcd" + 0.018*"cddde"
+2017-04-26 04:12:12,318 : INFO : topic #16 (0.050): 0.037*"feeee" + 0.027*"cccbb" + 0.018*"eeeff" + 0.017*"cbbcb" + 0.015*"bbcbc" + 0.015*"bcccc" + 0.014*"cccbc" + 0.014*"eeeef" + 0.014*"eeeee" + 0.014*"eefef"
+2017-04-26 04:12:12,318 : INFO : topic #1 (0.050): 0.030*"effgf" + 0.025*"ffgfe" + 0.023*"feeff" + 0.021*"fefff" + 0.020*"ffeff" + 0.019*"fgggf" + 0.019*"gffgf" + 0.019*"fdefg" + 0.019*"fffge" + 0.019*"ggfgg"
+2017-04-26 04:12:12,318 : INFO : topic #4 (0.050): 0.030*"cbccc" + 0.027*"ccccc" + 0.022*"cccdc" + 0.020*"ccdbc" + 0.013*"eeded" + 0.012*"dbccb" + 0.012*"ccbcc" + 0.011*"eedfd" + 0.010*"ccdce" + 0.010*"cbcdc"
+2017-04-26 04:12:12,318 : INFO : topic #5 (0.050): 0.447*"aaaaa" + 0.085*"aabaa" + 0.065*"aaaba" + 0.058*"abaaa" + 0.051*"aaaab" + 0.032*"baaaa" + 0.016*"bbaaa" + 0.012*"ababa" + 0.012*"eeeee" + 0.010*"babaa"
+2017-04-26 04:12:12,319 : INFO : topic diff=0.256280, rho=0.408248
+2017-04-26 04:12:12,612 : INFO : -5.148 per-word bound, 35.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:12,612 : INFO : PROGRESS: pass 5, at document #174/174
+2017-04-26 04:12:12,781 : INFO : topic #14 (0.050): 0.045*"edddd" + 0.042*"dddee" + 0.034*"ddddd" + 0.023*"ddecd" + 0.021*"eeddd" + 0.021*"dddde" + 0.020*"edded" + 0.020*"ddede" + 0.014*"dddce" + 0.014*"edede"
+2017-04-26 04:12:12,781 : INFO : topic #12 (0.050): 0.790*"ggggg" + 0.030*"gggfg" + 0.015*"fgggg" + 0.014*"ggggf" + 0.011*"bbbbb" + 0.007*"gfggg" + 0.006*"bcbbb" + 0.004*"ggfgg" + 0.003*"abbcc" + 0.003*"ffggg"
+2017-04-26 04:12:12,781 : INFO : topic #17 (0.050): 0.038*"bbbcb" + 0.030*"bbbbc" + 0.027*"cbcbc" + 0.024*"bcbcb" + 0.023*"bbbcc" + 0.020*"cbcbb" + 0.017*"cbbbc" + 0.017*"bbbbb" + 0.016*"ccbcc" + 0.015*"bbbca"
+2017-04-26 04:12:12,781 : INFO : topic #15 (0.050): 0.030*"cddcc" + 0.024*"bbbbb" + 0.019*"bbcbc" + 0.017*"cdcdc" + 0.016*"bccbb" + 0.015*"dcdcc" + 0.015*"cdccd" + 0.014*"cdcde" + 0.012*"bcbbb" + 0.012*"bcbcc"
+2017-04-26 04:12:12,781 : INFO : topic #8 (0.050): 0.024*"feeff" + 0.012*"efdee" + 0.012*"edeef" + 0.012*"eeffd" + 0.012*"fefgf" + 0.012*"eefgd" + 0.012*"fedff" + 0.012*"gfgef" + 0.012*"fegdd" + 0.012*"gfege"
+2017-04-26 04:12:12,781 : INFO : topic diff=0.209153, rho=0.377964
+2017-04-26 04:12:13,063 : INFO : -5.101 per-word bound, 34.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:13,063 : INFO : PROGRESS: pass 6, at document #174/174
+2017-04-26 04:12:13,221 : INFO : topic #11 (0.050): 0.046*"gfggf" + 0.043*"ggggg" + 0.035*"ffggg" + 0.030*"ffgff" + 0.030*"ffffg" + 0.021*"fggfg" + 0.021*"ddddd" + 0.020*"gggfg" + 0.018*"fgggg" + 0.016*"ffgfg"
+2017-04-26 04:12:13,222 : INFO : topic #9 (0.050): 0.090*"ccccc" + 0.037*"cccbc" + 0.034*"ccccb" + 0.029*"ccdcc" + 0.029*"ccbcc" + 0.029*"cdccb" + 0.021*"bcccc" + 0.021*"cbbcc" + 0.021*"cccdc" + 0.021*"cccbb"
+2017-04-26 04:12:13,222 : INFO : topic #18 (0.050): 0.048*"ccccc" + 0.026*"cccdc" + 0.017*"ffgff" + 0.017*"fggff" + 0.017*"gfefg" + 0.017*"ffeeg" + 0.016*"ccccb" + 0.014*"bcdcc" + 0.014*"bdccb" + 0.013*"ccbdd"
+2017-04-26 04:12:13,222 : INFO : topic #3 (0.050): 0.181*"fffff" + 0.053*"fffgf" + 0.045*"fffef" + 0.045*"ffffg" + 0.045*"eeeee" + 0.031*"ffeff" + 0.031*"effff" + 0.030*"ffffe" + 0.025*"eeede" + 0.023*"gffff"
+2017-04-26 04:12:13,222 : INFO : topic #2 (0.050): 0.026*"deede" + 0.026*"eeeee" + 0.021*"dddfd" + 0.020*"ddedd" + 0.020*"eddce" + 0.017*"deeee" + 0.017*"eedee" + 0.014*"ddcdd" + 0.014*"ededd" + 0.013*"efdee"
+2017-04-26 04:12:13,222 : INFO : topic diff=0.170272, rho=0.353553
+2017-04-26 04:12:13,506 : INFO : -5.065 per-word bound, 33.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:13,506 : INFO : PROGRESS: pass 7, at document #174/174
+2017-04-26 04:12:13,665 : INFO : topic #17 (0.050): 0.036*"bbbcb" + 0.031*"bbbbc" + 0.031*"cbcbc" + 0.026*"bcbcb" + 0.024*"bbbcc" + 0.022*"cbcbb" + 0.020*"cbbbc" + 0.016*"ccbcc" + 0.016*"bbbca" + 0.015*"abccc"
+2017-04-26 04:12:13,665 : INFO : topic #16 (0.050): 0.058*"feeee" + 0.027*"eefef" + 0.022*"eeeef" + 0.022*"eeeee" + 0.022*"eeeff" + 0.021*"cccbb" + 0.020*"efeee" + 0.020*"eeeed" + 0.019*"eeefe" + 0.017*"cbbcb"
+2017-04-26 04:12:13,665 : INFO : topic #12 (0.050): 0.819*"ggggg" + 0.030*"gggfg" + 0.014*"fgggg" + 0.013*"ggggf" + 0.005*"gfggg" + 0.005*"bbbbb" + 0.003*"abbcc" + 0.003*"bcbbb" + 0.003*"ffggg" + 0.002*"ggfgg"
+2017-04-26 04:12:13,666 : INFO : topic #11 (0.050): 0.046*"gfggf" + 0.038*"ffggg" + 0.036*"ggggg" + 0.032*"ffgff" + 0.032*"ffffg" + 0.022*"ddddd" + 0.018*"fggfg" + 0.018*"ffgfg" + 0.017*"gggfg" + 0.017*"ddded"
+2017-04-26 04:12:13,666 : INFO : topic #5 (0.050): 0.467*"aaaaa" + 0.090*"aabaa" + 0.067*"aaaba" + 0.061*"abaaa" + 0.051*"aaaab" + 0.034*"baaaa" + 0.016*"bbaaa" + 0.011*"ababa" + 0.010*"aabab" + 0.010*"babaa"
+2017-04-26 04:12:13,666 : INFO : topic diff=0.138248, rho=0.333333
+2017-04-26 04:12:13,937 : INFO : -5.039 per-word bound, 32.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:13,938 : INFO : PROGRESS: pass 8, at document #174/174
+2017-04-26 04:12:14,097 : INFO : topic #11 (0.050): 0.044*"gfggf" + 0.040*"ffggg" + 0.034*"ffgff" + 0.034*"ffffg" + 0.029*"ggggg" + 0.023*"ddddd" + 0.019*"ffgfg" + 0.017*"ddded" + 0.017*"gffgf" + 0.016*"fggfg"
+2017-04-26 04:12:14,097 : INFO : topic #15 (0.050): 0.034*"cddcc" + 0.021*"bbcbc" + 0.020*"cdcdc" + 0.018*"dcdcc" + 0.018*"bccbb" + 0.016*"cdccd" + 0.016*"cdcde" + 0.013*"bbbbb" + 0.012*"bcbcc" + 0.011*"cedcc"
+2017-04-26 04:12:14,097 : INFO : topic #16 (0.050): 0.061*"feeee" + 0.029*"eefef" + 0.025*"eeeee" + 0.025*"eeeef" + 0.023*"efeee" + 0.022*"eeeed" + 0.022*"eeeff" + 0.020*"eeefe" + 0.019*"cccbb" + 0.017*"cbbcb"
+2017-04-26 04:12:14,097 : INFO : topic #8 (0.050): 0.024*"feeff" + 0.012*"efdee" + 0.012*"edeef" + 0.012*"eeffd" + 0.012*"fefgf" + 0.012*"eefgd" + 0.012*"fedff" + 0.012*"gfgef" + 0.012*"fegdd" + 0.012*"gfege"
+2017-04-26 04:12:14,097 : INFO : topic #19 (0.050): 0.187*"bbbbb" + 0.049*"bbabb" + 0.044*"bbbab" + 0.041*"babbb" + 0.031*"bbbba" + 0.027*"bbbbc" + 0.026*"bbbcb" + 0.021*"bcbbb" + 0.019*"aabbb" + 0.019*"abbbb"
+2017-04-26 04:12:14,097 : INFO : topic diff=0.112700, rho=0.316228
+2017-04-26 04:12:14,363 : INFO : -5.019 per-word bound, 32.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:14,363 : INFO : PROGRESS: pass 9, at document #174/174
+2017-04-26 04:12:14,517 : INFO : topic #3 (0.050): 0.180*"fffff" + 0.052*"fffgf" + 0.050*"eeeee" + 0.045*"ffffg" + 0.045*"fffef" + 0.031*"effff" + 0.031*"ffeff" + 0.029*"ffffe" + 0.025*"eeede" + 0.024*"gffff"
+2017-04-26 04:12:14,518 : INFO : topic #7 (0.050): 0.018*"fggff" + 0.017*"ffece" + 0.013*"ffffg" + 0.013*"eeefd" + 0.013*"eeddf" + 0.012*"gggfg" + 0.012*"gffef" + 0.012*"ffefg" + 0.012*"ddfcc" + 0.012*"eefee"
+2017-04-26 04:12:14,518 : INFO : topic #9 (0.050): 0.093*"ccccc" + 0.039*"cccbc" + 0.036*"ccccb" + 0.031*"ccbcc" + 0.030*"ccdcc" + 0.027*"cdccb" + 0.023*"ccccd" + 0.023*"cccbb" + 0.023*"bcccc" + 0.022*"cccdc"
+2017-04-26 04:12:14,518 : INFO : topic #6 (0.050): 0.083*"gfggg" + 0.079*"ggfgg" + 0.073*"ggggf" + 0.061*"fgggg" + 0.061*"gggfg" + 0.044*"ggggg" + 0.035*"ggfgf" + 0.035*"fggfg" + 0.031*"gggff" + 0.029*"fggff"
+2017-04-26 04:12:14,518 : INFO : topic #8 (0.050): 0.024*"feeff" + 0.012*"efdee" + 0.012*"edeef" + 0.012*"eeffd" + 0.012*"fefgf" + 0.012*"eefgd" + 0.012*"fedff" + 0.012*"gfgef" + 0.012*"fegdd" + 0.012*"gfege"
+2017-04-26 04:12:14,518 : INFO : topic diff=0.092608, rho=0.301511
+2017-04-26 04:12:14,784 : INFO : -5.003 per-word bound, 32.1 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:14,784 : INFO : PROGRESS: pass 10, at document #174/174
+2017-04-26 04:12:14,949 : INFO : topic #0 (0.050): 0.022*"ddccc" + 0.017*"dddcc" + 0.017*"effee" + 0.016*"edeef" + 0.013*"dcdcd" + 0.013*"eeeef" + 0.013*"efefe" + 0.013*"cdffe" + 0.013*"fceff" + 0.013*"ceefe"
+2017-04-26 04:12:14,949 : INFO : topic #12 (0.050): 0.838*"ggggg" + 0.029*"gggfg" + 0.013*"fgggg" + 0.012*"ggggf" + 0.003*"gfggg" + 0.003*"abbcc" + 0.003*"ffggg" + 0.002*"bbbbb" + 0.002*"gegff" + 0.002*"bcacb"
+2017-04-26 04:12:14,949 : INFO : topic #18 (0.050): 0.033*"ccccc" + 0.023*"cccdc" + 0.018*"ffgff" + 0.018*"fggff" + 0.018*"gfefg" + 0.018*"ffeeg" + 0.017*"bcdcc" + 0.017*"bdccb" + 0.017*"ccbdd" + 0.010*"ccccb"
+2017-04-26 04:12:14,950 : INFO : topic #2 (0.050): 0.028*"deede" + 0.027*"eeeee" + 0.022*"dddfd" + 0.022*"ddedd" + 0.022*"eddce" + 0.018*"deeee" + 0.018*"eedee" + 0.015*"ddcdd" + 0.015*"ededd" + 0.014*"efdee"
+2017-04-26 04:12:14,950 : INFO : topic #11 (0.050): 0.044*"ffggg" + 0.038*"ffgff" + 0.038*"gfggf" + 0.037*"ffffg" + 0.024*"ddddd" + 0.020*"ffgfg" + 0.019*"ggggg" + 0.018*"gffgf" + 0.018*"ddded" + 0.014*"ddcdd"
+2017-04-26 04:12:14,950 : INFO : topic diff=0.076658, rho=0.288675
+2017-04-26 04:12:15,211 : INFO : -4.990 per-word bound, 31.8 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:15,212 : INFO : PROGRESS: pass 11, at document #174/174
+2017-04-26 04:12:15,363 : INFO : topic #17 (0.050): 0.034*"cbcbc" + 0.032*"bbbcb" + 0.032*"bbbbc" + 0.029*"bcbcb" + 0.025*"bbbcc" + 0.024*"cbcbb" + 0.022*"cbbbc" + 0.018*"cbccc" + 0.017*"ccbcc" + 0.016*"cbbbb"
+2017-04-26 04:12:15,363 : INFO : topic #14 (0.050): 0.052*"edddd" + 0.045*"dddee" + 0.034*"ddddd" + 0.023*"eeddd" + 0.023*"dddde" + 0.022*"edded" + 0.022*"ddede" + 0.018*"ddecd" + 0.015*"edede" + 0.015*"ddece"
+2017-04-26 04:12:15,363 : INFO : topic #12 (0.050): 0.841*"ggggg" + 0.029*"gggfg" + 0.012*"fgggg" + 0.012*"ggggf" + 0.003*"gfggg" + 0.003*"abbcc" + 0.003*"ffggg" + 0.002*"gegff" + 0.002*"bcacb" + 0.002*"edeef"
+2017-04-26 04:12:15,364 : INFO : topic #16 (0.050): 0.068*"feeee" + 0.037*"eeeee" + 0.032*"eefef" + 0.032*"eeeef" + 0.029*"eeeed" + 0.027*"efeee" + 0.025*"eeefe" + 0.023*"eeeff" + 0.018*"feeff" + 0.017*"feeef"
+2017-04-26 04:12:15,364 : INFO : topic #15 (0.050): 0.036*"cddcc" + 0.022*"bbcbc" + 0.022*"cdcdc" + 0.020*"dcdcc" + 0.018*"bccbb" + 0.017*"cdccd" + 0.016*"cdcde" + 0.012*"bcbcc" + 0.011*"cedcc" + 0.011*"cbcdc"
+2017-04-26 04:12:15,364 : INFO : topic diff=0.063915, rho=0.277350
+2017-04-26 04:12:15,626 : INFO : -4.979 per-word bound, 31.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:15,626 : INFO : PROGRESS: pass 12, at document #174/174
+2017-04-26 04:12:15,775 : INFO : topic #14 (0.050): 0.052*"edddd" + 0.045*"dddee" + 0.034*"ddddd" + 0.023*"eeddd" + 0.023*"dddde" + 0.023*"edded" + 0.022*"ddede" + 0.018*"ddecd" + 0.015*"edede" + 0.015*"ddece"
+2017-04-26 04:12:15,775 : INFO : topic #5 (0.050): 0.477*"aaaaa" + 0.093*"aabaa" + 0.068*"aaaba" + 0.063*"abaaa" + 0.051*"aaaab" + 0.035*"baaaa" + 0.017*"bbaaa" + 0.011*"ababa" + 0.010*"aabab" + 0.009*"abbaa"
+2017-04-26 04:12:15,775 : INFO : topic #7 (0.050): 0.018*"fggff" + 0.017*"ffece" + 0.015*"eeefd" + 0.015*"eeddf" + 0.012*"ffffg" + 0.012*"gggfg" + 0.012*"gffef" + 0.012*"ffefg" + 0.012*"ddfcc" + 0.012*"eefee"
+2017-04-26 04:12:15,775 : INFO : topic #1 (0.050): 0.031*"effgf" + 0.030*"ffgfe" + 0.025*"fffee" + 0.023*"fefff" + 0.022*"feeff" + 0.021*"ffeff" + 0.019*"fgggf" + 0.019*"gffgf" + 0.019*"fdefg" + 0.019*"fffge"
+2017-04-26 04:12:15,775 : INFO : topic #11 (0.050): 0.047*"ffggg" + 0.040*"ffgff" + 0.039*"ffffg" + 0.030*"gfggf" + 0.026*"ddddd" + 0.021*"ffgfg" + 0.019*"gffgf" + 0.018*"ddded" + 0.015*"ddced" + 0.015*"dddde"
+2017-04-26 04:12:15,775 : INFO : topic diff=0.053663, rho=0.267261
+2017-04-26 04:12:16,031 : INFO : -4.970 per-word bound, 31.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:16,031 : INFO : PROGRESS: pass 13, at document #174/174
+2017-04-26 04:12:16,179 : INFO : topic #4 (0.050): 0.030*"cbccc" + 0.026*"ccccc" + 0.021*"ccdbc" + 0.021*"cccdc" + 0.014*"eeded" + 0.014*"dbccb" + 0.013*"deded" + 0.013*"edeed" + 0.012*"eedfd" + 0.011*"ccbcc"
+2017-04-26 04:12:16,179 : INFO : topic #10 (0.050): 0.029*"ddddc" + 0.029*"ddded" + 0.027*"cdddd" + 0.026*"ddedd" + 0.025*"dddcd" + 0.024*"ddddd" + 0.021*"ddcdc" + 0.021*"dddcc" + 0.020*"ccdcc" + 0.020*"cddde"
+2017-04-26 04:12:16,180 : INFO : topic #0 (0.050): 0.022*"ddccc" + 0.018*"dddcc" + 0.017*"effee" + 0.017*"edeef" + 0.013*"dcdcd" + 0.013*"eeeef" + 0.013*"efefe" + 0.013*"cdffe" + 0.013*"fceff" + 0.013*"ceefe"
+2017-04-26 04:12:16,180 : INFO : topic #5 (0.050): 0.478*"aaaaa" + 0.093*"aabaa" + 0.068*"aaaba" + 0.063*"abaaa" + 0.051*"aaaab" + 0.035*"baaaa" + 0.017*"bbaaa" + 0.011*"ababa" + 0.010*"aabab" + 0.009*"abbaa"
+2017-04-26 04:12:16,180 : INFO : topic #15 (0.050): 0.037*"cddcc" + 0.022*"bbcbc" + 0.022*"cdcdc" + 0.020*"dcdcc" + 0.018*"bccbb" + 0.017*"cdccd" + 0.017*"cdcde" + 0.012*"bcbcc" + 0.011*"cedcc" + 0.011*"cbcdc"
+2017-04-26 04:12:16,180 : INFO : topic diff=0.045307, rho=0.258199
+2017-04-26 04:12:16,440 : INFO : -4.962 per-word bound, 31.2 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:16,440 : INFO : PROGRESS: pass 14, at document #174/174
+2017-04-26 04:12:16,586 : INFO : topic #6 (0.050): 0.082*"gfggg" + 0.078*"ggfgg" + 0.073*"ggggf" + 0.063*"gggfg" + 0.062*"fgggg" + 0.045*"ggggg" + 0.037*"fggfg" + 0.034*"ggfgf" + 0.033*"gggff" + 0.032*"gfggf"
+2017-04-26 04:12:16,586 : INFO : topic #7 (0.050): 0.017*"fggff" + 0.017*"ffece" + 0.016*"eeefd" + 0.016*"eeddf" + 0.012*"ffffg" + 0.012*"gggfg" + 0.012*"gffef" + 0.012*"ffefg" + 0.012*"ddfcc" + 0.012*"eefee"
+2017-04-26 04:12:16,586 : INFO : topic #8 (0.050): 0.024*"feeff" + 0.012*"efdee" + 0.012*"edeef" + 0.012*"eeffd" + 0.012*"fefgf" + 0.012*"eefgd" + 0.012*"fedff" + 0.012*"gfgef" + 0.012*"fegdd" + 0.012*"gfege"
+2017-04-26 04:12:16,586 : INFO : topic #17 (0.050): 0.036*"cbcbc" + 0.031*"bbbbc" + 0.031*"bcbcb" + 0.028*"bbbcb" + 0.025*"bbbcc" + 0.025*"cbcbb" + 0.023*"cbbbc" + 0.019*"cbccc" + 0.017*"ccbcc" + 0.017*"cbbbb"
+2017-04-26 04:12:16,586 : INFO : topic #1 (0.050): 0.031*"effgf" + 0.031*"ffgfe" + 0.027*"fffee" + 0.023*"fefff" + 0.022*"feeff" + 0.021*"ffeff" + 0.019*"fgggf" + 0.019*"gffgf" + 0.019*"fdefg" + 0.019*"fffge"
+2017-04-26 04:12:16,586 : INFO : topic diff=0.038545, rho=0.250000
+2017-04-26 04:12:16,844 : INFO : -4.955 per-word bound, 31.0 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:16,844 : INFO : PROGRESS: pass 15, at document #174/174
+2017-04-26 04:12:16,987 : INFO : topic #16 (0.050): 0.071*"feeee" + 0.055*"eeeee" + 0.039*"eeeef" + 0.033*"eefef" + 0.033*"eeeed" + 0.030*"eeefe" + 0.028*"efeee" + 0.024*"eeede" + 0.023*"eeeff" + 0.019*"feeff"
+2017-04-26 04:12:16,987 : INFO : topic #12 (0.050): 0.847*"ggggg" + 0.028*"gggfg" + 0.012*"fgggg" + 0.011*"ggggf" + 0.003*"abbcc" + 0.003*"ffggg" + 0.003*"gfggg" + 0.002*"gegff" + 0.002*"bcacb" + 0.002*"edeef"
+2017-04-26 04:12:16,988 : INFO : topic #4 (0.050): 0.030*"cbccc" + 0.026*"ccccc" + 0.021*"ccdbc" + 0.020*"cccdc" + 0.014*"eeded" + 0.014*"dbccb" + 0.013*"deded" + 0.013*"edeed" + 0.012*"eedfd" + 0.010*"ccbcc"
+2017-04-26 04:12:16,988 : INFO : topic #0 (0.050): 0.022*"ddccc" + 0.018*"dddcc" + 0.017*"effee" + 0.017*"edeef" + 0.013*"dcdcd" + 0.013*"eeeef" + 0.013*"efefe" + 0.013*"cdffe" + 0.013*"fceff" + 0.013*"ceefe"
+2017-04-26 04:12:16,988 : INFO : topic #17 (0.050): 0.036*"cbcbc" + 0.031*"bbbbc" + 0.031*"bcbcb" + 0.027*"bbbcb" + 0.025*"cbcbb" + 0.025*"bbbcc" + 0.024*"cbbbc" + 0.020*"cbccc" + 0.017*"ccbcc" + 0.017*"cbbbb"
+2017-04-26 04:12:16,988 : INFO : topic diff=0.033596, rho=0.242536
+2017-04-26 04:12:17,245 : INFO : -4.950 per-word bound, 30.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:17,245 : INFO : PROGRESS: pass 16, at document #174/174
+2017-04-26 04:12:17,392 : INFO : topic #19 (0.050): 0.198*"bbbbb" + 0.050*"bbabb" + 0.044*"bbbab" + 0.042*"babbb" + 0.033*"bbbcb" + 0.032*"bbbbc" + 0.031*"bbbba" + 0.024*"bcbbb" + 0.019*"aabbb" + 0.019*"abbbb"
+2017-04-26 04:12:17,392 : INFO : topic #3 (0.050): 0.187*"fffff" + 0.053*"fffgf" + 0.047*"ffffg" + 0.046*"fffef" + 0.042*"eeeee" + 0.032*"effff" + 0.031*"ffeff" + 0.029*"ffffe" + 0.026*"gffff" + 0.024*"ffgff"
+2017-04-26 04:12:17,392 : INFO : topic #11 (0.050): 0.050*"ffggg" + 0.043*"ffgff" + 0.042*"ffffg" + 0.027*"ddddd" + 0.022*"ffgfg" + 0.019*"gffgf" + 0.019*"ddded" + 0.018*"gfggf" + 0.016*"ddced" + 0.016*"dddde"
+2017-04-26 04:12:17,392 : INFO : topic #14 (0.050): 0.053*"edddd" + 0.045*"dddee" + 0.034*"ddddd" + 0.023*"eeddd" + 0.023*"dddde" + 0.023*"edded" + 0.023*"ddede" + 0.017*"ddecd" + 0.015*"edede" + 0.015*"ddece"
+2017-04-26 04:12:17,392 : INFO : topic #16 (0.050): 0.071*"feeee" + 0.063*"eeeee" + 0.040*"eeeef" + 0.034*"eeeed" + 0.033*"eefef" + 0.033*"eeefe" + 0.028*"efeee" + 0.027*"eeede" + 0.022*"eeeff" + 0.019*"feeff"
+2017-04-26 04:12:17,393 : INFO : topic diff=0.029408, rho=0.235702
+2017-04-26 04:12:17,652 : INFO : -4.945 per-word bound, 30.8 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:17,652 : INFO : PROGRESS: pass 17, at document #174/174
+2017-04-26 04:12:17,799 : INFO : topic #14 (0.050): 0.053*"edddd" + 0.045*"dddee" + 0.034*"ddddd" + 0.023*"eeddd" + 0.023*"dddde" + 0.023*"edded" + 0.023*"ddede" + 0.017*"ddecd" + 0.015*"edede" + 0.015*"ddece"
+2017-04-26 04:12:17,799 : INFO : topic #16 (0.050): 0.071*"eeeee" + 0.070*"feeee" + 0.042*"eeeef" + 0.035*"eeefe" + 0.034*"eeeed" + 0.033*"eefef" + 0.029*"eeede" + 0.027*"efeee" + 0.022*"eeeff" + 0.019*"feeff"
+2017-04-26 04:12:17,799 : INFO : topic #11 (0.050): 0.051*"ffggg" + 0.043*"ffgff" + 0.042*"ffffg" + 0.028*"ddddd" + 0.022*"ffgfg" + 0.019*"gffgf" + 0.019*"ddded" + 0.016*"gfggf" + 0.016*"ddced" + 0.016*"dddde"
+2017-04-26 04:12:17,799 : INFO : topic #17 (0.050): 0.037*"cbcbc" + 0.031*"bcbcb" + 0.031*"bbbbc" + 0.026*"bbbcb" + 0.025*"cbcbb" + 0.025*"bbbcc" + 0.024*"cbbbc" + 0.020*"cbccc" + 0.017*"bbccc" + 0.017*"ccbcc"
+2017-04-26 04:12:17,799 : INFO : topic #8 (0.050): 0.024*"feeff" + 0.012*"efdee" + 0.012*"edeef" + 0.012*"eeffd" + 0.012*"fefgf" + 0.012*"eefgd" + 0.012*"fedff" + 0.012*"gfgef" + 0.012*"fegdd" + 0.012*"gfege"
+2017-04-26 04:12:17,800 : INFO : topic diff=0.025889, rho=0.229416
+2017-04-26 04:12:18,057 : INFO : -4.941 per-word bound, 30.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:18,057 : INFO : PROGRESS: pass 18, at document #174/174
+2017-04-26 04:12:18,204 : INFO : topic #4 (0.050): 0.030*"cbccc" + 0.025*"ccccc" + 0.020*"ccdbc" + 0.020*"cccdc" + 0.014*"eeded" + 0.014*"dbccb" + 0.013*"deded" + 0.013*"edeed" + 0.012*"eedfd" + 0.012*"deedd"
+2017-04-26 04:12:18,204 : INFO : topic #1 (0.050): 0.031*"effgf" + 0.031*"ffgfe" + 0.029*"fffee" + 0.023*"fefff" + 0.022*"feeff" + 0.021*"ffeff" + 0.019*"fgggf" + 0.019*"gffgf" + 0.019*"fdefg" + 0.019*"fffge"
+2017-04-26 04:12:18,204 : INFO : topic #2 (0.050): 0.029*"deede" + 0.028*"eeeee" + 0.022*"dddfd" + 0.022*"ddedd" + 0.022*"eddce" + 0.020*"deeee" + 0.020*"eedee" + 0.015*"ddcdd" + 0.015*"ededd" + 0.015*"efdee"
+2017-04-26 04:12:18,205 : INFO : topic #7 (0.050): 0.017*"fggff" + 0.017*"ffece" + 0.017*"eeefd" + 0.017*"eeddf" + 0.012*"ffffg" + 0.012*"gggfg" + 0.012*"gffef" + 0.012*"ffefg" + 0.012*"ddfcc" + 0.012*"eefee"
+2017-04-26 04:12:18,205 : INFO : topic #6 (0.050): 0.082*"gfggg" + 0.077*"ggfgg" + 0.072*"ggggf" + 0.063*"gggfg" + 0.063*"fgggg" + 0.046*"ggggg" + 0.038*"fggfg" + 0.036*"gfggf" + 0.034*"ggfgf" + 0.033*"gggff"
+2017-04-26 04:12:18,205 : INFO : topic diff=0.022852, rho=0.223607
+2017-04-26 04:12:18,466 : INFO : -4.937 per-word bound, 30.6 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:18,466 : INFO : PROGRESS: pass 19, at document #174/174
+2017-04-26 04:12:18,612 : INFO : topic #14 (0.050): 0.053*"edddd" + 0.045*"dddee" + 0.034*"ddddd" + 0.023*"eeddd" + 0.023*"dddde" + 0.023*"edded" + 0.023*"ddede" + 0.017*"ddecd" + 0.015*"edede" + 0.015*"ddece"
+2017-04-26 04:12:18,612 : INFO : topic #0 (0.050): 0.022*"ddccc" + 0.018*"dddcc" + 0.017*"effee" + 0.017*"edeef" + 0.013*"dcdcd" + 0.013*"eeeef" + 0.013*"efefe" + 0.013*"cdffe" + 0.013*"fceff" + 0.013*"ceefe"
+2017-04-26 04:12:18,612 : INFO : topic #5 (0.050): 0.482*"aaaaa" + 0.096*"aabaa" + 0.068*"aaaba" + 0.063*"abaaa" + 0.050*"aaaab" + 0.035*"baaaa" + 0.017*"bbaaa" + 0.010*"aabab" + 0.010*"ababa" + 0.009*"abbaa"
+2017-04-26 04:12:18,612 : INFO : topic #17 (0.050): 0.037*"cbcbc" + 0.032*"bcbcb" + 0.031*"bbbbc" + 0.026*"cbcbb" + 0.025*"bbbcc" + 0.024*"bbbcb" + 0.024*"cbbbc" + 0.021*"cbccc" + 0.017*"bbccc" + 0.017*"cbbbb"
+2017-04-26 04:12:18,612 : INFO : topic #13 (0.050): 0.081*"aaaba" + 0.058*"ababa" + 0.047*"baaab" + 0.046*"baaaa" + 0.045*"aaaab" + 0.039*"babab" + 0.038*"abbba" + 0.036*"bbbab" + 0.035*"aabaa" + 0.031*"aaaaa"
+2017-04-26 04:12:18,612 : INFO : topic diff=0.020425, rho=0.218218
+2017-04-26 04:12:18,612 : INFO : saving LdaState object under ../models/ts2_lda_20.lda.state, separately None
+2017-04-26 04:12:18,613 : INFO : saved ../models/ts2_lda_20.lda.state
+2017-04-26 04:12:18,614 : INFO : saving LdaModel object under ../models/ts2_lda_20.lda, separately ['expElogbeta', 'sstats']
+2017-04-26 04:12:18,614 : INFO : not storing attribute id2word
+2017-04-26 04:12:18,614 : INFO : storing np array 'expElogbeta' to ../models/ts2_lda_20.lda.expElogbeta.npy
+2017-04-26 04:12:18,614 : INFO : not storing attribute state
+2017-04-26 04:12:18,614 : INFO : not storing attribute dispatcher
+2017-04-26 04:12:18,615 : INFO : saved ../models/ts2_lda_20.lda
+2017-04-26 04:12:18,615 : INFO : using symmetric alpha at 0.0333333333333
+2017-04-26 04:12:18,615 : INFO : using symmetric eta at 0.00102040816327
+2017-04-26 04:12:18,615 : INFO : using serial LDA version on this node
+2017-04-26 04:12:18,976 : INFO : running online LDA training, 30 topics, 20 passes over the supplied corpus of 174 documents, updating model once every 174 documents, evaluating perplexity every 174 documents, iterating 50x with a convergence threshold of 0.001000
+2017-04-26 04:12:20,112 : INFO : -17.201 per-word bound, 150680.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:20,112 : INFO : PROGRESS: pass 0, at document #174/174
+2017-04-26 04:12:20,760 : INFO : topic #15 (0.033): 0.033*"cccdc" + 0.027*"ccbcc" + 0.021*"bbccc" + 0.020*"ccccc" + 0.019*"cbcbc" + 0.017*"bcbcb" + 0.017*"cccbc" + 0.016*"dcdcb" + 0.015*"ccdcc" + 0.015*"cbbbc"
+2017-04-26 04:12:20,760 : INFO : topic #0 (0.033): 0.025*"ccccc" + 0.024*"edeee" + 0.023*"eeeee" + 0.023*"eeede" + 0.020*"cccdc" + 0.019*"eedee" + 0.018*"deeee" + 0.017*"eeedd" + 0.015*"cddcc" + 0.015*"ddddc"
+2017-04-26 04:12:20,761 : INFO : topic #18 (0.033): 0.046*"aaaba" + 0.043*"aaaab" + 0.040*"baaaa" + 0.032*"bbbab" + 0.032*"aabba" + 0.028*"aaaaa" + 0.027*"bbbaa" + 0.026*"bcaba" + 0.019*"baaab" + 0.018*"abbba"
+2017-04-26 04:12:20,761 : INFO : topic #21 (0.033): 0.143*"aaaaa" + 0.054*"aaaab" + 0.040*"aabaa" + 0.040*"ababa" + 0.038*"aaaba" + 0.024*"babaa" + 0.024*"babab" + 0.023*"bbaab" + 0.020*"cdcdc" + 0.016*"aacaa"
+2017-04-26 04:12:20,761 : INFO : topic #23 (0.033): 0.023*"aaaba" + 0.023*"bbbab" + 0.022*"baaab" + 0.018*"fffgg" + 0.016*"bbbbb" + 0.015*"baaaa" + 0.014*"bbaab" + 0.013*"fgggf" + 0.013*"abbba" + 0.012*"babbb"
+2017-04-26 04:12:20,761 : INFO : topic diff=24.502582, rho=1.000000
+2017-04-26 04:12:21,106 : INFO : -5.818 per-word bound, 56.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:21,106 : INFO : PROGRESS: pass 1, at document #174/174
+2017-04-26 04:12:21,335 : INFO : topic #11 (0.033): 0.014*"effee" + 0.014*"ffece" + 0.014*"cbcec" + 0.013*"edddd" + 0.013*"eedfd" + 0.013*"ddedd" + 0.013*"eeded" + 0.013*"ddddd" + 0.008*"ccccc" + 0.008*"dcccd"
+2017-04-26 04:12:21,335 : INFO : topic #10 (0.033): 0.028*"ffeff" + 0.022*"gfgff" + 0.022*"gffgg" + 0.020*"ffdgf" + 0.018*"fggff" + 0.015*"fffgf" + 0.013*"ffffe" + 0.013*"ffggf" + 0.013*"ffffg" + 0.012*"ggfff"
+2017-04-26 04:12:21,336 : INFO : topic #15 (0.033): 0.037*"cccdc" + 0.028*"ccbcc" + 0.026*"ccccc" + 0.020*"bbccc" + 0.020*"cbcbc" + 0.019*"bcbcb" + 0.019*"cccbc" + 0.018*"dcdcb" + 0.018*"ccdcc" + 0.017*"ccccd"
+2017-04-26 04:12:21,336 : INFO : topic #25 (0.033): 0.014*"cccdc" + 0.010*"ccccc" + 0.008*"ccccd" + 0.008*"ggggg" + 0.007*"ccdcc" + 0.007*"ggfgg" + 0.005*"gggfg" + 0.005*"ddcbd" + 0.005*"bcdcd" + 0.005*"cddec"
+2017-04-26 04:12:21,337 : INFO : topic #9 (0.033): 0.084*"bbbbb" + 0.049*"bbbcb" + 0.034*"bbbbc" + 0.032*"ccbbc" + 0.025*"cccbb" + 0.025*"bbcbc" + 0.025*"bbcbb" + 0.023*"bbbcc" + 0.023*"ccccc" + 0.021*"cbccc"
+2017-04-26 04:12:21,337 : INFO : topic diff=0.364999, rho=0.577350
+2017-04-26 04:12:21,644 : INFO : -5.553 per-word bound, 46.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:21,644 : INFO : PROGRESS: pass 2, at document #174/174
+2017-04-26 04:12:21,847 : INFO : topic #24 (0.033): 0.127*"aaaaa" + 0.105*"aaaba" + 0.093*"aabaa" + 0.046*"baaaa" + 0.032*"ababa" + 0.027*"abbab" + 0.027*"fffff" + 0.019*"abaaa" + 0.019*"acaaa" + 0.018*"aaaab"
+2017-04-26 04:12:21,847 : INFO : topic #17 (0.033): 0.036*"ggggf" + 0.024*"ccdcc" + 0.022*"ccccc" + 0.021*"cccbc" + 0.018*"cdccc" + 0.017*"ccbcc" + 0.017*"fgggg" + 0.016*"ggffg" + 0.015*"dcdcd" + 0.012*"ccccd"
+2017-04-26 04:12:21,847 : INFO : topic #21 (0.033): 0.080*"aaaaa" + 0.050*"aaaab" + 0.049*"ababa" + 0.034*"aaaba" + 0.033*"babab" + 0.030*"aabaa" + 0.030*"bbaab" + 0.027*"babaa" + 0.023*"aacaa" + 0.022*"cdcdc"
+2017-04-26 04:12:21,847 : INFO : topic #25 (0.033): 0.008*"cccdc" + 0.006*"ccccc" + 0.005*"ccccd" + 0.005*"ggggg" + 0.005*"ccdcc" + 0.004*"ggfgg" + 0.003*"gggfg" + 0.003*"ddcbd" + 0.003*"bcdcd" + 0.003*"cddec"
+2017-04-26 04:12:21,847 : INFO : topic #19 (0.033): 0.110*"gfggg" + 0.081*"fgggg" + 0.078*"ggfgg" + 0.059*"ggggf" + 0.056*"gggfg" + 0.041*"gggff" + 0.039*"ggfgf" + 0.036*"gfgff" + 0.034*"ggggg" + 0.034*"fggff"
+2017-04-26 04:12:21,848 : INFO : topic diff=0.326240, rho=0.500000
+2017-04-26 04:12:22,162 : INFO : -5.383 per-word bound, 41.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:22,162 : INFO : PROGRESS: pass 3, at document #174/174
+2017-04-26 04:12:22,373 : INFO : topic #13 (0.033): 0.051*"dddcc" + 0.039*"cdcde" + 0.034*"ddccc" + 0.034*"cdccd" + 0.026*"cddcc" + 0.022*"ccdcc" + 0.020*"cdecc" + 0.020*"dccdc" + 0.019*"ccdcd" + 0.018*"dbcdd"
+2017-04-26 04:12:22,373 : INFO : topic #16 (0.033): 0.075*"fffff" + 0.074*"fffgf" + 0.051*"ffffg" + 0.049*"gffff" + 0.039*"fefff" + 0.035*"ffffe" + 0.021*"fffef" + 0.020*"fgfff" + 0.017*"effgf" + 0.016*"gfffe"
+2017-04-26 04:12:22,373 : INFO : topic #11 (0.033): 0.015*"ddddd" + 0.015*"edddd" + 0.014*"effee" + 0.014*"ffece" + 0.014*"cbcec" + 0.014*"eedfd" + 0.014*"ddedd" + 0.014*"eeded" + 0.011*"ccded" + 0.011*"ddeed"
+2017-04-26 04:12:22,373 : INFO : topic #3 (0.033): 0.621*"ggggg" + 0.042*"gggfg" + 0.031*"ggggf" + 0.023*"ggfgg" + 0.017*"fgggg" + 0.015*"gfggf" + 0.014*"gfggg" + 0.013*"fggfg" + 0.007*"ggffg" + 0.007*"ffgfg"
+2017-04-26 04:12:22,373 : INFO : topic #22 (0.033): 0.031*"abbcb" + 0.025*"bccca" + 0.023*"cbcbb" + 0.021*"cbbbc" + 0.017*"bcccc" + 0.017*"cccbc" + 0.016*"babcb" + 0.016*"ecbbc" + 0.016*"cbabc" + 0.016*"ccbea"
+2017-04-26 04:12:22,373 : INFO : topic diff=0.275291, rho=0.447214
+2017-04-26 04:12:22,686 : INFO : -5.273 per-word bound, 38.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:22,686 : INFO : PROGRESS: pass 4, at document #174/174
+2017-04-26 04:12:22,886 : INFO : topic #26 (0.033): 0.057*"feeee" + 0.049*"eeeee" + 0.039*"eeeef" + 0.033*"eeeed" + 0.027*"eeefe" + 0.027*"eefee" + 0.027*"efeee" + 0.025*"eeede" + 0.021*"bbbcb" + 0.020*"eefef"
+2017-04-26 04:12:22,886 : INFO : topic #2 (0.033): 0.004*"ccccc" + 0.003*"cbccc" + 0.002*"ccdbc" + 0.002*"cdccb" + 0.002*"fffff" + 0.002*"cccbc" + 0.002*"ccbcc" + 0.002*"cbcbd" + 0.002*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:22,886 : INFO : topic #7 (0.033): 0.061*"baaab" + 0.055*"babab" + 0.054*"abbba" + 0.044*"aabba" + 0.039*"bbbab" + 0.038*"babbb" + 0.038*"bbbbb" + 0.034*"aaaba" + 0.031*"ababb" + 0.027*"baaba"
+2017-04-26 04:12:22,886 : INFO : topic #8 (0.033): 0.507*"aaaaa" + 0.086*"aabaa" + 0.062*"abaaa" + 0.059*"aaaab" + 0.057*"aaaba" + 0.037*"baaaa" + 0.014*"ababa" + 0.013*"bbaaa" + 0.011*"aabab" + 0.010*"aabba"
+2017-04-26 04:12:22,886 : INFO : topic #19 (0.033): 0.099*"gfggg" + 0.080*"ggfgg" + 0.074*"fgggg" + 0.067*"ggggf" + 0.061*"gggfg" + 0.040*"gggff" + 0.039*"ggfgf" + 0.038*"fggfg" + 0.035*"fggff" + 0.034*"gfggf"
+2017-04-26 04:12:22,886 : INFO : topic diff=0.233837, rho=0.408248
+2017-04-26 04:12:23,194 : INFO : -5.199 per-word bound, 36.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:23,194 : INFO : PROGRESS: pass 5, at document #174/174
+2017-04-26 04:12:23,397 : INFO : topic #28 (0.033): 0.066*"aaaaa" + 0.024*"ccccc" + 0.022*"cbccc" + 0.018*"ccdbc" + 0.013*"abaaa" + 0.011*"aabaa" + 0.009*"bccda" + 0.009*"defed" + 0.009*"dedee" + 0.009*"edeed"
+2017-04-26 04:12:23,397 : INFO : topic #25 (0.033): 0.003*"cccdc" + 0.002*"ccccc" + 0.002*"ccccd" + 0.002*"ggggg" + 0.002*"ccdcc" + 0.002*"ggfgg" + 0.002*"gggfg" + 0.002*"ddcbd" + 0.002*"bcdcd" + 0.001*"cddec"
+2017-04-26 04:12:23,398 : INFO : topic #7 (0.033): 0.062*"baaab" + 0.057*"babab" + 0.054*"abbba" + 0.045*"aabba" + 0.041*"bbbab" + 0.039*"babbb" + 0.037*"bbbbb" + 0.034*"aaaba" + 0.032*"ababb" + 0.028*"baaba"
+2017-04-26 04:12:23,398 : INFO : topic #10 (0.033): 0.028*"ffeff" + 0.023*"gfgff" + 0.023*"gffgg" + 0.023*"ffdgf" + 0.021*"fggff" + 0.012*"fffgf" + 0.012*"ffggf" + 0.012*"ffffg" + 0.012*"ggfff" + 0.012*"effgf"
+2017-04-26 04:12:23,398 : INFO : topic #12 (0.033): 0.038*"ddddd" + 0.024*"ddded" + 0.024*"dddcd" + 0.015*"ddcdd" + 0.013*"ccddd" + 0.013*"dcccd" + 0.013*"ddddc" + 0.012*"dccdd" + 0.011*"cddcd" + 0.011*"ddecd"
+2017-04-26 04:12:23,398 : INFO : topic diff=0.196196, rho=0.377964
+2017-04-26 04:12:23,703 : INFO : -5.148 per-word bound, 35.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:23,703 : INFO : PROGRESS: pass 6, at document #174/174
+2017-04-26 04:12:23,899 : INFO : topic #18 (0.033): 0.075*"baaaa" + 0.069*"aaaba" + 0.064*"aaaab" + 0.056*"bbbab" + 0.049*"bbbaa" + 0.035*"bbaab" + 0.031*"baaab" + 0.029*"ababa" + 0.029*"cabab" + 0.027*"aaaaa"
+2017-04-26 04:12:23,899 : INFO : topic #9 (0.033): 0.112*"bbbbb" + 0.072*"bbbcb" + 0.053*"bbbbc" + 0.038*"bbcbb" + 0.034*"bbbcc" + 0.033*"ccbbc" + 0.029*"bbcbc" + 0.027*"cccbb" + 0.024*"bccbb" + 0.021*"bcbca"
+2017-04-26 04:12:23,900 : INFO : topic #1 (0.033): 0.004*"bbbbb" + 0.002*"bcbbb" + 0.002*"cbbbb" + 0.002*"bbbbc" + 0.002*"bbbba" + 0.002*"bbbab" + 0.001*"abbbc" + 0.001*"babcb" + 0.001*"bcacb" + 0.001*"cabbb"
+2017-04-26 04:12:23,900 : INFO : topic #19 (0.033): 0.094*"gfggg" + 0.081*"ggfgg" + 0.071*"fgggg" + 0.070*"ggggf" + 0.063*"gggfg" + 0.040*"gfggf" + 0.040*"fggfg" + 0.039*"gggff" + 0.039*"ggfgf" + 0.035*"ggggg"
+2017-04-26 04:12:23,900 : INFO : topic #29 (0.033): 0.078*"eeeee" + 0.020*"eeede" + 0.020*"eeefe" + 0.018*"bbbca" + 0.018*"edeef" + 0.016*"eeeef" + 0.014*"eedee" + 0.014*"eddee" + 0.014*"ceefe" + 0.014*"eeefd"
+2017-04-26 04:12:23,900 : INFO : topic diff=0.163973, rho=0.353553
+2017-04-26 04:12:24,204 : INFO : -5.110 per-word bound, 34.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:24,204 : INFO : PROGRESS: pass 7, at document #174/174
+2017-04-26 04:12:24,394 : INFO : topic #4 (0.033): 0.082*"ccccc" + 0.045*"cccdc" + 0.035*"ccccb" + 0.024*"ccbcc" + 0.023*"ccdcc" + 0.019*"ccccd" + 0.019*"cccbc" + 0.017*"cbcbc" + 0.014*"bccac" + 0.014*"cdccc"
+2017-04-26 04:12:24,394 : INFO : topic #9 (0.033): 0.114*"bbbbb" + 0.074*"bbbcb" + 0.054*"bbbbc" + 0.038*"bbcbb" + 0.035*"bbbcc" + 0.033*"ccbbc" + 0.030*"bbcbc" + 0.027*"cccbb" + 0.025*"bccbb" + 0.021*"bcbca"
+2017-04-26 04:12:24,394 : INFO : topic #28 (0.033): 0.031*"aaaaa" + 0.027*"ccccc" + 0.025*"cbccc" + 0.019*"ccdbc" + 0.010*"bccda" + 0.010*"defed" + 0.010*"dedee" + 0.010*"edeed" + 0.010*"deded" + 0.010*"eedde"
+2017-04-26 04:12:24,394 : INFO : topic #14 (0.033): 0.204*"fffff" + 0.058*"fffef" + 0.044*"effff" + 0.042*"ffeff" + 0.036*"ffgff" + 0.035*"ffffg" + 0.033*"fffgf" + 0.031*"ffffe" + 0.028*"effef" + 0.022*"ffefe"
+2017-04-26 04:12:24,395 : INFO : topic #2 (0.033): 0.002*"ccccc" + 0.001*"cbccc" + 0.001*"ccdbc" + 0.001*"cdccb" + 0.001*"fffff" + 0.001*"cccbc" + 0.001*"ccbcc" + 0.001*"cbcbd" + 0.001*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:24,395 : INFO : topic diff=0.136516, rho=0.333333
+2017-04-26 04:12:24,696 : INFO : -5.081 per-word bound, 33.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:24,696 : INFO : PROGRESS: pass 8, at document #174/174
+2017-04-26 04:12:24,889 : INFO : topic #16 (0.033): 0.091*"fffgf" + 0.082*"fffff" + 0.066*"gffff" + 0.055*"ffffg" + 0.045*"fefff" + 0.032*"ffffe" + 0.027*"fffef" + 0.023*"gfffg" + 0.021*"ffgfg" + 0.020*"fgfff"
+2017-04-26 04:12:24,889 : INFO : topic #18 (0.033): 0.075*"baaaa" + 0.070*"aaaba" + 0.066*"aaaab" + 0.057*"bbbab" + 0.050*"bbbaa" + 0.037*"bbaab" + 0.032*"baaab" + 0.032*"ababa" + 0.029*"cabab" + 0.027*"aaaaa"
+2017-04-26 04:12:24,889 : INFO : topic #26 (0.033): 0.064*"feeee" + 0.053*"eeeee" + 0.041*"eeeef" + 0.033*"eeeed" + 0.031*"eefee" + 0.031*"eeefe" + 0.028*"efeee" + 0.028*"eefef" + 0.026*"eeede" + 0.022*"bbbcb"
+2017-04-26 04:12:24,889 : INFO : topic #28 (0.033): 0.028*"ccccc" + 0.026*"cbccc" + 0.021*"aaaaa" + 0.020*"ccdbc" + 0.010*"bccda" + 0.010*"defed" + 0.010*"dedee" + 0.010*"edeed" + 0.010*"deded" + 0.010*"eedde"
+2017-04-26 04:12:24,889 : INFO : topic #17 (0.033): 0.034*"ccdcc" + 0.026*"ccccc" + 0.026*"cdccc" + 0.023*"cccbc" + 0.023*"ccbcc" + 0.017*"dcdcd" + 0.017*"ccccd" + 0.017*"cddcd" + 0.017*"cccce" + 0.017*"feggg"
+2017-04-26 04:12:24,889 : INFO : topic diff=0.113770, rho=0.316228
+2017-04-26 04:12:25,195 : INFO : -5.061 per-word bound, 33.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:25,195 : INFO : PROGRESS: pass 9, at document #174/174
+2017-04-26 04:12:25,383 : INFO : topic #3 (0.033): 0.754*"ggggg" + 0.035*"gggfg" + 0.019*"ggggf" + 0.013*"fgggg" + 0.008*"ffgfg" + 0.008*"ggfgg" + 0.006*"gfffg" + 0.005*"gegfg" + 0.005*"gfggg" + 0.004*"gffeg"
+2017-04-26 04:12:25,383 : INFO : topic #29 (0.033): 0.082*"eeeee" + 0.021*"eeede" + 0.021*"eeefe" + 0.019*"edeef" + 0.017*"eeeef" + 0.014*"eedee" + 0.014*"eddee" + 0.014*"ceefe" + 0.014*"eeefd" + 0.014*"bbccb"
+2017-04-26 04:12:25,384 : INFO : topic #16 (0.033): 0.092*"fffgf" + 0.083*"fffff" + 0.066*"gffff" + 0.055*"ffffg" + 0.045*"fefff" + 0.031*"ffffe" + 0.027*"fffef" + 0.024*"gfffg" + 0.021*"ffgfg" + 0.020*"fgfff"
+2017-04-26 04:12:25,384 : INFO : topic #20 (0.033): 0.062*"ccccc" + 0.038*"cdccb" + 0.035*"cccbc" + 0.033*"cccbb" + 0.029*"bccbc" + 0.024*"cbcbd" + 0.020*"ccccb" + 0.019*"ccbbc" + 0.017*"feeff" + 0.017*"dbccc"
+2017-04-26 04:12:25,384 : INFO : topic #28 (0.033): 0.028*"ccccc" + 0.026*"cbccc" + 0.020*"ccdbc" + 0.015*"aaaaa" + 0.010*"bccda" + 0.010*"defed" + 0.010*"dedee" + 0.010*"edeed" + 0.010*"deded" + 0.010*"eedde"
+2017-04-26 04:12:25,384 : INFO : topic diff=0.095671, rho=0.301511
+2017-04-26 04:12:25,677 : INFO : -5.044 per-word bound, 33.0 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:25,677 : INFO : PROGRESS: pass 10, at document #174/174
+2017-04-26 04:12:25,863 : INFO : topic #8 (0.033): 0.513*"aaaaa" + 0.092*"aabaa" + 0.065*"abaaa" + 0.063*"aaaab" + 0.061*"aaaba" + 0.037*"baaaa" + 0.015*"ababa" + 0.015*"bbaaa" + 0.012*"aabab" + 0.010*"abbaa"
+2017-04-26 04:12:25,863 : INFO : topic #14 (0.033): 0.204*"fffff" + 0.058*"fffef" + 0.044*"effff" + 0.043*"ffeff" + 0.038*"ffgff" + 0.036*"ffffg" + 0.033*"ffffe" + 0.032*"fffgf" + 0.029*"effef" + 0.022*"ffefe"
+2017-04-26 04:12:25,863 : INFO : topic #1 (0.033): 0.002*"bbbbb" + 0.001*"bcbbb" + 0.001*"cbbbb" + 0.001*"bbbbc" + 0.001*"bbbba" + 0.001*"bbbab" + 0.001*"abbbc" + 0.001*"babcb" + 0.001*"bcacb" + 0.001*"cabbb"
+2017-04-26 04:12:25,864 : INFO : topic #20 (0.033): 0.062*"ccccc" + 0.038*"cdccb" + 0.036*"cccbc" + 0.033*"cccbb" + 0.029*"bccbc" + 0.024*"cbcbd" + 0.021*"ccccb" + 0.019*"ccbbc" + 0.017*"feeff" + 0.017*"dbccc"
+2017-04-26 04:12:25,864 : INFO : topic #22 (0.033): 0.033*"abbcb" + 0.025*"bccca" + 0.025*"cbbbc" + 0.023*"cbcbb" + 0.018*"cbccc" + 0.017*"bcccc" + 0.017*"cccbc" + 0.017*"babcb" + 0.017*"ecbbc" + 0.017*"cbabc"
+2017-04-26 04:12:25,864 : INFO : topic diff=0.080695, rho=0.288675
+2017-04-26 04:12:26,157 : INFO : -5.031 per-word bound, 32.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:26,157 : INFO : PROGRESS: pass 11, at document #174/174
+2017-04-26 04:12:26,342 : INFO : topic #2 (0.033): 0.001*"ccccc" + 0.001*"cbccc" + 0.001*"ccdbc" + 0.001*"cdccb" + 0.001*"fffff" + 0.001*"cccbc" + 0.001*"ccbcc" + 0.001*"cbcbd" + 0.001*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:26,342 : INFO : topic #3 (0.033): 0.770*"ggggg" + 0.033*"gggfg" + 0.016*"ggggf" + 0.012*"fgggg" + 0.009*"ffgfg" + 0.006*"gfffg" + 0.006*"ggfgg" + 0.006*"gegfg" + 0.004*"gffeg" + 0.004*"efgfg"
+2017-04-26 04:12:26,342 : INFO : topic #1 (0.033): 0.002*"bbbbb" + 0.001*"bcbbb" + 0.001*"cbbbb" + 0.001*"bbbbc" + 0.001*"bbbba" + 0.001*"bbbab" + 0.001*"abbbc" + 0.001*"babcb" + 0.001*"bcacb" + 0.001*"cabbb"
+2017-04-26 04:12:26,342 : INFO : topic #4 (0.033): 0.083*"ccccc" + 0.046*"cccdc" + 0.037*"ccccb" + 0.025*"ccbcc" + 0.023*"ccdcc" + 0.022*"ccccd" + 0.018*"cccbc" + 0.016*"cbcbc" + 0.015*"cbccc" + 0.015*"ccdbc"
+2017-04-26 04:12:26,342 : INFO : topic #14 (0.033): 0.204*"fffff" + 0.057*"fffef" + 0.044*"effff" + 0.043*"ffeff" + 0.038*"ffgff" + 0.036*"ffffg" + 0.034*"ffffe" + 0.032*"fffgf" + 0.029*"effef" + 0.022*"ffefe"
+2017-04-26 04:12:26,342 : INFO : topic diff=0.068358, rho=0.277350
+2017-04-26 04:12:26,637 : INFO : -5.020 per-word bound, 32.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:26,637 : INFO : PROGRESS: pass 12, at document #174/174
+2017-04-26 04:12:26,819 : INFO : topic #21 (0.033): 0.044*"babab" + 0.035*"cdcdc" + 0.030*"bdaaa" + 0.030*"babba" + 0.029*"cddcc" + 0.025*"ababa" + 0.020*"dcdcc" + 0.020*"aaaac" + 0.019*"ddcbd" + 0.019*"cccdc"
+2017-04-26 04:12:26,819 : INFO : topic #9 (0.033): 0.119*"bbbbb" + 0.081*"bbbcb" + 0.060*"bbbbc" + 0.040*"bbcbb" + 0.036*"bbbcc" + 0.033*"ccbbc" + 0.032*"bbcbc" + 0.028*"bccbb" + 0.027*"cccbb" + 0.021*"bcbca"
+2017-04-26 04:12:26,820 : INFO : topic #18 (0.033): 0.073*"baaaa" + 0.071*"aaaba" + 0.070*"aaaab" + 0.060*"bbbab" + 0.048*"bbbaa" + 0.043*"bbaab" + 0.040*"ababa" + 0.032*"aacaa" + 0.031*"babaa" + 0.031*"baaab"
+2017-04-26 04:12:26,820 : INFO : topic #2 (0.033): 0.001*"ccccc" + 0.001*"cbccc" + 0.001*"ccdbc" + 0.001*"cdccb" + 0.001*"fffff" + 0.001*"cccbc" + 0.001*"ccbcc" + 0.001*"cbcbd" + 0.001*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:26,820 : INFO : topic #17 (0.033): 0.036*"ccdcc" + 0.027*"cdccc" + 0.026*"ccccc" + 0.023*"ccbcc" + 0.020*"cccbc" + 0.018*"ccccd" + 0.018*"cddcd" + 0.018*"cccce" + 0.018*"feggg" + 0.018*"dcccd"
+2017-04-26 04:12:26,820 : INFO : topic diff=0.058219, rho=0.267261
+2017-04-26 04:12:27,108 : INFO : -5.011 per-word bound, 32.2 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:27,108 : INFO : PROGRESS: pass 13, at document #174/174
+2017-04-26 04:12:27,289 : INFO : topic #20 (0.033): 0.062*"ccccc" + 0.038*"cdccb" + 0.037*"cccbc" + 0.033*"cccbb" + 0.030*"bccbc" + 0.025*"cbcbd" + 0.021*"ccccb" + 0.019*"ccbbc" + 0.017*"feeff" + 0.017*"dbccc"
+2017-04-26 04:12:27,289 : INFO : topic #29 (0.033): 0.085*"eeeee" + 0.022*"eeede" + 0.021*"eeefe" + 0.020*"edeef" + 0.017*"eeeef" + 0.015*"eedee" + 0.015*"eddee" + 0.015*"ceefe" + 0.015*"eeefd" + 0.015*"bbccb"
+2017-04-26 04:12:27,289 : INFO : topic #7 (0.033): 0.068*"baaab" + 0.063*"babab" + 0.053*"abbba" + 0.045*"bbbab" + 0.045*"aabba" + 0.044*"babbb" + 0.036*"bbbbb" + 0.035*"baaba" + 0.033*"aaaba" + 0.033*"ababb"
+2017-04-26 04:12:27,290 : INFO : topic #14 (0.033): 0.203*"fffff" + 0.057*"fffef" + 0.044*"effff" + 0.043*"ffeff" + 0.038*"ffgff" + 0.036*"ffffg" + 0.035*"ffffe" + 0.032*"fffgf" + 0.029*"effef" + 0.022*"ffefe"
+2017-04-26 04:12:27,290 : INFO : topic #26 (0.033): 0.067*"feeee" + 0.055*"eeeee" + 0.043*"eeeef" + 0.034*"eeeed" + 0.033*"eefee" + 0.032*"eefef" + 0.032*"eeefe" + 0.028*"efeee" + 0.026*"eeede" + 0.021*"eeeff"
+2017-04-26 04:12:27,290 : INFO : topic diff=0.050361, rho=0.258199
+2017-04-26 04:12:27,588 : INFO : -5.003 per-word bound, 32.1 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:27,588 : INFO : PROGRESS: pass 14, at document #174/174
+2017-04-26 04:12:27,769 : INFO : topic #14 (0.033): 0.203*"fffff" + 0.057*"fffef" + 0.044*"effff" + 0.043*"ffeff" + 0.038*"ffgff" + 0.036*"ffffg" + 0.035*"ffffe" + 0.032*"fffgf" + 0.029*"effef" + 0.022*"ffefe"
+2017-04-26 04:12:27,769 : INFO : topic #10 (0.033): 0.028*"ffeff" + 0.023*"gfgff" + 0.023*"gffgg" + 0.023*"ffdgf" + 0.021*"fggff" + 0.012*"fffgf" + 0.012*"ffggf" + 0.012*"ffffg" + 0.012*"ggfff" + 0.012*"effgf"
+2017-04-26 04:12:27,769 : INFO : topic #18 (0.033): 0.072*"baaaa" + 0.072*"aaaab" + 0.071*"aaaba" + 0.060*"bbbab" + 0.047*"bbbaa" + 0.044*"bbaab" + 0.044*"ababa" + 0.034*"aacaa" + 0.033*"babaa" + 0.031*"baaab"
+2017-04-26 04:12:27,770 : INFO : topic #24 (0.033): 0.118*"aaaba" + 0.088*"aabaa" + 0.065*"aaaaa" + 0.058*"baaaa" + 0.044*"abbab" + 0.043*"ababa" + 0.032*"acaaa" + 0.023*"abaab" + 0.020*"caaaa" + 0.019*"abbca"
+2017-04-26 04:12:27,770 : INFO : topic #23 (0.033): 0.025*"gfgef" + 0.024*"fgffg" + 0.019*"ffegf" + 0.018*"gfffg" + 0.018*"fefgf" + 0.018*"fffgg" + 0.014*"bbaca" + 0.014*"ggfgg" + 0.014*"ffgef" + 0.014*"gggef"
+2017-04-26 04:12:27,770 : INFO : topic diff=0.043529, rho=0.250000
+2017-04-26 04:12:28,062 : INFO : -4.996 per-word bound, 31.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:28,063 : INFO : PROGRESS: pass 15, at document #174/174
+2017-04-26 04:12:28,242 : INFO : topic #6 (0.033): 0.032*"edddd" + 0.027*"ddedd" + 0.027*"dddce" + 0.026*"ddddc" + 0.024*"ddddd" + 0.020*"eddce" + 0.020*"dddcd" + 0.020*"ededd" + 0.020*"edded" + 0.019*"eeddd"
+2017-04-26 04:12:28,242 : INFO : topic #15 (0.033): 0.036*"cccdc" + 0.030*"ccbcc" + 0.027*"ccccc" + 0.024*"bcbcb" + 0.022*"cccbc" + 0.022*"bbbbd" + 0.022*"cbcbc" + 0.018*"bbccc" + 0.018*"dcdcb" + 0.018*"ccdcc"
+2017-04-26 04:12:28,242 : INFO : topic #2 (0.033): 0.001*"ccccc" + 0.001*"cbccc" + 0.001*"ccdbc" + 0.001*"cdccb" + 0.001*"fffff" + 0.001*"cccbc" + 0.001*"ccbcc" + 0.001*"cbcbd" + 0.001*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:28,242 : INFO : topic #7 (0.033): 0.068*"baaab" + 0.063*"babab" + 0.053*"abbba" + 0.045*"bbbab" + 0.045*"babbb" + 0.044*"aabba" + 0.036*"baaba" + 0.036*"bbbbb" + 0.034*"abbbb" + 0.033*"aaaba"
+2017-04-26 04:12:28,242 : INFO : topic #3 (0.033): 0.787*"ggggg" + 0.030*"gggfg" + 0.013*"ggggf" + 0.011*"fgggg" + 0.009*"ffgfg" + 0.006*"gegfg" + 0.005*"gfffg" + 0.004*"gffeg" + 0.004*"efgfg" + 0.004*"fgfef"
+2017-04-26 04:12:28,242 : INFO : topic diff=0.037660, rho=0.242536
+2017-04-26 04:12:28,528 : INFO : -4.990 per-word bound, 31.8 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:28,528 : INFO : PROGRESS: pass 16, at document #174/174
+2017-04-26 04:12:28,710 : INFO : topic #25 (0.033): 0.001*"cccdc" + 0.001*"ccccc" + 0.001*"ccccd" + 0.001*"ggggg" + 0.001*"ccdcc" + 0.001*"ggfgg" + 0.001*"gggfg" + 0.001*"ddcbd" + 0.001*"bcdcd" + 0.001*"cddec"
+2017-04-26 04:12:28,710 : INFO : topic #20 (0.033): 0.062*"ccccc" + 0.038*"cdccb" + 0.038*"cccbc" + 0.033*"cccbb" + 0.030*"bccbc" + 0.025*"cbcbd" + 0.022*"ccccb" + 0.019*"ccbbc" + 0.017*"feeff" + 0.017*"dbccc"
+2017-04-26 04:12:28,710 : INFO : topic #7 (0.033): 0.068*"baaab" + 0.063*"babab" + 0.052*"abbba" + 0.046*"babbb" + 0.045*"bbbab" + 0.044*"aabba" + 0.037*"baaba" + 0.036*"bbbbb" + 0.035*"abbbb" + 0.033*"aaaba"
+2017-04-26 04:12:28,710 : INFO : topic #18 (0.033): 0.073*"aaaab" + 0.072*"baaaa" + 0.071*"aaaba" + 0.060*"bbbab" + 0.047*"ababa" + 0.047*"bbbaa" + 0.046*"bbaab" + 0.036*"aacaa" + 0.035*"babaa" + 0.030*"baaab"
+2017-04-26 04:12:28,710 : INFO : topic #0 (0.033): 0.028*"edeee" + 0.028*"eeeee" + 0.028*"eeede" + 0.024*"eedee" + 0.023*"dddee" + 0.022*"deeee" + 0.022*"eeedd" + 0.020*"dcdcc" + 0.017*"eeefe" + 0.017*"eeeed"
+2017-04-26 04:12:28,710 : INFO : topic diff=0.032542, rho=0.235702
+2017-04-26 04:12:29,000 : INFO : -4.984 per-word bound, 31.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:29,000 : INFO : PROGRESS: pass 17, at document #174/174
+2017-04-26 04:12:29,180 : INFO : topic #5 (0.033): 0.001*"fggff" + 0.001*"ffffg" + 0.001*"gffef" + 0.001*"gggfg" + 0.001*"ffeeg" + 0.001*"gfgdf" + 0.001*"eeged" + 0.001*"effef" + 0.001*"egggf" + 0.001*"feddg"
+2017-04-26 04:12:29,180 : INFO : topic #26 (0.033): 0.069*"feeee" + 0.057*"eeeee" + 0.044*"eeeef" + 0.035*"eeeed" + 0.035*"eefee" + 0.035*"eefef" + 0.033*"eeefe" + 0.029*"efeee" + 0.027*"eeede" + 0.023*"eeeff"
+2017-04-26 04:12:29,180 : INFO : topic #15 (0.033): 0.035*"cccdc" + 0.031*"ccbcc" + 0.027*"bcbcb" + 0.026*"ccccc" + 0.023*"cccbc" + 0.023*"bbbbd" + 0.023*"cbcbc" + 0.018*"bbccc" + 0.018*"dcdcb" + 0.018*"ccdcc"
+2017-04-26 04:12:29,180 : INFO : topic #6 (0.033): 0.033*"edddd" + 0.028*"ddedd" + 0.028*"dddce" + 0.027*"ddddc" + 0.025*"ddddd" + 0.021*"eddce" + 0.021*"dddcd" + 0.021*"ededd" + 0.021*"edded" + 0.020*"eeddd"
+2017-04-26 04:12:29,180 : INFO : topic #18 (0.033): 0.074*"aaaab" + 0.071*"baaaa" + 0.071*"aaaba" + 0.060*"bbbab" + 0.048*"ababa" + 0.046*"bbbaa" + 0.046*"bbaab" + 0.037*"aacaa" + 0.035*"babaa" + 0.030*"baaab"
+2017-04-26 04:12:29,180 : INFO : topic diff=0.028185, rho=0.229416
+2017-04-26 04:12:29,554 : INFO : -4.979 per-word bound, 31.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:29,554 : INFO : PROGRESS: pass 18, at document #174/174
+2017-04-26 04:12:29,808 : INFO : topic #11 (0.033): 0.016*"ddddd" + 0.016*"edddd" + 0.014*"effee" + 0.014*"ffece" + 0.014*"cbcec" + 0.014*"eedfd" + 0.014*"ddedd" + 0.014*"eeded" + 0.014*"ccded" + 0.014*"ddeed"
+2017-04-26 04:12:29,808 : INFO : topic #20 (0.033): 0.062*"ccccc" + 0.038*"cccbc" + 0.038*"cdccb" + 0.033*"cccbb" + 0.030*"bccbc" + 0.025*"cbcbd" + 0.022*"ccccb" + 0.019*"ccbbc" + 0.017*"feeff" + 0.017*"dbccc"
+2017-04-26 04:12:29,808 : INFO : topic #24 (0.033): 0.115*"aaaba" + 0.085*"aabaa" + 0.058*"baaaa" + 0.058*"aaaaa" + 0.046*"abbab" + 0.044*"ababa" + 0.033*"acaaa" + 0.023*"abaab" + 0.020*"caaaa" + 0.020*"abbca"
+2017-04-26 04:12:29,808 : INFO : topic #8 (0.033): 0.509*"aaaaa" + 0.094*"aabaa" + 0.066*"abaaa" + 0.063*"aaaba" + 0.062*"aaaab" + 0.037*"baaaa" + 0.016*"bbaaa" + 0.016*"ababa" + 0.012*"aabab" + 0.011*"abbaa"
+2017-04-26 04:12:29,808 : INFO : topic #28 (0.033): 0.030*"ccccc" + 0.028*"cbccc" + 0.021*"ccdbc" + 0.011*"bccda" + 0.011*"defed" + 0.011*"deded" + 0.011*"dedee" + 0.011*"edeed" + 0.011*"cdced" + 0.011*"eedde"
+2017-04-26 04:12:29,809 : INFO : topic diff=0.024509, rho=0.223607
+2017-04-26 04:12:30,408 : INFO : -4.975 per-word bound, 31.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:30,409 : INFO : PROGRESS: pass 19, at document #174/174
+2017-04-26 04:12:30,689 : INFO : topic #2 (0.033): 0.001*"ccccc" + 0.001*"cbccc" + 0.001*"ccdbc" + 0.001*"cdccb" + 0.001*"fffff" + 0.001*"cccbc" + 0.001*"ccbcc" + 0.001*"cbcbd" + 0.001*"ccabc" + 0.001*"ccbbc"
+2017-04-26 04:12:30,689 : INFO : topic #16 (0.033): 0.097*"fffgf" + 0.086*"fffff" + 0.068*"gffff" + 0.055*"ffffg" + 0.045*"fefff" + 0.028*"fffef" + 0.027*"ffffe" + 0.027*"gfffg" + 0.022*"ffgfg" + 0.021*"fgfff"
+2017-04-26 04:12:30,689 : INFO : topic #10 (0.033): 0.028*"ffeff" + 0.023*"gfgff" + 0.023*"gffgg" + 0.023*"ffdgf" + 0.020*"fggff" + 0.012*"fffgf" + 0.012*"ffggf" + 0.012*"ffffg" + 0.012*"ggfff" + 0.012*"effgf"
+2017-04-26 04:12:30,689 : INFO : topic #9 (0.033): 0.117*"bbbbb" + 0.092*"bbbcb" + 0.068*"bbbbc" + 0.039*"bbcbb" + 0.038*"bbbcc" + 0.034*"bbcbc" + 0.031*"ccbbc" + 0.028*"bccbb" + 0.026*"cccbb" + 0.020*"bcbca"
+2017-04-26 04:12:30,689 : INFO : topic #17 (0.033): 0.036*"ccdcc" + 0.027*"cdccc" + 0.026*"ccccc" + 0.023*"ccbcc" + 0.018*"ccccd" + 0.018*"cddcd" + 0.018*"cccce" + 0.018*"feggg" + 0.018*"dcccd" + 0.018*"dcccc"
+2017-04-26 04:12:30,689 : INFO : topic diff=0.021433, rho=0.218218
+2017-04-26 04:12:30,689 : INFO : saving LdaState object under ../models/ts2_lda_30.lda.state, separately None
+2017-04-26 04:12:30,690 : INFO : saved ../models/ts2_lda_30.lda.state
+2017-04-26 04:12:30,691 : INFO : saving LdaModel object under ../models/ts2_lda_30.lda, separately ['expElogbeta', 'sstats']
+2017-04-26 04:12:30,691 : INFO : not storing attribute id2word
+2017-04-26 04:12:30,691 : INFO : storing np array 'expElogbeta' to ../models/ts2_lda_30.lda.expElogbeta.npy
+2017-04-26 04:12:30,691 : INFO : not storing attribute state
+2017-04-26 04:12:30,692 : INFO : not storing attribute dispatcher
+2017-04-26 04:12:30,692 : INFO : saved ../models/ts2_lda_30.lda
+2017-04-26 04:12:30,692 : INFO : using symmetric alpha at 0.025
+2017-04-26 04:12:30,692 : INFO : using symmetric eta at 0.00102040816327
+2017-04-26 04:12:30,692 : INFO : using serial LDA version on this node
+2017-04-26 04:12:31,309 : INFO : running online LDA training, 40 topics, 20 passes over the supplied corpus of 174 documents, updating model once every 174 documents, evaluating perplexity every 174 documents, iterating 50x with a convergence threshold of 0.001000
+2017-04-26 04:12:32,734 : INFO : -22.031 per-word bound, 4284101.6 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:32,734 : INFO : PROGRESS: pass 0, at document #174/174
+2017-04-26 04:12:33,373 : INFO : topic #22 (0.025): 0.071*"gfggg" + 0.056*"ggggg" + 0.049*"fgggg" + 0.042*"gggfg" + 0.037*"ggggf" + 0.036*"ggfgg" + 0.021*"gfgff" + 0.021*"gggff" + 0.020*"ffggg" + 0.020*"fggff"
+2017-04-26 04:12:33,373 : INFO : topic #15 (0.025): 0.147*"fffff" + 0.030*"fffgf" + 0.028*"ffffg" + 0.025*"fffef" + 0.021*"ffffe" + 0.015*"fgfff" + 0.014*"ffgff" + 0.012*"bbbbb" + 0.011*"ggfff" + 0.009*"fffdf"
+2017-04-26 04:12:33,373 : INFO : topic #24 (0.025): 0.213*"aaaaa" + 0.078*"aaaba" + 0.066*"aabaa" + 0.053*"baaaa" + 0.039*"aaaab" + 0.034*"ababa" + 0.028*"abaaa" + 0.018*"aabab" + 0.018*"abbab" + 0.015*"baaab"
+2017-04-26 04:12:33,373 : INFO : topic #26 (0.025): 0.015*"abbcb" + 0.015*"cbccc" + 0.015*"dddcc" + 0.015*"ddccc" + 0.015*"cdccd" + 0.015*"ccdcc" + 0.015*"ccccb" + 0.015*"cbbbc" + 0.015*"bbbbb" + 0.011*"ccccd"
+2017-04-26 04:12:33,373 : INFO : topic #35 (0.025): 0.071*"fffff" + 0.043*"bbbbb" + 0.027*"ffffg" + 0.024*"effff" + 0.022*"aaaba" + 0.021*"fffgf" + 0.021*"ffeff" + 0.017*"fefff" + 0.017*"ffffe" + 0.016*"babbb"
+2017-04-26 04:12:33,374 : INFO : topic diff=33.734856, rho=1.000000
+2017-04-26 04:12:33,748 : INFO : -5.960 per-word bound, 62.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:33,748 : INFO : PROGRESS: pass 1, at document #174/174
+2017-04-26 04:12:34,008 : INFO : topic #9 (0.025): 0.058*"feeee" + 0.043*"eeeee" + 0.039*"ffeee" + 0.039*"eefef" + 0.036*"eeeef" + 0.035*"fffee" + 0.034*"effff" + 0.033*"ffeff" + 0.030*"effef" + 0.027*"eefee"
+2017-04-26 04:12:34,009 : INFO : topic #21 (0.025): 0.022*"cbcdc" + 0.019*"ccdcc" + 0.016*"cddcc" + 0.016*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.010*"ccccd" + 0.010*"ddcdd" + 0.009*"dcddd"
+2017-04-26 04:12:34,009 : INFO : topic #34 (0.025): 0.001*"aaaab" + 0.001*"aaaaa" + 0.001*"aaaba" + 0.001*"bbbab" + 0.001*"baaaa" + 0.001*"ababa" + 0.001*"bbbaa" + 0.001*"aabaa" + 0.001*"bbbba" + 0.001*"bcaab"
+2017-04-26 04:12:34,009 : INFO : topic #1 (0.025): 0.061*"ccccc" + 0.031*"cccdc" + 0.024*"ddddd" + 0.023*"ddedd" + 0.022*"edddd" + 0.021*"eedfd" + 0.021*"eeded" + 0.020*"ccccb" + 0.012*"dddcd" + 0.011*"ddcdd"
+2017-04-26 04:12:34,009 : INFO : topic #15 (0.025): 0.135*"fffff" + 0.029*"fffgf" + 0.023*"ffffe" + 0.022*"fffef" + 0.022*"ffffg" + 0.015*"fefff" + 0.011*"fffdf" + 0.011*"gfffe" + 0.011*"fgfff" + 0.011*"ffgff"
+2017-04-26 04:12:34,009 : INFO : topic diff=0.377862, rho=0.577350
+2017-04-26 04:12:34,344 : INFO : -5.611 per-word bound, 48.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:34,344 : INFO : PROGRESS: pass 2, at document #174/174
+2017-04-26 04:12:34,587 : INFO : topic #32 (0.025): 0.045*"bbabb" + 0.038*"bbbbb" + 0.022*"ccccc" + 0.022*"ccccd" + 0.019*"aabbb" + 0.018*"bbaba" + 0.015*"cbccc" + 0.015*"dccbb" + 0.015*"ccccb" + 0.015*"cccdc"
+2017-04-26 04:12:34,587 : INFO : topic #28 (0.025): 0.068*"bbbab" + 0.052*"aaaab" + 0.043*"baaab" + 0.039*"baaba" + 0.036*"baaaa" + 0.033*"babbb" + 0.033*"bbbaa" + 0.032*"bbaab" + 0.031*"aaaba" + 0.029*"bbbba"
+2017-04-26 04:12:34,588 : INFO : topic #21 (0.025): 0.023*"cbcdc" + 0.021*"ccdcc" + 0.016*"cddcc" + 0.016*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.013*"ccccd" + 0.012*"ccccc" + 0.009*"ddcdd"
+2017-04-26 04:12:34,588 : INFO : topic #38 (0.025): 0.520*"aaaaa" + 0.092*"aabaa" + 0.066*"aaaba" + 0.066*"abaaa" + 0.054*"aaaab" + 0.033*"baaaa" + 0.017*"bbaaa" + 0.011*"ababa" + 0.010*"babaa" + 0.010*"aabba"
+2017-04-26 04:12:34,588 : INFO : topic #0 (0.025): 0.040*"fggff" + 0.025*"ffgff" + 0.025*"gfefg" + 0.025*"ffeeg" + 0.021*"gggfg" + 0.015*"ggfef" + 0.015*"feddg" + 0.015*"efgdg" + 0.015*"ggfdf" + 0.015*"efggf"
+2017-04-26 04:12:34,588 : INFO : topic diff=0.334368, rho=0.500000
+2017-04-26 04:12:34,987 : INFO : -5.413 per-word bound, 42.6 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:34,987 : INFO : PROGRESS: pass 3, at document #174/174
+2017-04-26 04:12:35,292 : INFO : topic #25 (0.025): 0.048*"cdcdc" + 0.046*"cddcc" + 0.025*"dcdcc" + 0.023*"acddc" + 0.023*"ddccd" + 0.023*"cddbe" + 0.023*"ddece" + 0.023*"ddcbd" + 0.023*"ccdbc" + 0.023*"cccdc"
+2017-04-26 04:12:35,292 : INFO : topic #22 (0.025): 0.031*"gfggg" + 0.028*"ggfgg" + 0.024*"feeff" + 0.017*"ggggg" + 0.016*"ggggf" + 0.016*"fgggg" + 0.014*"gggfg" + 0.014*"gffgf" + 0.013*"efdee" + 0.013*"eecfe"
+2017-04-26 04:12:35,292 : INFO : topic #4 (0.025): 0.032*"bcbcb" + 0.028*"cbcbc" + 0.026*"ccbcc" + 0.021*"cbcab" + 0.020*"bbccc" + 0.018*"dccdd" + 0.018*"dddcd" + 0.018*"dcccd" + 0.018*"abccc" + 0.018*"bcbbd"
+2017-04-26 04:12:35,292 : INFO : topic #7 (0.025): 0.013*"aaaca" + 0.013*"abbca" + 0.012*"ffffe" + 0.012*"ffefe" + 0.012*"ffeff" + 0.012*"egffd" + 0.012*"efeef" + 0.012*"fffdf" + 0.012*"ffgff" + 0.012*"gfdef"
+2017-04-26 04:12:35,292 : INFO : topic #0 (0.025): 0.041*"fggff" + 0.026*"ffeeg" + 0.026*"gfefg" + 0.025*"ffgff" + 0.019*"gggfg" + 0.016*"ggfdf" + 0.016*"efggf" + 0.016*"fgfgf" + 0.016*"feddg" + 0.016*"ggfef"
+2017-04-26 04:12:35,293 : INFO : topic diff=0.304840, rho=0.447214
+2017-04-26 04:12:35,719 : INFO : -5.281 per-word bound, 38.9 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:35,719 : INFO : PROGRESS: pass 4, at document #174/174
+2017-04-26 04:12:36,008 : INFO : topic #38 (0.025): 0.533*"aaaaa" + 0.092*"aabaa" + 0.068*"abaaa" + 0.065*"aaaba" + 0.054*"aaaab" + 0.034*"baaaa" + 0.018*"bbaaa" + 0.010*"aabba" + 0.010*"abbaa" + 0.010*"ababa"
+2017-04-26 04:12:36,008 : INFO : topic #32 (0.025): 0.027*"ccccc" + 0.027*"ccccd" + 0.023*"bbabb" + 0.018*"cbccc" + 0.018*"cccdb" + 0.018*"ccccb" + 0.018*"cccdc" + 0.018*"dccbb" + 0.018*"ddcdd" + 0.018*"dddfd"
+2017-04-26 04:12:36,008 : INFO : topic #34 (0.025): 0.001*"aaaab" + 0.001*"aaaaa" + 0.001*"aaaba" + 0.001*"bbbab" + 0.001*"baaaa" + 0.001*"ababa" + 0.001*"bbbaa" + 0.001*"aabaa" + 0.001*"bbbba" + 0.001*"bcaab"
+2017-04-26 04:12:36,008 : INFO : topic #19 (0.025): 0.042*"ddccc" + 0.028*"cddcd" + 0.028*"dcdcd" + 0.028*"dddcc" + 0.015*"ccccb" + 0.014*"ccdcd" + 0.014*"cdcdd" + 0.014*"cdcdb" + 0.014*"ebddd" + 0.014*"ddedc"
+2017-04-26 04:12:36,008 : INFO : topic #5 (0.025): 0.076*"eeeee" + 0.050*"eeede" + 0.043*"eeeed" + 0.035*"eeefe" + 0.032*"deeee" + 0.031*"cbccc" + 0.027*"edeee" + 0.027*"eedee" + 0.024*"cccdc" + 0.023*"ccdbc"
+2017-04-26 04:12:36,009 : INFO : topic diff=0.275114, rho=0.408248
+2017-04-26 04:12:36,364 : INFO : -5.192 per-word bound, 36.6 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:36,364 : INFO : PROGRESS: pass 5, at document #174/174
+2017-04-26 04:12:36,602 : INFO : topic #22 (0.025): 0.030*"feeff" + 0.022*"ggfgg" + 0.016*"gffgf" + 0.015*"efdee" + 0.015*"eecfe" + 0.015*"dffff" + 0.015*"edeef" + 0.015*"fedff" + 0.015*"fegdd" + 0.015*"fefff"
+2017-04-26 04:12:36,602 : INFO : topic #21 (0.025): 0.028*"cbcdc" + 0.023*"ccdcc" + 0.016*"cddcc" + 0.016*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.015*"ccccc" + 0.015*"ccccd" + 0.011*"bccdc"
+2017-04-26 04:12:36,602 : INFO : topic #37 (0.025): 0.053*"cccbb" + 0.045*"bbcbc" + 0.028*"ccbbc" + 0.026*"bccbb" + 0.023*"bcccc" + 0.020*"ccccc" + 0.019*"cbbcb" + 0.019*"cbcbc" + 0.019*"eeeed" + 0.018*"cbccc"
+2017-04-26 04:12:36,602 : INFO : topic #31 (0.025): 0.043*"ccccc" + 0.028*"bbbbb" + 0.025*"bbbbc" + 0.024*"cccdc" + 0.023*"cccbb" + 0.021*"ccbbc" + 0.020*"bbbcb" + 0.019*"bbcbb" + 0.018*"cbcbd" + 0.015*"ccbcc"
+2017-04-26 04:12:36,602 : INFO : topic #14 (0.025): 0.068*"ddddd" + 0.057*"dddcd" + 0.056*"ddded" + 0.054*"cdddd" + 0.048*"ddedd" + 0.047*"ddcdd" + 0.042*"ddecd" + 0.034*"ddddc" + 0.031*"ddcdc" + 0.027*"dddce"
+2017-04-26 04:12:36,602 : INFO : topic diff=0.244089, rho=0.377964
+2017-04-26 04:12:36,948 : INFO : -5.130 per-word bound, 35.0 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:36,948 : INFO : PROGRESS: pass 6, at document #174/174
+2017-04-26 04:12:37,178 : INFO : topic #2 (0.025): 0.033*"edeef" + 0.033*"ceefe" + 0.033*"eddee" + 0.017*"eeedd" + 0.017*"deced" + 0.017*"geeec" + 0.017*"cedgf" + 0.017*"edfee" + 0.017*"ddcfd" + 0.017*"dcdde"
+2017-04-26 04:12:37,178 : INFO : topic #24 (0.025): 0.130*"aaaaa" + 0.108*"aaaba" + 0.088*"aabaa" + 0.067*"ababa" + 0.062*"baaaa" + 0.048*"aaaab" + 0.042*"abbab" + 0.024*"aabab" + 0.022*"babaa" + 0.021*"abaab"
+2017-04-26 04:12:37,178 : INFO : topic #4 (0.025): 0.035*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.025*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:37,178 : INFO : topic #7 (0.025): 0.014*"aaaca" + 0.014*"abbca" + 0.013*"ffffe" + 0.013*"ffefe" + 0.013*"ffeff" + 0.013*"egffd" + 0.013*"fggff" + 0.013*"efeef" + 0.013*"ffgff" + 0.013*"gfdef"
+2017-04-26 04:12:37,178 : INFO : topic #5 (0.025): 0.076*"eeeee" + 0.051*"eeede" + 0.044*"eeeed" + 0.035*"eeefe" + 0.034*"deeee" + 0.031*"cbccc" + 0.027*"edeee" + 0.027*"eedee" + 0.024*"cccdc" + 0.023*"ccdbc"
+2017-04-26 04:12:37,179 : INFO : topic diff=0.211413, rho=0.353553
+2017-04-26 04:12:37,529 : INFO : -5.086 per-word bound, 34.0 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:37,529 : INFO : PROGRESS: pass 7, at document #174/174
+2017-04-26 04:12:37,756 : INFO : topic #37 (0.025): 0.055*"cccbb" + 0.047*"bbcbc" + 0.030*"ccbbc" + 0.027*"bccbb" + 0.024*"bcccc" + 0.020*"ccccc" + 0.020*"cbbcb" + 0.020*"cbcbc" + 0.019*"eeeed" + 0.018*"cbccc"
+2017-04-26 04:12:37,756 : INFO : topic #25 (0.025): 0.057*"cddcc" + 0.052*"cdcdc" + 0.029*"cdcde" + 0.026*"dcdcc" + 0.026*"acddc" + 0.026*"ddccd" + 0.026*"cddbe" + 0.026*"ddece" + 0.026*"ddcbd" + 0.026*"ccdbc"
+2017-04-26 04:12:37,756 : INFO : topic #29 (0.025): 0.015*"bbcab" + 0.014*"babbb" + 0.012*"aabba" + 0.012*"ggfgg" + 0.012*"cbaab" + 0.012*"abbca" + 0.012*"eeedf" + 0.012*"eggge" + 0.012*"ceeff" + 0.012*"eefgd"
+2017-04-26 04:12:37,756 : INFO : topic #4 (0.025): 0.036*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.025*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:37,756 : INFO : topic #14 (0.025): 0.068*"ddddd" + 0.060*"dddcd" + 0.058*"ddded" + 0.053*"cdddd" + 0.050*"ddedd" + 0.050*"ddcdd" + 0.041*"ddecd" + 0.040*"ddddc" + 0.032*"dddce" + 0.030*"ddcdc"
+2017-04-26 04:12:37,756 : INFO : topic diff=0.179309, rho=0.333333
+2017-04-26 04:12:38,081 : INFO : -5.054 per-word bound, 33.2 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:38,081 : INFO : PROGRESS: pass 8, at document #174/174
+2017-04-26 04:12:38,316 : INFO : topic #17 (0.025): 0.245*"bbbbb" + 0.057*"bbabb" + 0.051*"bbbcb" + 0.047*"bbbab" + 0.046*"bbbbc" + 0.043*"babbb" + 0.034*"bbbba" + 0.031*"bcbbb" + 0.028*"cbbbb" + 0.019*"aabbb"
+2017-04-26 04:12:38,316 : INFO : topic #10 (0.025): 0.042*"ccccc" + 0.021*"dcdcc" + 0.021*"cddcc" + 0.021*"dddee" + 0.020*"edddd" + 0.016*"ddddd" + 0.015*"ddecd" + 0.014*"ccdcb" + 0.014*"ccccd" + 0.014*"ccbcc"
+2017-04-26 04:12:38,316 : INFO : topic #8 (0.025): 0.078*"gfggg" + 0.074*"ggfgg" + 0.068*"ggggf" + 0.067*"ggggg" + 0.061*"fgggg" + 0.059*"gggfg" + 0.040*"gfggf" + 0.035*"fggfg" + 0.033*"ggfgf" + 0.033*"gggff"
+2017-04-26 04:12:38,316 : INFO : topic #16 (0.025): 0.064*"ddddd" + 0.043*"ddded" + 0.043*"gegfg" + 0.032*"gffeg" + 0.032*"fgfef" + 0.032*"efgfg" + 0.022*"dddde" + 0.022*"ddced" + 0.021*"caaab" + 0.020*"ggfge"
+2017-04-26 04:12:38,316 : INFO : topic #4 (0.025): 0.036*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.025*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:38,317 : INFO : topic diff=0.149806, rho=0.316228
+2017-04-26 04:12:38,662 : INFO : -5.031 per-word bound, 32.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:38,662 : INFO : PROGRESS: pass 9, at document #174/174
+2017-04-26 04:12:38,892 : INFO : topic #21 (0.025): 0.030*"cbcdc" + 0.023*"ccdcc" + 0.016*"ccccc" + 0.015*"cddcc" + 0.015*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.015*"ccccd" + 0.014*"bccdc"
+2017-04-26 04:12:38,892 : INFO : topic #31 (0.025): 0.039*"ccccc" + 0.027*"bbbbb" + 0.027*"bbbbc" + 0.026*"ccbbc" + 0.024*"cccbb" + 0.024*"cccdc" + 0.023*"bbbcb" + 0.021*"bbcbb" + 0.018*"cbcbd" + 0.017*"bcccc"
+2017-04-26 04:12:38,892 : INFO : topic #27 (0.025): 0.034*"deeee" + 0.034*"deede" + 0.034*"eddce" + 0.034*"eedee" + 0.034*"ededd" + 0.034*"eeeee" + 0.017*"edede" + 0.017*"dddfd" + 0.017*"eddde" + 0.017*"ecdee"
+2017-04-26 04:12:38,892 : INFO : topic #24 (0.025): 0.122*"aaaaa" + 0.110*"aaaba" + 0.089*"aabaa" + 0.068*"ababa" + 0.063*"baaaa" + 0.048*"aaaab" + 0.043*"abbab" + 0.024*"aabab" + 0.023*"abaab" + 0.023*"babaa"
+2017-04-26 04:12:38,892 : INFO : topic #11 (0.025): 0.081*"abbba" + 0.081*"baaab" + 0.074*"babab" + 0.065*"aabba" + 0.048*"bbbab" + 0.047*"aaaba" + 0.041*"ababb" + 0.033*"abbbb" + 0.031*"bbbba" + 0.029*"babaa"
+2017-04-26 04:12:38,892 : INFO : topic diff=0.124292, rho=0.301511
+2017-04-26 04:12:39,225 : INFO : -5.014 per-word bound, 32.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:39,226 : INFO : PROGRESS: pass 10, at document #174/174
+2017-04-26 04:12:39,456 : INFO : topic #17 (0.025): 0.246*"bbbbb" + 0.057*"bbabb" + 0.052*"bbbcb" + 0.047*"bbbab" + 0.046*"bbbbc" + 0.044*"babbb" + 0.034*"bbbba" + 0.032*"bcbbb" + 0.029*"cbbbb" + 0.019*"aabbb"
+2017-04-26 04:12:39,456 : INFO : topic #0 (0.025): 0.044*"fggff" + 0.027*"ffeeg" + 0.027*"gfefg" + 0.024*"ffgff" + 0.018*"gggfg" + 0.018*"ggfdf" + 0.018*"efggf" + 0.018*"fgfgf" + 0.018*"feddg" + 0.018*"ggfef"
+2017-04-26 04:12:39,456 : INFO : topic #9 (0.025): 0.079*"feeee" + 0.063*"eeeee" + 0.054*"eeeef" + 0.049*"ffeee" + 0.037*"eefef" + 0.033*"effef" + 0.033*"eeefe" + 0.031*"fffee" + 0.031*"efeee" + 0.031*"effff"
+2017-04-26 04:12:39,456 : INFO : topic #21 (0.025): 0.030*"cbcdc" + 0.023*"ccdcc" + 0.016*"ccccc" + 0.015*"cddcc" + 0.015*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.015*"ccccd" + 0.015*"bccdc"
+2017-04-26 04:12:39,457 : INFO : topic #6 (0.025): 0.073*"cccbc" + 0.059*"cdccc" + 0.059*"ccccc" + 0.052*"bccbc" + 0.050*"cdccb" + 0.039*"ccbcc" + 0.037*"dcccd" + 0.034*"bbccc" + 0.027*"cbcbd" + 0.025*"dcccc"
+2017-04-26 04:12:39,457 : INFO : topic diff=0.102654, rho=0.288675
+2017-04-26 04:12:39,791 : INFO : -5.002 per-word bound, 32.0 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:39,791 : INFO : PROGRESS: pass 11, at document #174/174
+2017-04-26 04:12:40,021 : INFO : topic #30 (0.025): 0.001*"egfgf" + 0.001*"gfefg" + 0.001*"gggge" + 0.001*"egggg" + 0.001*"ffgef" + 0.001*"gfegg" + 0.001*"fdgfg" + 0.001*"gfgfd" + 0.001*"ggeeg" + 0.001*"fdffg"
+2017-04-26 04:12:40,022 : INFO : topic #10 (0.025): 0.043*"ccccc" + 0.022*"dcdcc" + 0.021*"cddcc" + 0.021*"dddee" + 0.019*"edddd" + 0.016*"ddddd" + 0.015*"ddecd" + 0.014*"ccdcb" + 0.014*"ccccd" + 0.014*"ccbcc"
+2017-04-26 04:12:40,022 : INFO : topic #24 (0.025): 0.118*"aaaaa" + 0.111*"aaaba" + 0.089*"aabaa" + 0.069*"ababa" + 0.063*"baaaa" + 0.049*"aaaab" + 0.044*"abbab" + 0.025*"aabab" + 0.023*"abaab" + 0.023*"babaa"
+2017-04-26 04:12:40,022 : INFO : topic #32 (0.025): 0.031*"ccccc" + 0.031*"ccccd" + 0.021*"cbccc" + 0.021*"dccbb" + 0.021*"ccccb" + 0.021*"cccdc" + 0.021*"cccdb" + 0.021*"ddcdd" + 0.021*"dddfd" + 0.011*"bbcbb"
+2017-04-26 04:12:40,022 : INFO : topic #14 (0.025): 0.069*"ddddd" + 0.061*"dddcd" + 0.059*"ddded" + 0.052*"cdddd" + 0.052*"ddedd" + 0.051*"ddcdd" + 0.045*"ddddc" + 0.041*"ddecd" + 0.037*"dddce" + 0.031*"edddc"
+2017-04-26 04:12:40,022 : INFO : topic diff=0.084521, rho=0.277350
+2017-04-26 04:12:40,364 : INFO : -4.993 per-word bound, 31.8 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:40,364 : INFO : PROGRESS: pass 12, at document #174/174
+2017-04-26 04:12:40,599 : INFO : topic #29 (0.025): 0.015*"bbcab" + 0.013*"aabba" + 0.013*"ggfgg" + 0.013*"cbaab" + 0.013*"abbca" + 0.013*"eeedf" + 0.013*"eggge" + 0.013*"ceeff" + 0.013*"eefgd" + 0.013*"dfegf"
+2017-04-26 04:12:40,599 : INFO : topic #30 (0.025): 0.001*"egfgf" + 0.001*"gfefg" + 0.001*"gggge" + 0.001*"egggg" + 0.001*"ffgef" + 0.001*"gfegg" + 0.001*"fdgfg" + 0.001*"gfgfd" + 0.001*"ggeeg" + 0.001*"fdffg"
+2017-04-26 04:12:40,599 : INFO : topic #28 (0.025): 0.073*"bbbab" + 0.057*"baaab" + 0.046*"bbbaa" + 0.042*"aaaab" + 0.040*"babbb" + 0.040*"baaba" + 0.037*"bbaab" + 0.036*"bbbba" + 0.033*"bbcab" + 0.031*"abbba"
+2017-04-26 04:12:40,599 : INFO : topic #3 (0.025): 0.223*"fffff" + 0.074*"fffgf" + 0.066*"ffffg" + 0.063*"fffef" + 0.039*"ffffe" + 0.034*"gffff" + 0.033*"ffeff" + 0.025*"fgfff" + 0.024*"effff" + 0.023*"ffgff"
+2017-04-26 04:12:40,599 : INFO : topic #27 (0.025): 0.034*"deeee" + 0.034*"deede" + 0.034*"eddce" + 0.034*"eedee" + 0.034*"ededd" + 0.034*"eeeee" + 0.017*"edede" + 0.017*"dddfd" + 0.017*"eddde" + 0.017*"ecdee"
+2017-04-26 04:12:40,599 : INFO : topic diff=0.069927, rho=0.267261
+2017-04-26 04:12:40,940 : INFO : -4.985 per-word bound, 31.7 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:40,940 : INFO : PROGRESS: pass 13, at document #174/174
+2017-04-26 04:12:41,167 : INFO : topic #34 (0.025): 0.001*"aaaab" + 0.001*"aaaaa" + 0.001*"aaaba" + 0.001*"bbbab" + 0.001*"baaaa" + 0.001*"ababa" + 0.001*"bbbaa" + 0.001*"aabaa" + 0.001*"bbbba" + 0.001*"bcaab"
+2017-04-26 04:12:41,167 : INFO : topic #6 (0.025): 0.074*"cccbc" + 0.062*"ccccc" + 0.059*"bccbc" + 0.058*"cdccc" + 0.054*"cdccb" + 0.039*"ccbcc" + 0.035*"dcccd" + 0.034*"bbccc" + 0.033*"cbcbd" + 0.025*"cccbb"
+2017-04-26 04:12:41,167 : INFO : topic #13 (0.025): 0.887*"ggggg" + 0.030*"gggfg" + 0.013*"ggggf" + 0.012*"fgggg" + 0.003*"gfggg" + 0.002*"gggeg" + 0.002*"ccbeb" + 0.002*"abbdb" + 0.002*"cdbde" + 0.002*"acbcb"
+2017-04-26 04:12:41,167 : INFO : topic #32 (0.025): 0.032*"ccccc" + 0.032*"ccccd" + 0.021*"cbccc" + 0.021*"dccbb" + 0.021*"ccccb" + 0.021*"cccdc" + 0.021*"cccdb" + 0.021*"ddcdd" + 0.021*"dddfd" + 0.011*"bbcbb"
+2017-04-26 04:12:41,168 : INFO : topic #27 (0.025): 0.034*"deeee" + 0.034*"deede" + 0.034*"eddce" + 0.034*"eedee" + 0.034*"ededd" + 0.034*"eeeee" + 0.017*"edede" + 0.017*"dddfd" + 0.017*"eddde" + 0.017*"ecdee"
+2017-04-26 04:12:41,168 : INFO : topic diff=0.057795, rho=0.258199
+2017-04-26 04:12:41,516 : INFO : -4.979 per-word bound, 31.5 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:41,516 : INFO : PROGRESS: pass 14, at document #174/174
+2017-04-26 04:12:41,735 : INFO : topic #24 (0.025): 0.114*"aaaaa" + 0.112*"aaaba" + 0.089*"aabaa" + 0.070*"ababa" + 0.063*"baaaa" + 0.049*"aaaab" + 0.044*"abbab" + 0.025*"aabab" + 0.024*"abaab" + 0.023*"babaa"
+2017-04-26 04:12:41,736 : INFO : topic #23 (0.025): 0.030*"eeeef" + 0.030*"effee" + 0.030*"ffeef" + 0.015*"fceff" + 0.015*"gffcf" + 0.015*"defcf" + 0.015*"deede" + 0.015*"fefde" + 0.015*"efdee" + 0.015*"ffgff"
+2017-04-26 04:12:41,736 : INFO : topic #33 (0.025): 0.041*"eeeee" + 0.024*"edeef" + 0.017*"ddeee" + 0.015*"eedee" + 0.015*"edeee" + 0.013*"eeedd" + 0.012*"eeege" + 0.012*"ffefg" + 0.012*"defed" + 0.012*"eedef"
+2017-04-26 04:12:41,736 : INFO : topic #17 (0.025): 0.247*"bbbbb" + 0.058*"bbabb" + 0.052*"bbbcb" + 0.047*"bbbab" + 0.047*"bbbbc" + 0.045*"babbb" + 0.034*"bbbba" + 0.032*"bcbbb" + 0.029*"cbbbb" + 0.019*"aabbb"
+2017-04-26 04:12:41,736 : INFO : topic #4 (0.025): 0.037*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.026*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:41,736 : INFO : topic diff=0.047717, rho=0.250000
+2017-04-26 04:12:42,083 : INFO : -4.975 per-word bound, 31.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:42,083 : INFO : PROGRESS: pass 15, at document #174/174
+2017-04-26 04:12:42,305 : INFO : topic #19 (0.025): 0.048*"ddccc" + 0.032*"cddcd" + 0.032*"dcdcd" + 0.032*"dddcc" + 0.016*"ccccb" + 0.016*"ccdcd" + 0.016*"cdcdd" + 0.016*"cdcdb" + 0.016*"ebddd" + 0.016*"ddedc"
+2017-04-26 04:12:42,306 : INFO : topic #4 (0.025): 0.037*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.026*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:42,306 : INFO : topic #1 (0.025): 0.064*"ccccc" + 0.032*"cccdc" + 0.021*"ddddd" + 0.021*"ddedd" + 0.021*"edddd" + 0.021*"eeded" + 0.021*"eedfd" + 0.021*"ccccb" + 0.011*"dddcd" + 0.011*"ddcdd"
+2017-04-26 04:12:42,306 : INFO : topic #22 (0.025): 0.034*"feeff" + 0.017*"ggfgg" + 0.017*"gffgf" + 0.017*"efdee" + 0.017*"eecfe" + 0.017*"dffff" + 0.017*"edeef" + 0.017*"fedff" + 0.017*"fegdd" + 0.017*"fefff"
+2017-04-26 04:12:42,306 : INFO : topic #10 (0.025): 0.043*"ccccc" + 0.022*"dcdcc" + 0.022*"cddcc" + 0.022*"dddee" + 0.018*"edddd" + 0.016*"ddddd" + 0.015*"ddecd" + 0.014*"ccdcb" + 0.014*"ccccd" + 0.014*"ccbcc"
+2017-04-26 04:12:42,306 : INFO : topic diff=0.039450, rho=0.242536
+2017-04-26 04:12:42,638 : INFO : -4.971 per-word bound, 31.4 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:42,638 : INFO : PROGRESS: pass 16, at document #174/174
+2017-04-26 04:12:42,867 : INFO : topic #4 (0.025): 0.038*"bcbcb" + 0.028*"cbcbc" + 0.027*"ccbcc" + 0.026*"cbcab" + 0.019*"bbccc" + 0.019*"dccdd" + 0.019*"dddcd" + 0.019*"dcccd" + 0.019*"abccc" + 0.019*"bcbbd"
+2017-04-26 04:12:42,867 : INFO : topic #29 (0.025): 0.014*"bbcab" + 0.013*"aabba" + 0.013*"ggfgg" + 0.013*"cbaab" + 0.013*"abbca" + 0.013*"eeedf" + 0.013*"eggge" + 0.013*"ceeff" + 0.013*"eefgd" + 0.013*"dfegf"
+2017-04-26 04:12:42,867 : INFO : topic #5 (0.025): 0.076*"eeeee" + 0.052*"eeede" + 0.046*"eeeed" + 0.036*"eeefe" + 0.036*"deeee" + 0.029*"cbccc" + 0.027*"edeee" + 0.027*"eedee" + 0.024*"cccdc" + 0.024*"ccdbc"
+2017-04-26 04:12:42,867 : INFO : topic #8 (0.025): 0.078*"gfggg" + 0.074*"ggfgg" + 0.071*"ggggg" + 0.068*"ggggf" + 0.061*"gggfg" + 0.060*"fgggg" + 0.039*"gfggf" + 0.036*"fggfg" + 0.033*"ggfgf" + 0.032*"gggff"
+2017-04-26 04:12:42,867 : INFO : topic #25 (0.025): 0.060*"cddcc" + 0.052*"cdcdc" + 0.032*"cdcde" + 0.026*"dcdcc" + 0.026*"acddc" + 0.026*"ddccd" + 0.026*"cddbe" + 0.026*"ddece" + 0.026*"ddcbd" + 0.026*"ccdbc"
+2017-04-26 04:12:42,868 : INFO : topic diff=0.032680, rho=0.235702
+2017-04-26 04:12:43,197 : INFO : -4.968 per-word bound, 31.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:43,197 : INFO : PROGRESS: pass 17, at document #174/174
+2017-04-26 04:12:43,440 : INFO : topic #19 (0.025): 0.048*"ddccc" + 0.032*"cddcd" + 0.032*"dcdcd" + 0.032*"dddcc" + 0.016*"ccccb" + 0.016*"ccdcd" + 0.016*"cdcdd" + 0.016*"cdcdb" + 0.016*"ebddd" + 0.016*"ddedc"
+2017-04-26 04:12:43,440 : INFO : topic #21 (0.025): 0.031*"cbcdc" + 0.023*"ccdcc" + 0.016*"ccccc" + 0.015*"cddcc" + 0.015*"cdccb" + 0.015*"ddecc" + 0.015*"dcdcc" + 0.015*"ccddc" + 0.015*"ccccd" + 0.015*"bccdc"
+2017-04-26 04:12:43,440 : INFO : topic #33 (0.025): 0.032*"eeeee" + 0.024*"edeef" + 0.018*"ddeee" + 0.015*"eedee" + 0.015*"edeee" + 0.013*"eeedd" + 0.012*"eeege" + 0.012*"ffefg" + 0.012*"defed" + 0.012*"eedef"
+2017-04-26 04:12:43,440 : INFO : topic #5 (0.025): 0.076*"eeeee" + 0.052*"eeede" + 0.046*"eeeed" + 0.036*"eeefe" + 0.036*"deeee" + 0.029*"cbccc" + 0.027*"edeee" + 0.027*"eedee" + 0.024*"cccdc" + 0.024*"ccdbc"
+2017-04-26 04:12:43,440 : INFO : topic #8 (0.025): 0.078*"gfggg" + 0.074*"ggfgg" + 0.071*"ggggg" + 0.068*"ggggf" + 0.061*"gggfg" + 0.060*"fgggg" + 0.039*"gfggf" + 0.036*"fggfg" + 0.033*"ggfgf" + 0.032*"gggff"
+2017-04-26 04:12:43,440 : INFO : topic diff=0.027214, rho=0.229416
+2017-04-26 04:12:43,762 : INFO : -4.966 per-word bound, 31.3 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:43,762 : INFO : PROGRESS: pass 18, at document #174/174
+2017-04-26 04:12:43,984 : INFO : topic #20 (0.025): 0.028*"ccdcc" + 0.022*"ccdcd" + 0.019*"ccccc" + 0.018*"ddddc" + 0.017*"dddcc" + 0.017*"dcccd" + 0.017*"dcddd" + 0.011*"cccbb" + 0.011*"cccbd" + 0.011*"cccdc"
+2017-04-26 04:12:43,984 : INFO : topic #35 (0.025): 0.133*"fefff" + 0.073*"gfffe" + 0.047*"ffegf" + 0.027*"babba" + 0.027*"caaac" + 0.027*"egeff" + 0.027*"ffeef" + 0.001*"acabb" + 0.001*"fffff" + 0.001*"ffeff"
+2017-04-26 04:12:43,984 : INFO : topic #15 (0.025): 0.014*"fffdf" + 0.014*"ddedc" + 0.014*"eeece" + 0.014*"cdeed" + 0.014*"efecd" + 0.014*"efece" + 0.014*"dfeec" + 0.014*"dfgfd" + 0.014*"efeed" + 0.014*"efeec"
+2017-04-26 04:12:43,985 : INFO : topic #39 (0.025): 0.001*"baaab" + 0.001*"abbba" + 0.001*"babab" + 0.001*"aaaba" + 0.001*"dcdcc" + 0.001*"bbbab" + 0.001*"bbbbb" + 0.001*"aaaab" + 0.001*"ababb" + 0.001*"cbcdc"
+2017-04-26 04:12:43,985 : INFO : topic #2 (0.025): 0.034*"edeef" + 0.034*"ceefe" + 0.034*"eddee" + 0.017*"eeedd" + 0.017*"deced" + 0.017*"geeec" + 0.017*"cedgf" + 0.017*"edfee" + 0.017*"ddcfd" + 0.017*"dcdde"
+2017-04-26 04:12:43,985 : INFO : topic diff=0.022719, rho=0.223607
+2017-04-26 04:12:44,339 : INFO : -4.964 per-word bound, 31.2 perplexity estimate based on a held-out corpus of 174 documents with 6090 words
+2017-04-26 04:12:44,340 : INFO : PROGRESS: pass 19, at document #174/174
+2017-04-26 04:12:44,567 : INFO : topic #17 (0.025): 0.248*"bbbbb" + 0.058*"bbabb" + 0.052*"bbbcb" + 0.047*"bbbbc" + 0.047*"bbbab" + 0.045*"babbb" + 0.033*"bbbba" + 0.032*"bcbbb" + 0.029*"cbbbb" + 0.019*"aabbb"
+2017-04-26 04:12:44,567 : INFO : topic #7 (0.025): 0.014*"aaaca" + 0.014*"abbca" + 0.014*"ffffe" + 0.014*"ffefe" + 0.014*"ffeff" + 0.014*"efeef" + 0.014*"ffgff" + 0.014*"deede" + 0.014*"efgfe" + 0.014*"fggff"
+2017-04-26 04:12:44,567 : INFO : topic #24 (0.025): 0.113*"aaaba" + 0.111*"aaaaa" + 0.089*"aabaa" + 0.070*"ababa" + 0.064*"baaaa" + 0.050*"aaaab" + 0.045*"abbab" + 0.025*"aabab" + 0.024*"abaab" + 0.024*"babaa"
+2017-04-26 04:12:44,567 : INFO : topic #3 (0.025): 0.224*"fffff" + 0.074*"fffgf" + 0.066*"ffffg" + 0.063*"fffef" + 0.039*"ffffe" + 0.035*"ffeff" + 0.034*"gffff" + 0.025*"fgfff" + 0.025*"effff" + 0.023*"ffgff"
+2017-04-26 04:12:44,567 : INFO : topic #9 (0.025): 0.086*"eeeee" + 0.076*"feeee" + 0.060*"eeeef" + 0.047*"ffeee" + 0.038*"eeefe" + 0.035*"eefef" + 0.030*"effef" + 0.029*"fffee" + 0.029*"efeee" + 0.029*"eefee"
+2017-04-26 04:12:44,568 : INFO : topic diff=0.019006, rho=0.218218
+2017-04-26 04:12:44,568 : INFO : saving LdaState object under ../models/ts2_lda_40.lda.state, separately None
+2017-04-26 04:12:44,568 : INFO : saved ../models/ts2_lda_40.lda.state
+2017-04-26 04:12:44,570 : INFO : saving LdaModel object under ../models/ts2_lda_40.lda, separately ['expElogbeta', 'sstats']
+2017-04-26 04:12:44,570 : INFO : not storing attribute id2word
+2017-04-26 04:12:44,570 : INFO : storing np array 'expElogbeta' to ../models/ts2_lda_40.lda.expElogbeta.npy
+2017-04-26 04:12:44,571 : INFO : not storing attribute state
+2017-04-26 04:12:44,571 : INFO : not storing attribute dispatcher
+2017-04-26 04:12:44,571 : INFO : saved ../models/ts2_lda_40.lda
+2017-04-26 04:12:44,572 : INFO : loading LdaModel object from ../models/ts1_lda_20.lda
+2017-04-26 04:12:44,572 : INFO : loading expElogbeta from ../models/ts1_lda_20.lda.expElogbeta.npy with mmap=None
+2017-04-26 04:12:44,572 : INFO : setting ignored attribute id2word to None
+2017-04-26 04:12:44,572 : INFO : setting ignored attribute state to None
+2017-04-26 04:12:44,572 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 04:12:44,572 : INFO : loaded ../models/ts1_lda_20.lda
+2017-04-26 04:12:44,573 : INFO : loading LdaModel object from ../models/ts1_lda_20.lda.state
+2017-04-26 04:12:44,573 : INFO : loaded ../models/ts1_lda_20.lda.state
+2017-04-26 04:12:44,574 : INFO : loading LdaModel object from ../models/ts1_lda_30.lda
+2017-04-26 04:12:44,574 : INFO : loading expElogbeta from ../models/ts1_lda_30.lda.expElogbeta.npy with mmap=None
+2017-04-26 04:12:44,574 : INFO : setting ignored attribute id2word to None
+2017-04-26 04:12:44,574 : INFO : setting ignored attribute state to None
+2017-04-26 04:12:44,574 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 04:12:44,574 : INFO : loaded ../models/ts1_lda_30.lda
+2017-04-26 04:12:44,575 : INFO : loading LdaModel object from ../models/ts1_lda_30.lda.state
+2017-04-26 04:12:44,575 : INFO : loaded ../models/ts1_lda_30.lda.state
+2017-04-26 04:12:44,576 : INFO : loading LdaModel object from ../models/ts1_lda_40.lda
+2017-04-26 04:12:44,576 : INFO : loading expElogbeta from ../models/ts1_lda_40.lda.expElogbeta.npy with mmap=None
+2017-04-26 04:12:44,577 : INFO : setting ignored attribute id2word to None
+2017-04-26 04:12:44,577 : INFO : setting ignored attribute state to None
+2017-04-26 04:12:44,577 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 04:12:44,577 : INFO : loaded ../models/ts1_lda_40.lda
+2017-04-26 04:12:44,577 : INFO : loading LdaModel object from ../models/ts1_lda_40.lda.state
+2017-04-26 04:12:44,577 : INFO : loaded ../models/ts1_lda_40.lda.state
+Printing topics for time series datasetno 1
+(0, u'0.102*"geggf" + 0.052*"gccff" + 0.052*"gfggc" + 0.052*"gbbfg" + 0.052*"fffdg" + 0.052*"edecc" + 0.052*"ffgdf" + 0.052*"edfec" + 0.052*"ffggc" + 0.052*"bcffg"')
+(1, u'0.040*"eeeeb" + 0.040*"bbccg" + 0.040*"babcg" + 0.040*"gfbce" + 0.040*"bcegf" + 0.040*"gcbfc" + 0.040*"ffgfb" + 0.040*"effee" + 0.040*"bfcgf" + 0.040*"cbbcb"')
+(2, u'0.006*"cbbbb" + 0.006*"ccbba" + 0.006*"geggf" + 0.006*"bbbab" + 0.006*"bfcgf" + 0.006*"effec" + 0.006*"gfgcd" + 0.006*"gfeef" + 0.006*"babcg" + 0.006*"gddfe"')
+(3, u'0.006*"ccbba" + 0.006*"cbbbb" + 0.006*"bbbab" + 0.006*"geggf" + 0.006*"gfgcd" + 0.006*"bbbbb" + 0.006*"gccff" + 0.006*"babcg" + 0.006*"cfgbf" + 0.006*"gfcfg"')
+(4, u'0.074*"cfgbf" + 0.074*"abbdb" + 0.074*"aabag" + 0.074*"abaac" + 0.074*"bfbga" + 0.074*"cbabb" + 0.004*"bbbbb" + 0.004*"cbbbb" + 0.004*"geggf" + 0.004*"ccbba"')
+(5, u'0.006*"bbbab" + 0.006*"cbbbb" + 0.006*"ccbba" + 0.006*"geggf" + 0.006*"gfcfg" + 0.006*"gfeef" + 0.006*"effec" + 0.006*"cbcbb" + 0.006*"babcg" + 0.006*"bfcgf"')
+(6, u'0.074*"ccbba" + 0.074*"bfbbb" + 0.074*"baaab" + 0.074*"cdgbc" + 0.074*"ccaca" + 0.074*"bbbag" + 0.004*"cbbbb" + 0.004*"bbbab" + 0.004*"geggf" + 0.004*"bfcgf"')
+(7, u'0.078*"cbbbb" + 0.040*"bcegd" + 0.040*"bfbcf" + 0.040*"bbcac" + 0.040*"dfffb" + 0.040*"fgfee" + 0.040*"cccba" + 0.040*"cfbge" + 0.040*"bbbca" + 0.040*"fbaeb"')
+(8, u'0.040*"bbbbb" + 0.040*"fddfd" + 0.040*"cfdff" + 0.040*"ggffe" + 0.040*"ffgde" + 0.040*"cgffa" + 0.040*"bcfde" + 0.040*"dfdef" + 0.040*"gfefd" + 0.040*"fgeff"')
+(9, u'0.074*"gfffd" + 0.074*"gfeef" + 0.074*"fcded" + 0.074*"fgfgf" + 0.074*"gfgec" + 0.074*"cdgef" + 0.004*"bbbab" + 0.004*"cbbbb" + 0.004*"geggf" + 0.004*"ccbba"')
+(10, u'0.040*"efggb" + 0.040*"bacbg" + 0.040*"cfgcf" + 0.040*"gdggf" + 0.040*"edgcc" + 0.040*"bbdbc" + 0.040*"ccccb" + 0.040*"eeecb" + 0.040*"bacba" + 0.040*"baaag"')
+(11, u'0.033*"ggfed" + 0.033*"egffg" + 0.033*"cfgfc" + 0.033*"cbbgb" + 0.033*"babbb" + 0.033*"bbacb" + 0.033*"dcbcf" + 0.033*"bbaab" + 0.033*"defff" + 0.033*"cfbcf"')
+(12, u'0.074*"bbbab" + 0.074*"cbcbb" + 0.074*"bbabb" + 0.074*"abaab" + 0.074*"cacbb" + 0.074*"bacca" + 0.004*"geggf" + 0.004*"cbbbb" + 0.004*"effec" + 0.004*"gccff"')
+(13, u'0.006*"cbbbb" + 0.006*"geggf" + 0.006*"bbbab" + 0.006*"gfeef" + 0.006*"ccbba" + 0.006*"bfcgf" + 0.006*"feggc" + 0.006*"cfgbf" + 0.006*"bbbbb" + 0.006*"bacca"')
+(14, u'0.006*"cbbbb" + 0.006*"geggf" + 0.006*"bbbab" + 0.006*"bbbbb" + 0.006*"ccbba" + 0.006*"cbcbb" + 0.006*"gfgcd" + 0.006*"bfcgf" + 0.006*"feggc" + 0.006*"gfeef"')
+(15, u'0.040*"effec" + 0.040*"bbbba" + 0.040*"bcaaa" + 0.040*"babcg" + 0.040*"aaaaa" + 0.040*"efefe" + 0.040*"ffbbe" + 0.040*"bbcbb" + 0.040*"ggegf" + 0.040*"dggfc"')
+(16, u'0.040*"gfcfg" + 0.040*"gfgcd" + 0.040*"ggeff" + 0.040*"bgbec" + 0.040*"cbcca" + 0.040*"gcegf" + 0.040*"dgedf" + 0.040*"ffbcf" + 0.040*"bfcgf" + 0.040*"bbbdg"')
+(17, u'0.074*"gfeef" + 0.074*"ddfff" + 0.074*"fffdc" + 0.074*"ffgfe" + 0.074*"gddfe" + 0.074*"gffgf" + 0.004*"cbbbb" + 0.004*"geggf" + 0.004*"gfgcd" + 0.004*"ccbba"')
+(18, u'0.006*"ccbba" + 0.006*"cbbbb" + 0.006*"geggf" + 0.006*"bbbab" + 0.006*"bbbbb" + 0.006*"gfgcd" + 0.006*"bfcgf" + 0.006*"bcccb" + 0.006*"babcg" + 0.006*"cbcbb"')
+(19, u'0.074*"bbbab" + 0.074*"cbbbb" + 0.074*"babce" + 0.074*"bcfbf" + 0.074*"fbaea" + 0.074*"bcbcb" + 0.004*"babba" + 0.004*"cbcba" + 0.004*"bccbb" + 0.004*"bcbac"')
+Printing topics for time series datasetno 1
+(0, u'0.090*"babcg" + 0.090*"cbcbb" + 0.090*"dggfc" + 0.090*"bbcbb" + 0.090*"fgffb" + 0.090*"ccdbg" + 0.003*"cfgbf" + 0.003*"geggf" + 0.003*"cbbbb" + 0.003*"bbbab"')
+(1, u'0.059*"bcbac" + 0.059*"bccbb" + 0.059*"gfgec" + 0.059*"cbcba" + 0.059*"bceda" + 0.059*"babba" + 0.059*"fgfgf" + 0.059*"gfffd" + 0.059*"fcded" + 0.059*"gbafb"')
+(2, u'0.006*"cfgbf" + 0.006*"effec" + 0.006*"cbbbb" + 0.006*"bbbab" + 0.006*"abaab" + 0.006*"babcg" + 0.006*"bbbbb" + 0.006*"gfeef" + 0.006*"bfbcf" + 0.006*"gfbce"')
+(3, u'0.006*"bbbab" + 0.006*"geggf" + 0.006*"effec" + 0.006*"cfgbf" + 0.006*"cbbbb" + 0.006*"abaab" + 0.006*"cbcbb" + 0.006*"dfffb" + 0.006*"gfbce" + 0.006*"fgfee"')
+(4, u'0.090*"ffffb" + 0.090*"bfcgf" + 0.090*"bcegf" + 0.090*"bbccg" + 0.090*"effee" + 0.090*"gfbce" + 0.003*"gfeef" + 0.003*"gccff" + 0.003*"cbbbb" + 0.003*"cfgbf"')
+(5, u'0.059*"bcccb" + 0.059*"bbaab" + 0.059*"ccabb" + 0.059*"bbfbg" + 0.059*"bgbec" + 0.059*"bbbbb" + 0.059*"bbbdg" + 0.059*"ccbbb" + 0.059*"bcbab" + 0.059*"cbcca"')
+(6, u'0.006*"cfgbf" + 0.006*"geggf" + 0.006*"bbbab" + 0.006*"effec" + 0.006*"gfeef" + 0.006*"cbbbb" + 0.006*"gcegf" + 0.006*"bbccg" + 0.006*"dfffb" + 0.006*"gfbce"')
+(7, u'0.006*"cbbbb" + 0.006*"gccff" + 0.006*"gfeef" + 0.006*"effec" + 0.006*"bbbbb" + 0.006*"cbcbb" + 0.006*"bbbab" + 0.006*"geggf" + 0.006*"fgfee" + 0.006*"ffffb"')
+(8, u'0.006*"bbbbb" + 0.006*"gfcfg" + 0.006*"cbbbb" + 0.006*"geggf" + 0.006*"cfgbf" + 0.006*"bbbab" + 0.006*"fgfee" + 0.006*"gfbce" + 0.006*"bfbcf" + 0.006*"bbcbf"')
+(9, u'0.006*"bbbab" + 0.006*"cfgbf" + 0.006*"geggf" + 0.006*"cbbbb" + 0.006*"gfeef" + 0.006*"fgfee" + 0.006*"gcegf" + 0.006*"bcegf" + 0.006*"bcegd" + 0.006*"gfbce"')
+(10, u'0.006*"geggf" + 0.006*"bbbab" + 0.006*"gfbce" + 0.006*"bfbcf" + 0.006*"fgfed" + 0.006*"gcegf" + 0.006*"bcegf" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"bfcgf"')
+(11, u'0.059*"feggc" + 0.059*"gdggf" + 0.059*"bbbcf" + 0.059*"egffb" + 0.059*"cbabf" + 0.059*"bbbbb" + 0.059*"gbcfg" + 0.059*"cfgcf" + 0.059*"cbebe" + 0.059*"bbfeg"')
+(12, u'0.117*"cbbbb" + 0.059*"baaag" + 0.059*"bbdbc" + 0.059*"ccdbb" + 0.059*"edgcc" + 0.059*"efggb" + 0.059*"cfgbf" + 0.059*"bbcac" + 0.059*"fbaeb" + 0.059*"bbbca"')
+(13, u'0.059*"bbbab" + 0.059*"bacca" + 0.059*"bbcbf" + 0.059*"cfbge" + 0.059*"bfbcf" + 0.059*"fgfee" + 0.059*"dfffb" + 0.059*"bcegd" + 0.059*"bbabb" + 0.059*"cacbb"')
+(14, u'0.006*"cbbbb" + 0.006*"bbbab" + 0.006*"cbcbb" + 0.006*"geggf" + 0.006*"bbbbb" + 0.006*"gfeef" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"gcegf"')
+(15, u'0.087*"ccbba" + 0.044*"cbbba" + 0.044*"bbbba" + 0.044*"bbacb" + 0.044*"babac" + 0.044*"abbbb" + 0.044*"acaab" + 0.044*"bacbb" + 0.044*"bbbag" + 0.044*"cdgbc"')
+(16, u'0.006*"cbbbb" + 0.006*"bbbab" + 0.006*"cbcbb" + 0.006*"effee" + 0.006*"ffffb" + 0.006*"gfbce" + 0.006*"bcegf" + 0.006*"dfffb" + 0.006*"bbccg" + 0.006*"gcegf"')
+(17, u'0.059*"bbbab" + 0.059*"fbaea" + 0.059*"edecc" + 0.059*"bceeg" + 0.059*"fffdg" + 0.059*"bcfbf" + 0.059*"babce" + 0.059*"bcbcb" + 0.059*"gfggc" + 0.059*"gbbfg"')
+(18, u'0.090*"gfgcd" + 0.090*"egffg" + 0.090*"feeec" + 0.090*"ggfed" + 0.090*"gfcfg" + 0.090*"defff" + 0.003*"gfeef" + 0.003*"bbbbb" + 0.003*"cbbbb" + 0.003*"effec"')
+(19, u'0.090*"gfeef" + 0.090*"gddfe" + 0.090*"gffgf" + 0.090*"ddfff" + 0.090*"fffdc" + 0.090*"ffgfe" + 0.003*"cbbbb" + 0.003*"bbbbb" + 0.003*"cbcbb" + 0.003*"bbbab"')
+(20, u'0.006*"geggf" + 0.006*"bbbab" + 0.006*"cbcbb" + 0.006*"gfbce" + 0.006*"fgfee" + 0.006*"ffffb" + 0.006*"bbcbf" + 0.006*"bbccg" + 0.006*"bdebf" + 0.006*"bcegf"')
+(21, u'0.090*"gfgcd" + 0.090*"eeefc" + 0.090*"cffef" + 0.090*"ggeff" + 0.090*"gfcfg" + 0.090*"dgedf" + 0.003*"geggf" + 0.003*"bbbbb" + 0.003*"gfeef" + 0.003*"cbbbb"')
+(22, u'0.090*"geggf" + 0.090*"edfec" + 0.090*"bcffg" + 0.090*"ffggc" + 0.090*"ffgdf" + 0.090*"gccff" + 0.003*"bbbab" + 0.003*"cbbbb" + 0.003*"bbbbb" + 0.003*"ffffb"')
+(23, u'0.090*"effec" + 0.090*"dcbce" + 0.090*"bfcgf" + 0.090*"fgfed" + 0.090*"gcegf" + 0.090*"ffbcf" + 0.003*"cbbbb" + 0.003*"bbbbb" + 0.003*"cbcbb" + 0.003*"geggf"')
+(24, u'0.059*"bacbg" + 0.059*"cbbcb" + 0.059*"bgffd" + 0.059*"ccccb" + 0.059*"gcbfc" + 0.059*"cggfb" + 0.059*"ggfec" + 0.059*"bbebg" + 0.059*"bacba" + 0.059*"bbdaf"')
+(25, u'0.090*"geggf" + 0.090*"eeeeb" + 0.090*"cceeg" + 0.090*"ffgfb" + 0.090*"ggfdf" + 0.090*"gccff" + 0.003*"cbbbb" + 0.003*"ccbba" + 0.003*"cbcbb" + 0.003*"bbbbb"')
+(26, u'0.006*"geggf" + 0.006*"cbbbb" + 0.006*"bbbbb" + 0.006*"cbcbb" + 0.006*"bbbab" + 0.006*"bcegf" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gcegf" + 0.006*"dcbce"')
+(27, u'0.090*"cfdff" + 0.090*"dfdef" + 0.090*"gebbe" + 0.090*"ggffe" + 0.090*"eefef" + 0.090*"efeec" + 0.003*"effec" + 0.003*"bbbab" + 0.003*"gfeef" + 0.003*"bbbbb"')
+(28, u'0.059*"bbcef" + 0.059*"efefe" + 0.059*"gfeff" + 0.059*"fgeff" + 0.059*"ffgde" + 0.059*"ffbbe" + 0.059*"cfbgf" + 0.059*"fddfd" + 0.059*"ggegf" + 0.059*"gfefd"')
+(29, u'0.059*"bfbga" + 0.059*"cfgbf" + 0.059*"abaac" + 0.059*"cfbcf" + 0.059*"cbbgb" + 0.059*"abbdb" + 0.059*"bdebf" + 0.059*"cbabb" + 0.059*"dcbcf" + 0.059*"fgeec"')
+Printing topics for time series datasetno 1
+(0, u'0.102*"ddfff" + 0.102*"gffgf" + 0.102*"fffdc" + 0.102*"gddfe" + 0.102*"ffgfe" + 0.102*"gfeef" + 0.002*"fgeec" + 0.002*"cfbcf" + 0.002*"bcegf" + 0.002*"effee"')
+(1, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(2, u'0.102*"bacca" + 0.102*"bbabb" + 0.102*"cbcbb" + 0.102*"abaab" + 0.102*"cacbb" + 0.102*"bbbab" + 0.002*"fgfee" + 0.002*"dfffb" + 0.002*"bfbcf" + 0.002*"bcegd"')
+(3, u'0.064*"bcccb" + 0.064*"bbbdg" + 0.064*"gbbfb" + 0.064*"bbfbg" + 0.064*"babcg" + 0.064*"bgbec" + 0.064*"gcbfc" + 0.064*"cbcca" + 0.064*"cbbcb" + 0.064*"cabbb"')
+(4, u'0.102*"efggb" + 0.102*"cfgbf" + 0.102*"ccdbb" + 0.102*"edgcc" + 0.102*"bbdbc" + 0.102*"baaag" + 0.002*"cfbge" + 0.002*"bdebf" + 0.002*"dfffb" + 0.002*"bbcbf"')
+(5, u'0.102*"cdgbc" + 0.102*"ccbba" + 0.102*"bbbag" + 0.102*"baaab" + 0.102*"bfbbb" + 0.102*"ccaca" + 0.003*"cbbbb" + 0.003*"fbaeb" + 0.003*"bbcac" + 0.003*"cccba"')
+(6, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(7, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(8, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(9, u'0.064*"dfdef" + 0.064*"eefef" + 0.064*"bbcbf" + 0.064*"dfffb" + 0.064*"efeec" + 0.064*"cfdff" + 0.064*"cfbge" + 0.064*"fgfee" + 0.064*"bfbcf" + 0.064*"gebbe"')
+(10, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(11, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(12, u'0.126*"cbbbb" + 0.064*"edecc" + 0.064*"gfggc" + 0.064*"bceeg" + 0.064*"gbbfg" + 0.064*"fffdg" + 0.064*"geggf" + 0.064*"bbbca" + 0.064*"cccba" + 0.064*"bbcac"')
+(13, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(14, u'0.102*"cbbbb" + 0.102*"bcbcb" + 0.102*"babce" + 0.102*"bcfbf" + 0.102*"fbaea" + 0.102*"bbbab" + 0.002*"fgfee" + 0.002*"bcegf" + 0.002*"bbccg" + 0.002*"ffffb"')
+(15, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(16, u'0.064*"bacbg" + 0.064*"bbebg" + 0.064*"ggegf" + 0.064*"bbcef" + 0.064*"cfbgf" + 0.064*"effec" + 0.064*"bacba" + 0.064*"ccccb" + 0.064*"cggfb" + 0.064*"ffbbe"')
+(17, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(18, u'0.064*"fgffb" + 0.064*"dggfc" + 0.064*"bbcbb" + 0.064*"babcg" + 0.064*"ccdbg" + 0.064*"cbcbb" + 0.064*"cffef" + 0.064*"ggeff" + 0.064*"eeefc" + 0.064*"gfcfg"')
+(19, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(20, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(21, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(22, u'0.126*"bbbbb" + 0.064*"bbbcf" + 0.064*"cbabf" + 0.064*"egffb" + 0.064*"cgffa" + 0.064*"cbebe" + 0.064*"ccabb" + 0.064*"bcbab" + 0.064*"cbebb" + 0.064*"bbaab"')
+(23, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(24, u'0.102*"bfcgf" + 0.102*"ffbcf" + 0.102*"gcegf" + 0.102*"effec" + 0.102*"fgfed" + 0.102*"dcbce" + 0.002*"bfbcf" + 0.002*"effee" + 0.002*"fgfee" + 0.002*"gfbce"')
+(25, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(26, u'0.046*"fgfgf" + 0.046*"cdgef" + 0.046*"babbb" + 0.046*"gfgcd" + 0.046*"feeec" + 0.046*"ccbba" + 0.046*"gfffd" + 0.046*"fcded" + 0.046*"bbacb" + 0.046*"gfgec"')
+(27, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(28, u'0.102*"gfefd" + 0.102*"gfeff" + 0.102*"fgeff" + 0.102*"bcfde" + 0.102*"ffgde" + 0.102*"fddfd" + 0.002*"bbccg" + 0.002*"effee" + 0.002*"dfffb" + 0.002*"ffffb"')
+(29, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(30, u'0.064*"abbdb" + 0.064*"abaac" + 0.064*"cfgbf" + 0.064*"bdebf" + 0.064*"fgeec" + 0.064*"bfbga" + 0.064*"cbabb" + 0.064*"cfgfc" + 0.064*"cbbgb" + 0.064*"dcbcf"')
+(31, u'0.102*"gdggf" + 0.102*"cfgcf" + 0.102*"bbfeg" + 0.102*"eeecb" + 0.102*"feggc" + 0.102*"gbcfg" + 0.002*"fgeec" + 0.002*"cfbge" + 0.002*"cfbcf" + 0.002*"cfgfc"')
+(32, u'0.102*"bcegf" + 0.102*"bfcgf" + 0.102*"bbccg" + 0.102*"effee" + 0.102*"gfbce" + 0.102*"ffffb" + 0.002*"dfffb" + 0.002*"fgfee" + 0.002*"bfbcf" + 0.002*"gcegf"')
+(33, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(34, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(35, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(36, u'0.102*"ffgdf" + 0.102*"ffggc" + 0.102*"geggf" + 0.102*"bcffg" + 0.102*"gccff" + 0.102*"edfec" + 0.003*"aaaaa" + 0.003*"bacbb" + 0.003*"bbbba" + 0.003*"bbbab"')
+(37, u'0.006*"bbcbf" + 0.006*"bcegd" + 0.006*"bbccg" + 0.006*"effee" + 0.006*"gfbce" + 0.006*"ffffb" + 0.006*"fgfee" + 0.006*"bfbcf" + 0.006*"dfffb" + 0.006*"gcegf"')
+(38, u'0.064*"bceda" + 0.064*"bcbac" + 0.064*"gbafb" + 0.064*"bccbb" + 0.064*"cbcba" + 0.064*"babba" + 0.064*"cceeg" + 0.064*"geggf" + 0.064*"ggfdf" + 0.064*"ffgfb"')
+(39, u'0.102*"bcaaa" + 0.102*"cbbba" + 0.102*"bbbab" + 0.102*"bbbba" + 0.102*"bacbb" + 0.102*"aaaaa" + 0.002*"dfffb" + 0.002*"bfbcf" + 0.002*"bcegd" + 0.002*"gfbce"')
+
+Process finished with exit code 0
