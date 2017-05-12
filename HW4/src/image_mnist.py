@@ -42,6 +42,8 @@ def create_plots(model, words, n_iter):
         # Initialize a list with the original number of pixels
         pix = [0] * 784
         pixel_id = []
+
+        # Find pixels for top words
         for i in topic.argsort()[:-words-1:-1]:
             pixel_id.append(i)
 

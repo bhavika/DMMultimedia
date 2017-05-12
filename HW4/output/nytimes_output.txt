@@ -1,1 +1,455 @@
-python: can't open file 'nytimes.py': [Errno 2] No such file or directory
+/home/bhavika/anaconda2/bin/python /home/bhavika/PycharmProjects/miner/HW4/src/nytimes.py
+2017-04-26 13:37:52,025 : INFO : Initializing corpus reader from ../data/docword.nytimes.txt
+2017-04-26 13:37:52,025 : INFO : accepted corpus with 300000 documents, 102660 features, 69679427 non-zero entries
+2017-04-26 13:37:52,148 : INFO : storing corpus in Matrix Market format to ../models/corpus.mm
+2017-04-26 13:37:52,148 : INFO : saving sparse matrix to ../models/corpus.mm
+2017-04-26 13:37:52,149 : INFO : PROGRESS: saving document #0
+2017-04-26 13:37:58,600 : INFO : PROGRESS: saving document #1000
+2017-04-26 13:38:03,545 : INFO : PROGRESS: saving document #2000
+2017-04-26 13:38:09,524 : INFO : PROGRESS: saving document #3000
+2017-04-26 13:38:16,854 : INFO : PROGRESS: saving document #4000
+2017-04-26 13:38:25,637 : INFO : PROGRESS: saving document #5000
+2017-04-26 13:38:32,160 : INFO : PROGRESS: saving document #6000
+2017-04-26 13:38:39,920 : INFO : PROGRESS: saving document #7000
+2017-04-26 13:38:46,322 : INFO : PROGRESS: saving document #8000
+2017-04-26 13:38:56,629 : INFO : PROGRESS: saving document #9000
+2017-04-26 13:39:04,560 : INFO : PROGRESS: saving document #10000
+2017-04-26 13:39:15,456 : INFO : PROGRESS: saving document #11000
+2017-04-26 13:39:27,659 : INFO : PROGRESS: saving document #12000
+2017-04-26 13:39:34,831 : INFO : PROGRESS: saving document #13000
+2017-04-26 13:39:43,969 : INFO : PROGRESS: saving document #14000
+2017-04-26 13:39:52,407 : INFO : PROGRESS: saving document #15000
+2017-04-26 13:39:59,716 : INFO : PROGRESS: saving document #16000
+2017-04-26 13:40:05,432 : INFO : PROGRESS: saving document #17000
+2017-04-26 13:40:14,219 : INFO : PROGRESS: saving document #18000
+2017-04-26 13:40:20,236 : INFO : PROGRESS: saving document #19000
+2017-04-26 13:40:26,675 : INFO : PROGRESS: saving document #20000
+2017-04-26 13:40:32,475 : INFO : PROGRESS: saving document #21000
+2017-04-26 13:40:38,829 : INFO : PROGRESS: saving document #22000
+2017-04-26 13:40:45,383 : INFO : PROGRESS: saving document #23000
+2017-04-26 13:40:53,831 : INFO : PROGRESS: saving document #24000
+2017-04-26 13:41:03,673 : INFO : PROGRESS: saving document #25000
+2017-04-26 13:41:17,315 : INFO : PROGRESS: saving document #26000
+2017-04-26 13:41:26,298 : INFO : PROGRESS: saving document #27000
+2017-04-26 13:41:33,857 : INFO : PROGRESS: saving document #28000
+2017-04-26 13:41:43,379 : INFO : PROGRESS: saving document #29000
+2017-04-26 13:41:52,738 : INFO : PROGRESS: saving document #30000
+2017-04-26 13:42:00,541 : INFO : PROGRESS: saving document #31000
+2017-04-26 13:42:07,762 : INFO : PROGRESS: saving document #32000
+2017-04-26 13:42:14,664 : INFO : PROGRESS: saving document #33000
+2017-04-26 13:42:21,211 : INFO : PROGRESS: saving document #34000
+2017-04-26 13:42:28,425 : INFO : PROGRESS: saving document #35000
+2017-04-26 13:42:34,128 : INFO : PROGRESS: saving document #36000
+2017-04-26 13:42:38,211 : INFO : PROGRESS: saving document #37000
+2017-04-26 13:42:43,887 : INFO : PROGRESS: saving document #38000
+2017-04-26 13:42:49,651 : INFO : PROGRESS: saving document #39000
+2017-04-26 13:42:55,781 : INFO : PROGRESS: saving document #40000
+2017-04-26 13:43:02,330 : INFO : PROGRESS: saving document #41000
+2017-04-26 13:43:09,250 : INFO : PROGRESS: saving document #42000
+2017-04-26 13:43:18,550 : INFO : PROGRESS: saving document #43000
+2017-04-26 13:43:26,637 : INFO : PROGRESS: saving document #44000
+2017-04-26 13:43:36,564 : INFO : PROGRESS: saving document #45000
+2017-04-26 13:43:46,329 : INFO : PROGRESS: saving document #46000
+2017-04-26 13:43:55,834 : INFO : PROGRESS: saving document #47000
+2017-04-26 13:44:05,633 : INFO : PROGRESS: saving document #48000
+2017-04-26 13:44:14,328 : INFO : PROGRESS: saving document #49000
+2017-04-26 13:44:24,039 : INFO : PROGRESS: saving document #50000
+2017-04-26 13:44:32,302 : INFO : PROGRESS: saving document #51000
+2017-04-26 13:44:40,467 : INFO : PROGRESS: saving document #52000
+2017-04-26 13:44:49,128 : INFO : PROGRESS: saving document #53000
+2017-04-26 13:44:56,894 : INFO : PROGRESS: saving document #54000
+2017-04-26 13:45:06,851 : INFO : PROGRESS: saving document #55000
+2017-04-26 13:45:16,708 : INFO : PROGRESS: saving document #56000
+2017-04-26 13:45:32,055 : INFO : PROGRESS: saving document #57000
+2017-04-26 13:45:45,291 : INFO : PROGRESS: saving document #58000
+2017-04-26 13:45:57,477 : INFO : PROGRESS: saving document #59000
+2017-04-26 13:46:01,947 : INFO : PROGRESS: saving document #60000
+2017-04-26 13:46:06,409 : INFO : PROGRESS: saving document #61000
+2017-04-26 13:46:14,001 : INFO : PROGRESS: saving document #62000
+2017-04-26 13:46:20,856 : INFO : PROGRESS: saving document #63000
+2017-04-26 13:46:27,373 : INFO : PROGRESS: saving document #64000
+2017-04-26 13:46:33,372 : INFO : PROGRESS: saving document #65000
+2017-04-26 13:46:42,391 : INFO : PROGRESS: saving document #66000
+2017-04-26 13:46:54,795 : INFO : PROGRESS: saving document #67000
+2017-04-26 13:47:00,511 : INFO : PROGRESS: saving document #68000
+2017-04-26 13:47:06,681 : INFO : PROGRESS: saving document #69000
+2017-04-26 13:47:13,940 : INFO : PROGRESS: saving document #70000
+2017-04-26 13:47:21,217 : INFO : PROGRESS: saving document #71000
+2017-04-26 13:47:26,442 : INFO : PROGRESS: saving document #72000
+2017-04-26 13:47:30,644 : INFO : PROGRESS: saving document #73000
+2017-04-26 13:47:38,129 : INFO : PROGRESS: saving document #74000
+2017-04-26 13:47:44,786 : INFO : PROGRESS: saving document #75000
+2017-04-26 13:47:51,533 : INFO : PROGRESS: saving document #76000
+2017-04-26 13:47:59,774 : INFO : PROGRESS: saving document #77000
+2017-04-26 13:48:06,909 : INFO : PROGRESS: saving document #78000
+2017-04-26 13:48:13,335 : INFO : PROGRESS: saving document #79000
+2017-04-26 13:48:20,854 : INFO : PROGRESS: saving document #80000
+2017-04-26 13:48:26,833 : INFO : PROGRESS: saving document #81000
+2017-04-26 13:48:34,812 : INFO : PROGRESS: saving document #82000
+2017-04-26 13:48:40,586 : INFO : PROGRESS: saving document #83000
+2017-04-26 13:48:45,390 : INFO : PROGRESS: saving document #84000
+2017-04-26 13:48:52,062 : INFO : PROGRESS: saving document #85000
+2017-04-26 13:49:00,024 : INFO : PROGRESS: saving document #86000
+2017-04-26 13:49:07,308 : INFO : PROGRESS: saving document #87000
+2017-04-26 13:49:12,620 : INFO : PROGRESS: saving document #88000
+2017-04-26 13:49:18,543 : INFO : PROGRESS: saving document #89000
+2017-04-26 13:49:24,182 : INFO : PROGRESS: saving document #90000
+2017-04-26 13:49:29,592 : INFO : PROGRESS: saving document #91000
+2017-04-26 13:49:34,985 : INFO : PROGRESS: saving document #92000
+2017-04-26 13:49:41,407 : INFO : PROGRESS: saving document #93000
+2017-04-26 13:49:49,103 : INFO : PROGRESS: saving document #94000
+2017-04-26 13:49:53,709 : INFO : PROGRESS: saving document #95000
+2017-04-26 13:49:57,824 : INFO : PROGRESS: saving document #96000
+2017-04-26 13:50:02,779 : INFO : PROGRESS: saving document #97000
+2017-04-26 13:50:11,665 : INFO : PROGRESS: saving document #98000
+2017-04-26 13:50:20,722 : INFO : PROGRESS: saving document #99000
+2017-04-26 13:50:29,017 : INFO : PROGRESS: saving document #100000
+2017-04-26 13:50:37,845 : INFO : PROGRESS: saving document #101000
+2017-04-26 13:50:44,879 : INFO : PROGRESS: saving document #102000
+2017-04-26 13:50:50,025 : INFO : PROGRESS: saving document #103000
+2017-04-26 13:50:56,990 : INFO : PROGRESS: saving document #104000
+2017-04-26 13:51:03,473 : INFO : PROGRESS: saving document #105000
+2017-04-26 13:51:07,653 : INFO : PROGRESS: saving document #106000
+2017-04-26 13:51:11,370 : INFO : PROGRESS: saving document #107000
+2017-04-26 13:51:16,891 : INFO : PROGRESS: saving document #108000
+2017-04-26 13:51:22,847 : INFO : PROGRESS: saving document #109000
+2017-04-26 13:51:28,741 : INFO : PROGRESS: saving document #110000
+2017-04-26 13:51:34,509 : INFO : PROGRESS: saving document #111000
+2017-04-26 13:51:40,782 : INFO : PROGRESS: saving document #112000
+2017-04-26 13:51:48,638 : INFO : PROGRESS: saving document #113000
+2017-04-26 13:51:56,023 : INFO : PROGRESS: saving document #114000
+2017-04-26 13:52:04,314 : INFO : PROGRESS: saving document #115000
+2017-04-26 13:52:10,854 : INFO : PROGRESS: saving document #116000
+2017-04-26 13:52:16,012 : INFO : PROGRESS: saving document #117000
+2017-04-26 13:52:20,967 : INFO : PROGRESS: saving document #118000
+2017-04-26 13:52:25,656 : INFO : PROGRESS: saving document #119000
+2017-04-26 13:52:34,110 : INFO : PROGRESS: saving document #120000
+2017-04-26 13:52:42,043 : INFO : PROGRESS: saving document #121000
+2017-04-26 13:52:51,517 : INFO : PROGRESS: saving document #122000
+2017-04-26 13:53:01,987 : INFO : PROGRESS: saving document #123000
+2017-04-26 13:53:12,102 : INFO : PROGRESS: saving document #124000
+2017-04-26 13:53:20,162 : INFO : PROGRESS: saving document #125000
+2017-04-26 13:53:28,293 : INFO : PROGRESS: saving document #126000
+2017-04-26 13:53:36,915 : INFO : PROGRESS: saving document #127000
+2017-04-26 13:53:45,821 : INFO : PROGRESS: saving document #128000
+2017-04-26 13:53:55,037 : INFO : PROGRESS: saving document #129000
+2017-04-26 13:54:04,952 : INFO : PROGRESS: saving document #130000
+2017-04-26 13:54:14,440 : INFO : PROGRESS: saving document #131000
+2017-04-26 13:54:33,826 : INFO : PROGRESS: saving document #132000
+2017-04-26 13:54:52,378 : INFO : PROGRESS: saving document #133000
+2017-04-26 13:55:09,401 : INFO : PROGRESS: saving document #134000
+2017-04-26 13:55:30,001 : INFO : PROGRESS: saving document #135000
+2017-04-26 13:55:51,891 : INFO : PROGRESS: saving document #136000
+2017-04-26 13:56:07,647 : INFO : PROGRESS: saving document #137000
+2017-04-26 13:56:21,660 : INFO : PROGRESS: saving document #138000
+2017-04-26 13:56:34,824 : INFO : PROGRESS: saving document #139000
+2017-04-26 13:56:45,744 : INFO : PROGRESS: saving document #140000
+2017-04-26 13:56:58,031 : INFO : PROGRESS: saving document #141000
+2017-04-26 13:57:07,995 : INFO : PROGRESS: saving document #142000
+2017-04-26 13:57:19,041 : INFO : PROGRESS: saving document #143000
+2017-04-26 13:57:31,074 : INFO : PROGRESS: saving document #144000
+2017-04-26 13:57:39,473 : INFO : PROGRESS: saving document #145000
+2017-04-26 13:57:49,997 : INFO : PROGRESS: saving document #146000
+2017-04-26 13:57:58,902 : INFO : PROGRESS: saving document #147000
+2017-04-26 13:58:06,446 : INFO : PROGRESS: saving document #148000
+2017-04-26 13:58:15,870 : INFO : PROGRESS: saving document #149000
+2017-04-26 13:58:25,446 : INFO : PROGRESS: saving document #150000
+2017-04-26 13:58:34,087 : INFO : PROGRESS: saving document #151000
+2017-04-26 13:58:42,604 : INFO : PROGRESS: saving document #152000
+2017-04-26 13:58:50,763 : INFO : PROGRESS: saving document #153000
+2017-04-26 13:58:59,978 : INFO : PROGRESS: saving document #154000
+2017-04-26 13:59:04,381 : INFO : PROGRESS: saving document #155000
+2017-04-26 13:59:12,049 : INFO : PROGRESS: saving document #156000
+2017-04-26 13:59:26,013 : INFO : PROGRESS: saving document #157000
+2017-04-26 13:59:36,963 : INFO : PROGRESS: saving document #158000
+2017-04-26 13:59:48,154 : INFO : PROGRESS: saving document #159000
+2017-04-26 13:59:59,033 : INFO : PROGRESS: saving document #160000
+2017-04-26 14:00:09,071 : INFO : PROGRESS: saving document #161000
+2017-04-26 14:00:19,483 : INFO : PROGRESS: saving document #162000
+2017-04-26 14:00:28,567 : INFO : PROGRESS: saving document #163000
+2017-04-26 14:00:38,616 : INFO : PROGRESS: saving document #164000
+2017-04-26 14:00:48,386 : INFO : PROGRESS: saving document #165000
+2017-04-26 14:00:56,204 : INFO : PROGRESS: saving document #166000
+2017-04-26 14:01:06,101 : INFO : PROGRESS: saving document #167000
+2017-04-26 14:01:14,120 : INFO : PROGRESS: saving document #168000
+2017-04-26 14:01:22,384 : INFO : PROGRESS: saving document #169000
+2017-04-26 14:01:30,731 : INFO : PROGRESS: saving document #170000
+2017-04-26 14:01:39,107 : INFO : PROGRESS: saving document #171000
+2017-04-26 14:01:49,040 : INFO : PROGRESS: saving document #172000
+2017-04-26 14:01:57,645 : INFO : PROGRESS: saving document #173000
+2017-04-26 14:02:02,062 : INFO : PROGRESS: saving document #174000
+2017-04-26 14:02:12,191 : INFO : PROGRESS: saving document #175000
+2017-04-26 14:02:23,232 : INFO : PROGRESS: saving document #176000
+2017-04-26 14:02:31,033 : INFO : PROGRESS: saving document #177000
+2017-04-26 14:02:39,400 : INFO : PROGRESS: saving document #178000
+2017-04-26 14:02:47,605 : INFO : PROGRESS: saving document #179000
+2017-04-26 14:02:55,697 : INFO : PROGRESS: saving document #180000
+2017-04-26 14:03:07,358 : INFO : PROGRESS: saving document #181000
+2017-04-26 14:03:24,339 : INFO : PROGRESS: saving document #182000
+2017-04-26 14:03:38,801 : INFO : PROGRESS: saving document #183000
+2017-04-26 14:03:50,509 : INFO : PROGRESS: saving document #184000
+2017-04-26 14:04:00,937 : INFO : PROGRESS: saving document #185000
+2017-04-26 14:04:11,521 : INFO : PROGRESS: saving document #186000
+2017-04-26 14:04:21,873 : INFO : PROGRESS: saving document #187000
+2017-04-26 14:04:32,900 : INFO : PROGRESS: saving document #188000
+2017-04-26 14:04:44,197 : INFO : PROGRESS: saving document #189000
+2017-04-26 14:04:57,451 : INFO : PROGRESS: saving document #190000
+2017-04-26 14:05:08,842 : INFO : PROGRESS: saving document #191000
+2017-04-26 14:05:20,550 : INFO : PROGRESS: saving document #192000
+2017-04-26 14:05:32,056 : INFO : PROGRESS: saving document #193000
+2017-04-26 14:05:43,990 : INFO : PROGRESS: saving document #194000
+2017-04-26 14:05:55,074 : INFO : PROGRESS: saving document #195000
+2017-04-26 14:06:08,086 : INFO : PROGRESS: saving document #196000
+2017-04-26 14:06:23,252 : INFO : PROGRESS: saving document #197000
+2017-04-26 14:06:40,115 : INFO : PROGRESS: saving document #198000
+2017-04-26 14:06:51,485 : INFO : PROGRESS: saving document #199000
+2017-04-26 14:07:00,653 : INFO : PROGRESS: saving document #200000
+2017-04-26 14:07:12,562 : INFO : PROGRESS: saving document #201000
+2017-04-26 14:07:27,183 : INFO : PROGRESS: saving document #202000
+2017-04-26 14:07:38,398 : INFO : PROGRESS: saving document #203000
+2017-04-26 14:07:49,361 : INFO : PROGRESS: saving document #204000
+2017-04-26 14:08:01,337 : INFO : PROGRESS: saving document #205000
+2017-04-26 14:08:15,346 : INFO : PROGRESS: saving document #206000
+2017-04-26 14:08:24,839 : INFO : PROGRESS: saving document #207000
+2017-04-26 14:08:37,507 : INFO : PROGRESS: saving document #208000
+2017-04-26 14:08:48,571 : INFO : PROGRESS: saving document #209000
+2017-04-26 14:08:58,680 : INFO : PROGRESS: saving document #210000
+2017-04-26 14:09:08,120 : INFO : PROGRESS: saving document #211000
+2017-04-26 14:09:19,303 : INFO : PROGRESS: saving document #212000
+2017-04-26 14:09:32,457 : INFO : PROGRESS: saving document #213000
+2017-04-26 14:09:48,533 : INFO : PROGRESS: saving document #214000
+2017-04-26 14:10:00,785 : INFO : PROGRESS: saving document #215000
+2017-04-26 14:10:10,409 : INFO : PROGRESS: saving document #216000
+2017-04-26 14:10:21,971 : INFO : PROGRESS: saving document #217000
+2017-04-26 14:10:31,814 : INFO : PROGRESS: saving document #218000
+2017-04-26 14:10:42,658 : INFO : PROGRESS: saving document #219000
+2017-04-26 14:10:53,546 : INFO : PROGRESS: saving document #220000
+2017-04-26 14:11:04,335 : INFO : PROGRESS: saving document #221000
+2017-04-26 14:11:11,999 : INFO : PROGRESS: saving document #222000
+2017-04-26 14:11:20,163 : INFO : PROGRESS: saving document #223000
+2017-04-26 14:11:30,032 : INFO : PROGRESS: saving document #224000
+2017-04-26 14:11:39,262 : INFO : PROGRESS: saving document #225000
+2017-04-26 14:11:51,052 : INFO : PROGRESS: saving document #226000
+2017-04-26 14:12:00,125 : INFO : PROGRESS: saving document #227000
+2017-04-26 14:12:09,681 : INFO : PROGRESS: saving document #228000
+2017-04-26 14:12:19,594 : INFO : PROGRESS: saving document #229000
+2017-04-26 14:12:29,524 : INFO : PROGRESS: saving document #230000
+2017-04-26 14:12:40,424 : INFO : PROGRESS: saving document #231000
+2017-04-26 14:12:53,038 : INFO : PROGRESS: saving document #232000
+2017-04-26 14:13:03,996 : INFO : PROGRESS: saving document #233000
+2017-04-26 14:13:14,986 : INFO : PROGRESS: saving document #234000
+2017-04-26 14:13:27,548 : INFO : PROGRESS: saving document #235000
+2017-04-26 14:13:38,370 : INFO : PROGRESS: saving document #236000
+2017-04-26 14:13:50,727 : INFO : PROGRESS: saving document #237000
+2017-04-26 14:13:58,343 : INFO : PROGRESS: saving document #238000
+2017-04-26 14:14:03,798 : INFO : PROGRESS: saving document #239000
+2017-04-26 14:14:08,211 : INFO : PROGRESS: saving document #240000
+2017-04-26 14:14:12,790 : INFO : PROGRESS: saving document #241000
+2017-04-26 14:14:19,997 : INFO : PROGRESS: saving document #242000
+2017-04-26 14:14:30,198 : INFO : PROGRESS: saving document #243000
+2017-04-26 14:14:38,915 : INFO : PROGRESS: saving document #244000
+2017-04-26 14:14:47,511 : INFO : PROGRESS: saving document #245000
+2017-04-26 14:14:57,582 : INFO : PROGRESS: saving document #246000
+2017-04-26 14:15:06,803 : INFO : PROGRESS: saving document #247000
+2017-04-26 14:15:16,507 : INFO : PROGRESS: saving document #248000
+2017-04-26 14:15:27,400 : INFO : PROGRESS: saving document #249000
+2017-04-26 14:15:36,619 : INFO : PROGRESS: saving document #250000
+2017-04-26 14:15:45,506 : INFO : PROGRESS: saving document #251000
+2017-04-26 14:15:53,817 : INFO : PROGRESS: saving document #252000
+2017-04-26 14:16:02,260 : INFO : PROGRESS: saving document #253000
+2017-04-26 14:16:11,097 : INFO : PROGRESS: saving document #254000
+2017-04-26 14:16:23,484 : INFO : PROGRESS: saving document #255000
+2017-04-26 14:16:35,920 : INFO : PROGRESS: saving document #256000
+2017-04-26 14:16:47,252 : INFO : PROGRESS: saving document #257000
+2017-04-26 14:16:54,640 : INFO : PROGRESS: saving document #258000
+2017-04-26 14:17:01,946 : INFO : PROGRESS: saving document #259000
+2017-04-26 14:17:15,462 : INFO : PROGRESS: saving document #260000
+2017-04-26 14:17:25,329 : INFO : PROGRESS: saving document #261000
+2017-04-26 14:17:34,753 : INFO : PROGRESS: saving document #262000
+2017-04-26 14:17:45,913 : INFO : PROGRESS: saving document #263000
+2017-04-26 14:17:56,369 : INFO : PROGRESS: saving document #264000
+2017-04-26 14:18:07,870 : INFO : PROGRESS: saving document #265000
+2017-04-26 14:18:16,742 : INFO : PROGRESS: saving document #266000
+2017-04-26 14:18:24,699 : INFO : PROGRESS: saving document #267000
+2017-04-26 14:18:32,684 : INFO : PROGRESS: saving document #268000
+2017-04-26 14:18:40,763 : INFO : PROGRESS: saving document #269000
+2017-04-26 14:18:49,829 : INFO : PROGRESS: saving document #270000
+2017-04-26 14:19:00,097 : INFO : PROGRESS: saving document #271000
+2017-04-26 14:19:09,684 : INFO : PROGRESS: saving document #272000
+2017-04-26 14:19:20,072 : INFO : PROGRESS: saving document #273000
+2017-04-26 14:19:28,117 : INFO : PROGRESS: saving document #274000
+2017-04-26 14:19:34,728 : INFO : PROGRESS: saving document #275000
+2017-04-26 14:19:43,856 : INFO : PROGRESS: saving document #276000
+2017-04-26 14:19:53,157 : INFO : PROGRESS: saving document #277000
+2017-04-26 14:20:02,638 : INFO : PROGRESS: saving document #278000
+2017-04-26 14:20:12,905 : INFO : PROGRESS: saving document #279000
+2017-04-26 14:20:24,727 : INFO : PROGRESS: saving document #280000
+2017-04-26 14:20:34,589 : INFO : PROGRESS: saving document #281000
+2017-04-26 14:20:44,653 : INFO : PROGRESS: saving document #282000
+2017-04-26 14:20:53,898 : INFO : PROGRESS: saving document #283000
+2017-04-26 14:21:02,980 : INFO : PROGRESS: saving document #284000
+2017-04-26 14:21:12,423 : INFO : PROGRESS: saving document #285000
+2017-04-26 14:21:20,754 : INFO : PROGRESS: saving document #286000
+2017-04-26 14:21:29,396 : INFO : PROGRESS: saving document #287000
+2017-04-26 14:21:37,728 : INFO : PROGRESS: saving document #288000
+2017-04-26 14:21:46,984 : INFO : PROGRESS: saving document #289000
+2017-04-26 14:21:56,177 : INFO : PROGRESS: saving document #290000
+2017-04-26 14:22:03,952 : INFO : PROGRESS: saving document #291000
+2017-04-26 14:22:10,341 : INFO : PROGRESS: saving document #292000
+2017-04-26 14:22:18,498 : INFO : PROGRESS: saving document #293000
+2017-04-26 14:22:27,006 : INFO : PROGRESS: saving document #294000
+2017-04-26 14:22:36,995 : INFO : PROGRESS: saving document #295000
+2017-04-26 14:22:47,784 : INFO : PROGRESS: saving document #296000
+2017-04-26 14:22:58,235 : INFO : PROGRESS: saving document #297000
+2017-04-26 14:23:09,860 : INFO : PROGRESS: saving document #298000
+2017-04-26 14:23:22,329 : INFO : PROGRESS: saving document #299000
+2017-04-26 14:23:35,347 : INFO : saved 300000x102660 matrix, density=0.226% (69679427/30798000000)
+2017-04-26 14:23:35,348 : INFO : saving MmCorpus index to ../models/corpus.mm.index
+2017-04-26 14:23:35,552 : INFO : PROGRESS: processing document 0 of 300000
+2017-04-26 14:24:16,130 : INFO : PROGRESS: processing document 10000 of 300000
+2017-04-26 14:24:49,419 : INFO : PROGRESS: processing document 20000 of 300000
+2017-04-26 14:25:30,834 : INFO : PROGRESS: processing document 30000 of 300000
+2017-04-26 14:26:15,484 : INFO : PROGRESS: processing document 40000 of 300000
+2017-04-26 14:26:56,925 : INFO : PROGRESS: processing document 50000 of 300000
+2017-04-26 14:27:31,477 : INFO : PROGRESS: processing document 60000 of 300000
+2017-04-26 14:28:22,373 : INFO : PROGRESS: processing document 70000 of 300000
+2017-04-26 14:29:05,658 : INFO : PROGRESS: processing document 80000 of 300000
+2017-04-26 14:29:55,118 : INFO : PROGRESS: processing document 90000 of 300000
+2017-04-26 14:30:38,192 : INFO : PROGRESS: processing document 100000 of 300000
+2017-04-26 14:31:21,950 : INFO : PROGRESS: processing document 110000 of 300000
+2017-04-26 14:32:20,576 : INFO : PROGRESS: processing document 120000 of 300000
+2017-04-26 14:33:35,653 : INFO : PROGRESS: processing document 130000 of 300000
+2017-04-26 14:34:36,578 : INFO : PROGRESS: processing document 140000 of 300000
+2017-04-26 14:35:24,436 : INFO : PROGRESS: processing document 150000 of 300000
+2017-04-26 14:36:06,483 : INFO : PROGRESS: processing document 160000 of 300000
+2017-04-26 14:36:52,937 : INFO : PROGRESS: processing document 170000 of 300000
+2017-04-26 14:37:38,083 : INFO : PROGRESS: processing document 180000 of 300000
+2017-04-26 14:38:23,178 : INFO : PROGRESS: processing document 190000 of 300000
+2017-04-26 14:38:58,381 : INFO : PROGRESS: processing document 200000 of 300000
+2017-04-26 14:39:50,617 : INFO : PROGRESS: processing document 210000 of 300000
+2017-04-26 14:40:39,896 : INFO : PROGRESS: processing document 220000 of 300000
+2017-04-26 14:41:22,762 : INFO : PROGRESS: processing document 230000 of 300000
+2017-04-26 14:42:11,642 : INFO : PROGRESS: processing document 240000 of 300000
+2017-04-26 14:43:01,362 : INFO : PROGRESS: processing document 250000 of 300000
+2017-04-26 14:43:40,268 : INFO : PROGRESS: processing document 260000 of 300000
+2017-04-26 14:44:24,460 : INFO : PROGRESS: processing document 270000 of 300000
+2017-04-26 14:45:13,085 : INFO : PROGRESS: processing document 280000 of 300000
+2017-04-26 14:46:04,878 : INFO : PROGRESS: processing document 290000 of 300000
+2017-04-26 14:46:42,136 : INFO : saving Dictionary object under ../models/dict.dict, separately None
+2017-04-26 14:46:42,851 : INFO : saved ../models/dict.dict
+2017-04-26 14:46:42,852 : INFO : loading LdaModel object from ../models/lda_20.lda
+2017-04-26 14:46:42,944 : INFO : loading expElogbeta from ../models/lda_20.lda.expElogbeta.npy with mmap=None
+2017-04-26 14:46:42,949 : INFO : setting ignored attribute id2word to None
+2017-04-26 14:46:42,949 : INFO : setting ignored attribute state to None
+2017-04-26 14:46:42,949 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 14:46:42,949 : INFO : loaded ../models/lda_20.lda
+2017-04-26 14:46:42,949 : INFO : loading LdaModel object from ../models/lda_20.lda.state
+2017-04-26 14:46:42,990 : INFO : loaded ../models/lda_20.lda.state
+2017-04-26 14:46:43,433 : INFO : loading LdaModel object from ../models/lda_30.lda
+2017-04-26 14:46:43,448 : INFO : loading expElogbeta from ../models/lda_30.lda.expElogbeta.npy with mmap=None
+2017-04-26 14:46:43,711 : INFO : setting ignored attribute id2word to None
+2017-04-26 14:46:43,711 : INFO : setting ignored attribute state to None
+2017-04-26 14:46:43,711 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 14:46:43,711 : INFO : loaded ../models/lda_30.lda
+2017-04-26 14:46:43,711 : INFO : loading LdaModel object from ../models/lda_30.lda.state
+2017-04-26 14:46:44,023 : INFO : loaded ../models/lda_30.lda.state
+2017-04-26 14:46:44,417 : INFO : loading LdaModel object from ../models/lda_40.lda
+2017-04-26 14:46:44,432 : INFO : loading expElogbeta from ../models/lda_40.lda.expElogbeta.npy with mmap=None
+2017-04-26 14:46:44,781 : INFO : setting ignored attribute id2word to None
+2017-04-26 14:46:44,781 : INFO : setting ignored attribute state to None
+2017-04-26 14:46:44,781 : INFO : setting ignored attribute dispatcher to None
+2017-04-26 14:46:44,781 : INFO : loaded ../models/lda_40.lda
+2017-04-26 14:46:44,781 : INFO : loading LdaModel object from ../models/lda_40.lda.state
+2017-04-26 14:46:45,152 : INFO : loaded ../models/lda_40.lda.state
+(0, '0.019*"game" + 0.017*"team" + 0.013*"season" + 0.012*"games" + 0.012*"play" + 0.011*"player" + 0.007*"point" + 0.007*"win" + 0.005*"won" + 0.005*"ball"')
+(1, '0.009*"school" + 0.008*"family" + 0.006*"children" + 0.006*"friend" + 0.006*"student" + 0.005*"women" + 0.005*"home" + 0.005*"mother" + 0.005*"book" + 0.005*"son"')
+(2, '0.009*"film" + 0.005*"movie" + 0.003*"zzz_american" + 0.003*"director" + 0.003*"history" + 0.003*"book" + 0.003*"character" + 0.003*"actor" + 0.003*"american" + 0.003*"play"')
+(3, '0.009*"official" + 0.009*"case" + 0.008*"court" + 0.008*"law" + 0.007*"lawyer" + 0.006*"police" + 0.005*"investigation" + 0.004*"officer" + 0.004*"zzz_fbi" + 0.004*"federal"')
+(4, '0.031*"company" + 0.013*"companies" + 0.012*"million" + 0.010*"business" + 0.008*"zzz_enron" + 0.007*"firm" + 0.007*"executive" + 0.006*"deal" + 0.006*"customer" + 0.006*"executives"')
+(5, '0.012*"cup" + 0.010*"minutes" + 0.008*"food" + 0.008*"add" + 0.007*"tablespoon" + 0.006*"oil" + 0.006*"meat" + 0.006*"teaspoon" + 0.006*"pepper" + 0.006*"chicken"')
+(6, '0.013*"com" + 0.011*"mail" + 0.011*"web" + 0.010*"show" + 0.009*"www" + 0.009*"site" + 0.008*"computer" + 0.007*"information" + 0.007*"network" + 0.006*"program"')
+(7, '0.022*"percent" + 0.011*"market" + 0.011*"stock" + 0.007*"economy" + 0.006*"million" + 0.005*"billion" + 0.005*"economic" + 0.005*"companies" + 0.005*"investor" + 0.005*"financial"')
+(8, '0.019*"palestinian" + 0.015*"zzz_israel" + 0.011*"attack" + 0.009*"zzz_israeli" + 0.008*"zzz_yasser_arafat" + 0.008*"leader" + 0.007*"israeli" + 0.006*"peace" + 0.006*"official" + 0.006*"terrorist"')
+(9, '0.014*"car" + 0.007*"race" + 0.006*"passenger" + 0.006*"driver" + 0.006*"flight" + 0.005*"airport" + 0.004*"won" + 0.004*"tour" + 0.003*"zzz_tiger_wood" + 0.003*"airline"')
+(10, '0.027*"com" + 0.012*"beach" + 0.012*"palm" + 0.011*"daily" + 0.011*"question" + 0.010*"statesman" + 0.009*"newspaper" + 0.009*"american" + 0.009*"zzz_texas" + 0.008*"zzz_washington"')
+(11, '0.011*"zzz_united_states" + 0.011*"zzz_u_s" + 0.010*"military" + 0.009*"official" + 0.009*"zzz_afghanistan" + 0.009*"war" + 0.008*"government" + 0.007*"zzz_american" + 0.007*"zzz_taliban" + 0.006*"attack"')
+(12, '0.021*"music" + 0.014*"song" + 0.008*"show" + 0.008*"band" + 0.007*"album" + 0.006*"musical" + 0.005*"play" + 0.005*"record" + 0.005*"sound" + 0.005*"artist"')
+(13, '0.008*"bill" + 0.008*"million" + 0.008*"plan" + 0.008*"program" + 0.007*"money" + 0.006*"government" + 0.006*"tax" + 0.006*"group" + 0.006*"federal" + 0.006*"zzz_congress"')
+(14, '0.007*"building" + 0.005*"water" + 0.004*"area" + 0.003*"town" + 0.003*"miles" + 0.003*"land" + 0.003*"feet" + 0.003*"zzz_new_york" + 0.003*"fire" + 0.003*"plant"')
+(15, '0.015*"run" + 0.013*"priest" + 0.013*"inning" + 0.011*"hit" + 0.008*"baseball" + 0.008*"church" + 0.007*"yankees" + 0.007*"manager" + 0.007*"pitcher" + 0.007*"zzz_red_sox"')
+(16, '0.019*"zzz_bush" + 0.014*"president" + 0.010*"campaign" + 0.010*"political" + 0.010*"zzz_white_house" + 0.009*"election" + 0.007*"zzz_george_bush" + 0.006*"democratic" + 0.006*"vote" + 0.006*"republican"')
+(17, '0.008*"patient" + 0.007*"drug" + 0.006*"doctor" + 0.006*"cell" + 0.005*"scientist" + 0.005*"disease" + 0.005*"test" + 0.005*"research" + 0.005*"study" + 0.004*"anthrax"')
+(18, '0.005*"room" + 0.004*"look" + 0.003*"restaurant" + 0.003*"home" + 0.003*"food" + 0.003*"hand" + 0.003*"house" + 0.003*"white" + 0.002*"red" + 0.002*"door"')
+(19, '0.019*"team" + 0.014*"player" + 0.012*"season" + 0.011*"coach" + 0.006*"quarterback" + 0.006*"football" + 0.006*"point" + 0.005*"zzz_nba" + 0.005*"zzz_nfl" + 0.005*"play"')
+(0, '0.022*"company" + 0.017*"million" + 0.015*"zzz_enron" + 0.009*"companies" + 0.007*"firm" + 0.007*"employees" + 0.007*"executive" + 0.006*"executives" + 0.006*"deal" + 0.006*"financial"')
+(1, '0.006*"building" + 0.005*"room" + 0.005*"restaurant" + 0.004*"zzz_new_york" + 0.004*"art" + 0.004*"hotel" + 0.003*"design" + 0.003*"museum" + 0.003*"visitor" + 0.003*"collection"')
+(2, '0.017*"school" + 0.012*"student" + 0.009*"program" + 0.009*"drug" + 0.008*"patient" + 0.008*"doctor" + 0.007*"women" + 0.006*"health" + 0.006*"percent" + 0.006*"care"')
+(3, '0.014*"war" + 0.012*"zzz_afghanistan" + 0.012*"military" + 0.009*"zzz_taliban" + 0.008*"attack" + 0.007*"zzz_pakistan" + 0.006*"forces" + 0.006*"zzz_american" + 0.006*"terrorist" + 0.006*"zzz_u_s"')
+(4, '0.014*"government" + 0.012*"zzz_united_states" + 0.011*"country" + 0.007*"countries" + 0.007*"zzz_china" + 0.006*"foreign" + 0.006*"zzz_mexico" + 0.005*"zzz_u_s" + 0.005*"zzz_american" + 0.005*"political"')
+(5, '0.011*"campaign" + 0.011*"president" + 0.010*"zzz_bush" + 0.010*"political" + 0.009*"election" + 0.008*"bill" + 0.008*"zzz_senate" + 0.007*"zzz_white_house" + 0.007*"republican" + 0.007*"vote"')
+(6, '0.005*"family" + 0.005*"friend" + 0.005*"home" + 0.004*"book" + 0.004*"mother" + 0.004*"children" + 0.003*"father" + 0.003*"wife" + 0.003*"son" + 0.003*"feel"')
+(7, '0.012*"car" + 0.006*"air" + 0.005*"passenger" + 0.005*"flight" + 0.005*"hour" + 0.004*"fire" + 0.004*"airport" + 0.004*"plane" + 0.004*"truck" + 0.004*"driver"')
+(8, '0.027*"palestinian" + 0.021*"zzz_israel" + 0.017*"attack" + 0.013*"zzz_israeli" + 0.011*"zzz_yasser_arafat" + 0.010*"terrorist" + 0.009*"israeli" + 0.007*"peace" + 0.007*"israelis" + 0.006*"leader"')
+(9, '0.020*"company" + 0.014*"companies" + 0.014*"market" + 0.012*"stock" + 0.011*"business" + 0.010*"percent" + 0.009*"sales" + 0.008*"customer" + 0.008*"analyst" + 0.007*"million"')
+(10, '0.020*"team" + 0.011*"games" + 0.010*"goal" + 0.009*"game" + 0.009*"play" + 0.008*"king" + 0.008*"season" + 0.007*"point" + 0.007*"zzz_olympic" + 0.006*"player"')
+(11, '0.024*"race" + 0.013*"horse" + 0.012*"won" + 0.010*"horses" + 0.009*"winner" + 0.009*"racing" + 0.008*"zzz_phoenix" + 0.008*"zzz_michael_bloomberg" + 0.007*"zzz_kentucky_derby" + 0.007*"zzz_arizona_republic"')
+(12, '0.015*"season" + 0.013*"game" + 0.012*"team" + 0.010*"run" + 0.008*"play" + 0.007*"hit" + 0.006*"games" + 0.006*"player" + 0.006*"inning" + 0.005*"right"')
+(13, '0.014*"con" + 0.013*"music" + 0.008*"una" + 0.007*"song" + 0.007*"dice" + 0.006*"mas" + 0.006*"como" + 0.006*"los" + 0.006*"por" + 0.005*"las"')
+(14, '0.013*"priest" + 0.011*"church" + 0.010*"black" + 0.006*"bishop" + 0.006*"religious" + 0.006*"zzz_god" + 0.005*"white" + 0.005*"member" + 0.004*"community" + 0.004*"group"')
+(15, '0.024*"zzz_bush" + 0.015*"official" + 0.014*"administration" + 0.010*"zzz_united_states" + 0.009*"security" + 0.008*"zzz_u_s" + 0.007*"zzz_washington" + 0.006*"president" + 0.006*"zzz_iraq" + 0.006*"zzz_white_house"')
+(16, '0.019*"computer" + 0.015*"system" + 0.008*"technology" + 0.007*"software" + 0.007*"zzz_microsoft" + 0.006*"program" + 0.005*"company" + 0.005*"user" + 0.005*"data" + 0.005*"information"')
+(17, '0.024*"com" + 0.013*"beach" + 0.013*"palm" + 0.011*"daily" + 0.011*"statesman" + 0.010*"question" + 0.009*"newspaper" + 0.008*"sport" + 0.008*"zzz_texas" + 0.008*"zzz_austin"')
+(18, '0.013*"cup" + 0.011*"food" + 0.009*"minutes" + 0.008*"add" + 0.007*"tablespoon" + 0.007*"oil" + 0.006*"meat" + 0.006*"teaspoon" + 0.006*"pepper" + 0.006*"chicken"')
+(19, '0.036*"com" + 0.023*"mail" + 0.021*"www" + 0.021*"web" + 0.019*"site" + 0.017*"information" + 0.011*"article" + 0.010*"telegram" + 0.009*"syndicate" + 0.009*"online"')
+(20, '0.010*"water" + 0.006*"land" + 0.005*"plant" + 0.005*"million" + 0.004*"miles" + 0.004*"fish" + 0.004*"area" + 0.004*"bird" + 0.003*"animal" + 0.003*"forest"')
+(21, '0.010*"fight" + 0.009*"gun" + 0.009*"family" + 0.008*"police" + 0.008*"home" + 0.007*"told" + 0.007*"agent" + 0.006*"zzz_florida" + 0.005*"son" + 0.005*"official"')
+(22, '0.027*"show" + 0.014*"television" + 0.012*"network" + 0.007*"media" + 0.006*"zzz_nbc" + 0.006*"program" + 0.006*"cable" + 0.005*"viewer" + 0.005*"broadcast" + 0.005*"series"')
+(23, '0.012*"law" + 0.011*"case" + 0.011*"court" + 0.009*"lawyer" + 0.007*"official" + 0.006*"federal" + 0.006*"investigation" + 0.005*"zzz_fbi" + 0.005*"trial" + 0.005*"attorney"')
+(24, '0.008*"cell" + 0.007*"human" + 0.006*"scientist" + 0.006*"research" + 0.005*"disease" + 0.004*"researcher" + 0.003*"body" + 0.003*"professor" + 0.003*"brain" + 0.003*"study"')
+(25, '0.029*"percent" + 0.012*"tax" + 0.011*"money" + 0.009*"economy" + 0.009*"fund" + 0.008*"billion" + 0.008*"cut" + 0.007*"market" + 0.007*"million" + 0.007*"economic"')
+(26, '0.023*"player" + 0.021*"team" + 0.016*"game" + 0.010*"games" + 0.009*"fan" + 0.008*"sport" + 0.007*"point" + 0.007*"play" + 0.007*"season" + 0.007*"basketball"')
+(27, '0.011*"round" + 0.010*"oil" + 0.010*"zzz_tiger_wood" + 0.010*"player" + 0.009*"energy" + 0.009*"shot" + 0.009*"tour" + 0.009*"tournament" + 0.008*"golf" + 0.008*"gas"')
+(28, '0.022*"music" + 0.018*"song" + 0.014*"band" + 0.012*"album" + 0.010*"zzz_los_angeles" + 0.009*"record" + 0.007*"jazz" + 0.007*"rock" + 0.007*"group" + 0.006*"singer"')
+(29, '0.015*"film" + 0.010*"movie" + 0.007*"book" + 0.006*"character" + 0.005*"actor" + 0.004*"play" + 0.004*"director" + 0.004*"show" + 0.004*"movies" + 0.003*"look"')
+(0, '0.023*"computer" + 0.013*"system" + 0.009*"technology" + 0.008*"software" + 0.006*"program" + 0.006*"zzz_microsoft" + 0.006*"mail" + 0.006*"user" + 0.005*"window" + 0.005*"video"')
+(1, '0.015*"priest" + 0.013*"church" + 0.010*"religious" + 0.008*"black" + 0.007*"bishop" + 0.007*"zzz_god" + 0.005*"american" + 0.005*"zzz_america" + 0.005*"zzz_church" + 0.005*"religion"')
+(2, '0.027*"money" + 0.020*"million" + 0.019*"fund" + 0.014*"percent" + 0.012*"pay" + 0.009*"loan" + 0.007*"bank" + 0.007*"financial" + 0.007*"account" + 0.007*"bond"')
+(3, '0.012*"cup" + 0.010*"food" + 0.008*"minutes" + 0.007*"add" + 0.006*"tablespoon" + 0.006*"oil" + 0.006*"meat" + 0.006*"teaspoon" + 0.006*"pepper" + 0.006*"chicken"')
+(4, '0.020*"zzz_olympic" + 0.018*"fight" + 0.017*"medal" + 0.015*"games" + 0.012*"gold" + 0.010*"sport" + 0.009*"zzz_mike_tyson" + 0.009*"zzz_amtrak" + 0.006*"zzz_winter_olympic" + 0.006*"event"')
+(5, '0.012*"sales" + 0.010*"stores" + 0.010*"store" + 0.009*"customer" + 0.008*"company" + 0.007*"product" + 0.007*"sell" + 0.007*"business" + 0.006*"million" + 0.006*"item"')
+(6, '0.014*"campaign" + 0.014*"president" + 0.011*"political" + 0.010*"zzz_george_bush" + 0.010*"election" + 0.009*"zzz_white_house" + 0.008*"republican" + 0.008*"democratic" + 0.007*"vote" + 0.007*"zzz_bush"')
+(7, '0.012*"film" + 0.008*"movie" + 0.006*"show" + 0.005*"character" + 0.005*"play" + 0.004*"actor" + 0.003*"director" + 0.003*"movies" + 0.003*"series" + 0.003*"look"')
+(8, '0.035*"company" + 0.017*"companies" + 0.015*"zzz_enron" + 0.012*"million" + 0.010*"business" + 0.009*"firm" + 0.009*"executives" + 0.008*"executive" + 0.007*"deal" + 0.007*"chief"')
+(9, '0.015*"zzz_tiger_wood" + 0.014*"tour" + 0.014*"round" + 0.014*"golf" + 0.013*"shot" + 0.012*"tournament" + 0.012*"player" + 0.010*"par" + 0.009*"ball" + 0.009*"course"')
+(10, '0.027*"team" + 0.023*"player" + 0.017*"season" + 0.011*"coach" + 0.009*"game" + 0.007*"play" + 0.006*"football" + 0.006*"league" + 0.006*"games" + 0.005*"zzz_nba"')
+(11, '0.136*"zzz_bush" + 0.039*"tax" + 0.017*"zzz_white_house" + 0.014*"cut" + 0.013*"zzz_texas" + 0.011*"taxes" + 0.010*"president" + 0.007*"zzz_ari_fleischer" + 0.006*"administration" + 0.005*"zzz_washington"')
+(12, '0.046*"school" + 0.035*"student" + 0.016*"com" + 0.010*"teacher" + 0.008*"question" + 0.008*"palm" + 0.008*"beach" + 0.008*"daily" + 0.007*"statesman" + 0.007*"program"')
+(13, '0.015*"military" + 0.013*"zzz_u_s" + 0.012*"war" + 0.012*"zzz_afghanistan" + 0.011*"zzz_united_states" + 0.010*"zzz_american" + 0.009*"official" + 0.008*"attack" + 0.008*"zzz_taliban" + 0.008*"weapon"')
+(14, '0.013*"anthrax" + 0.010*"official" + 0.006*"problem" + 0.005*"virus" + 0.005*"plant" + 0.005*"chemical" + 0.005*"disease" + 0.005*"water" + 0.005*"agency" + 0.004*"safety"')
+(15, '0.015*"race" + 0.013*"won" + 0.009*"win" + 0.009*"sport" + 0.009*"winner" + 0.008*"horse" + 0.007*"match" + 0.007*"team" + 0.006*"set" + 0.006*"horses"')
+(16, '0.026*"drug" + 0.024*"women" + 0.012*"cancer" + 0.010*"patient" + 0.010*"study" + 0.010*"disease" + 0.009*"percent" + 0.008*"treatment" + 0.007*"doctor" + 0.006*"blood"')
+(17, '0.045*"car" + 0.019*"driver" + 0.009*"truck" + 0.008*"seat" + 0.007*"vehicle" + 0.007*"vehicles" + 0.007*"race" + 0.006*"zzz_ford" + 0.006*"wheel" + 0.006*"model"')
+(18, '0.020*"zzz_china" + 0.017*"zzz_united_states" + 0.015*"zzz_mexico" + 0.013*"zzz_u_s" + 0.012*"zzz_japan" + 0.011*"chinese" + 0.010*"government" + 0.009*"countries" + 0.009*"zzz_brazil" + 0.009*"country"')
+(19, '0.007*"water" + 0.007*"plant" + 0.006*"animal" + 0.004*"species" + 0.004*"forest" + 0.004*"land" + 0.004*"bird" + 0.004*"scientist" + 0.004*"trees" + 0.003*"found"')
+(20, '0.013*"official" + 0.013*"attack" + 0.012*"police" + 0.010*"terrorist" + 0.008*"officer" + 0.007*"zzz_fbi" + 0.007*"security" + 0.007*"bin" + 0.006*"laden" + 0.006*"killed"')
+(21, '0.017*"bill" + 0.012*"zzz_congress" + 0.011*"plan" + 0.010*"program" + 0.010*"federal" + 0.009*"government" + 0.008*"billion" + 0.007*"million" + 0.007*"money" + 0.007*"proposal"')
+(22, '0.016*"run" + 0.013*"game" + 0.012*"season" + 0.012*"hit" + 0.011*"inning" + 0.009*"team" + 0.008*"games" + 0.008*"baseball" + 0.007*"home" + 0.006*"right"')
+(23, '0.006*"need" + 0.005*"human" + 0.005*"problem" + 0.004*"question" + 0.004*"professor" + 0.003*"help" + 0.003*"mean" + 0.003*"word" + 0.003*"important" + 0.003*"brain"')
+(24, '0.021*"doctor" + 0.020*"patient" + 0.020*"hospital" + 0.016*"care" + 0.015*"medical" + 0.012*"children" + 0.009*"health" + 0.007*"surgery" + 0.006*"died" + 0.006*"family"')
+(25, '0.029*"com" + 0.020*"book" + 0.018*"web" + 0.017*"www" + 0.016*"mail" + 0.015*"site" + 0.012*"information" + 0.010*"telegram" + 0.009*"article" + 0.008*"online"')
+(26, '0.033*"music" + 0.025*"song" + 0.015*"album" + 0.013*"band" + 0.011*"con" + 0.008*"singer" + 0.008*"concert" + 0.007*"record" + 0.007*"jazz" + 0.007*"musician"')
+(27, '0.012*"cell" + 0.010*"energy" + 0.010*"flight" + 0.008*"gas" + 0.008*"passenger" + 0.007*"oil" + 0.007*"power" + 0.007*"airline" + 0.006*"airport" + 0.006*"pilot"')
+(28, '0.021*"game" + 0.015*"team" + 0.015*"point" + 0.014*"play" + 0.012*"season" + 0.009*"games" + 0.007*"goal" + 0.007*"shot" + 0.007*"yard" + 0.006*"player"')
+(29, '0.035*"percent" + 0.018*"market" + 0.016*"stock" + 0.012*"economy" + 0.009*"economic" + 0.008*"quarter" + 0.007*"analyst" + 0.007*"billion" + 0.006*"investor" + 0.006*"growth"')
+(30, '0.024*"palestinian" + 0.019*"zzz_israel" + 0.011*"zzz_israeli" + 0.010*"zzz_yasser_arafat" + 0.009*"leader" + 0.008*"israeli" + 0.008*"official" + 0.007*"peace" + 0.006*"attack" + 0.006*"zzz_iraq"')
+(31, '0.007*"art" + 0.006*"show" + 0.006*"book" + 0.006*"zzz_new_york" + 0.005*"artist" + 0.005*"history" + 0.005*"century" + 0.004*"collection" + 0.004*"painting" + 0.003*"zzz_american"')
+(32, '0.015*"building" + 0.014*"zzz_new_york" + 0.009*"million" + 0.008*"project" + 0.007*"official" + 0.007*"office" + 0.006*"plan" + 0.006*"center" + 0.005*"site" + 0.005*"public"')
+(33, '0.014*"restaurant" + 0.010*"hotel" + 0.009*"travel" + 0.008*"wine" + 0.007*"trip" + 0.006*"french" + 0.006*"room" + 0.005*"tour" + 0.005*"zzz_san_francisco" + 0.005*"www"')
+(34, '0.016*"court" + 0.014*"case" + 0.013*"law" + 0.013*"lawyer" + 0.007*"attorney" + 0.007*"decision" + 0.006*"judge" + 0.006*"cases" + 0.006*"legal" + 0.006*"trial"')
+(35, '0.009*"family" + 0.008*"friend" + 0.007*"home" + 0.006*"mother" + 0.006*"show" + 0.006*"father" + 0.006*"children" + 0.006*"son" + 0.005*"kid" + 0.005*"told"')
+(36, '0.017*"government" + 0.011*"political" + 0.011*"zzz_russia" + 0.010*"country" + 0.009*"leader" + 0.009*"power" + 0.007*"zzz_russian" + 0.006*"minister" + 0.006*"president" + 0.006*"election"')
+(37, '0.013*"group" + 0.011*"immigrant" + 0.008*"percent" + 0.008*"zzz_united_states" + 0.007*"zzz_cuba" + 0.007*"law" + 0.007*"number" + 0.007*"country" + 0.006*"american" + 0.006*"hispanic"')
+(38, '0.022*"patriot" + 0.015*"jet" + 0.013*"german" + 0.010*"fish" + 0.010*"zzz_new_england" + 0.008*"yard" + 0.008*"zzz_germany" + 0.007*"camp" + 0.007*"zzz_tom_brady" + 0.007*"zzz_drew_bledsoe"')
+(39, '0.005*"hour" + 0.005*"room" + 0.004*"town" + 0.004*"water" + 0.004*"miles" + 0.004*"fire" + 0.004*"home" + 0.004*"house" + 0.003*"feet" + 0.003*"floor"')
+
+Process finished with exit code 0
